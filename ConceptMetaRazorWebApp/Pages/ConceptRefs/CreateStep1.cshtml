@@ -1,0 +1,32 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptRefs.CreateStep1Model
+
+@{
+    ViewData["Title"] = "Create ConceptRef -  Step 1";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">ConceptRefs</a> &gt;
+    New ConceptRef (Step 1)
+</p>
+<h1>Create (Step 1)</h1>
+<h3>New ConceptRef</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <a asp-page="CreateCommon"  asp-route-conceptId="@Model.ConceptId">Common</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateScalar"  asp-route-conceptId="@Model.ConceptId">Scalar</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateObject"  asp-route-conceptId="@Model.ConceptId">Object</a>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>

@@ -92,12 +92,6 @@ namespace ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.DataTypes
         #endregion
 
         #region Instance Methods
-        public async Task<IActionResult> OnGetAsync()
-        {
-            await BuildBreadcrumbAsync();
-
-            return Page();
-        }
         private async Task BuildBreadcrumbAsync()
         {
             if (DataType?.ConceptModel != null)
@@ -113,6 +107,11 @@ namespace ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.DataTypes
 
             Breadcrumb_ConceptModel_ConceptModelId = ConceptModel?.ConceptModelId;
             Breadcrumb_ConceptModel_ValueString = ConceptModel?.ValueString;
+        }
+        public async Task<IActionResult> OnGetAsync()
+        {
+            await BuildBreadcrumbAsync();
+            return Page();
         }
         
         #endregion

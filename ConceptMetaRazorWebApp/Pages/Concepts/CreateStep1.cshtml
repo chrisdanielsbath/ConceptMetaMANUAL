@@ -1,0 +1,43 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Concepts.CreateStep1Model
+
+@{
+    ViewData["Title"] = "Create Concept -  Step 1";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Concepts</a> &gt;
+    New Concept (Step 1)
+</p>
+<h1>Create (Step 1)</h1>
+<h3>New Concept</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <a asp-page="CreateCommon"  asp-route-conceptModelId="@Model.ConceptModelId">Common</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateDataType"  asp-route-conceptModelId="@Model.ConceptModelId">DataType</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateEnumeration"  asp-route-conceptModelId="@Model.ConceptModelId">Enumeration</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateObject"  asp-route-conceptModelId="@Model.ConceptModelId">Object</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateScalar"  asp-route-conceptModelId="@Model.ConceptModelId">Scalar</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateUniqueKey"  asp-route-conceptModelId="@Model.ConceptModelId">UniqueKey</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateSubType"  asp-route-conceptModelId="@Model.ConceptModelId">SubType</a>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+</div>
