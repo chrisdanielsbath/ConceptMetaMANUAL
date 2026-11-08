@@ -1,0 +1,41 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptSubTypes.IndexModel
+
+@{
+    ViewData["Title"] = "ConceptSubTypes";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    ConceptSubTypes
+</p>
+<h1>ConceptSubTypes</h1>
+<p>
+    <a asp-page="Create" asp-route-conceptId="@Model.ConceptId">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConceptSubTypes[0].SubTypeName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ConceptSubTypes)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubTypeName)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-conceptSubTypeId="@item.ConceptSubTypeId">Details</a> |
+                <a asp-page="./Edit" asp-route-conceptSubTypeId="@item.ConceptSubTypeId">Edit</a> |
+                <a asp-page="./Delete" asp-route-conceptSubTypeId="@item.ConceptSubTypeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

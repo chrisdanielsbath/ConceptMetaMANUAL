@@ -1,0 +1,50 @@
+@page "/ConceptSubTypePropertyFamilyRefs/{conceptSubTypePropertyFamilyRefId:int}/Delete"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptSubTypePropertyFamilyRefs.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete ConceptSubTypePropertyFamilyRef";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="../ConceptSubTypes/Details" asp-route-conceptSubTypeId="@Model.Breadcrumb_ConceptSubType_ConceptSubTypeId">@Model.Breadcrumb_ConceptSubType_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptSubTypeId="@Model.ConceptSubTypeId">ConceptSubTypePropertyFamilyRefs</a> &gt;
+    @Model.ConceptSubTypePropertyFamilyRef.ValueString
+</p>
+<h1>Delete</h1>
+
+<h2>Are you sure you want to delete this?</h2>
+<div>
+    <h3>@Model.ConceptSubTypePropertyFamilyRef.ValueString</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <h4>Common Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptSubTypePropertyFamilyRef.ConceptSubTypeValueString)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.ConceptSubTypePropertyFamilyRef.ConceptSubTypeValueString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptSubTypePropertyFamilyRef.ConceptPropertyFamilyValueString)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.ConceptSubTypePropertyFamilyRef.ConceptPropertyFamilyValueString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptSubTypePropertyFamilyRef.SeqNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptSubTypePropertyFamilyRef.SeqNo)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="ConceptSubTypePropertyFamilyRef.ConceptSubTypePropertyFamilyRefId" />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-page="./Index" asp-route-conceptSubTypeId="@Model.ConceptSubTypeId">Back to List</a>
+        </div>
+    </form>
+</div>

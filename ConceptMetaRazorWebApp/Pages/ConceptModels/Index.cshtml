@@ -1,0 +1,46 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptModels.IndexModel
+
+@{
+    ViewData["Title"] = "ConceptModels";
+}
+
+<p>
+    ConceptModels
+</p>
+<h1>ConceptModels</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConceptModels[0].ModelName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConceptModels[0].DefaultStringLength)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ConceptModels)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DefaultStringLength)
+            </td>
+            <td>
+                <a asp-page="./ViewJson" asp-route-conceptModelId="@item.ConceptModelId">View Json</a>  |
+                <a asp-page="./Details" asp-route-conceptModelId="@item.ConceptModelId">Details</a> |
+                <a asp-page="./Edit" asp-route-conceptModelId="@item.ConceptModelId">Edit</a> |
+                <a asp-page="./Delete" asp-route-conceptModelId="@item.ConceptModelId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

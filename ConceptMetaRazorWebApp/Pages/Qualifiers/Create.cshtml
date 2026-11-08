@@ -1,0 +1,51 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Qualifiers.CreateModel
+
+@{
+    ViewData["Title"] = "Create Qualifier";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Qualifiers</a> &gt;
+    New Qualifier
+</p>
+<h1>Create</h1>
+
+<h3>New Qualifier</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4>Core Properties</h4>
+            <div class="form-group">
+                <label asp-for="Qualifier.ConceptKeyString" class="control-label"></label>
+                <select asp-for="Qualifier.ConceptKeyString" class="form-control" asp-items="Model.ConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Qualifier.ConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Qualifier.ItemValue" class="control-label"></label>
+                <input asp-for="Qualifier.ItemValue" class="form-control" />
+                <span asp-validation-for="Qualifier.ItemValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Qualifier.SeqNo" class="control-label"></label>
+                <input asp-for="Qualifier.SeqNo" class="form-control" />
+                <span asp-validation-for="Qualifier.SeqNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

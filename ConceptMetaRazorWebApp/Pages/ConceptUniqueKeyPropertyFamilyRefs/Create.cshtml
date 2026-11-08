@@ -1,0 +1,54 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptUniqueKeyPropertyFamilyRefs.CreateModel
+
+@{
+    ViewData["Title"] = "Create ConceptUniqueKeyPropertyFamilyRef";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="../ConceptUniqueKeys/Details" asp-route-conceptUniqueKeyId="@Model.Breadcrumb_ConceptUniqueKey_ConceptUniqueKeyId">@Model.Breadcrumb_ConceptUniqueKey_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptUniqueKeyId="@Model.ConceptUniqueKeyId">ConceptUniqueKeyPropertyFamilyRefs</a> &gt;
+    New ConceptUniqueKeyPropertyFamilyRef
+</p>
+<h1>Create</h1>
+
+<h3>New ConceptUniqueKeyPropertyFamilyRef</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptUniqueKeyPropertyFamilyRef.ConceptUniqueKeyKeyString" class="control-label"></label>
+                <select asp-for="ConceptUniqueKeyPropertyFamilyRef.ConceptUniqueKeyKeyString" class="form-control" asp-items="Model.ConceptUniqueKeySL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptUniqueKeyPropertyFamilyRef.ConceptUniqueKeyKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptUniqueKeyPropertyFamilyRef.ConceptPropertyFamilyKeyString" class="control-label"></label>
+                <select asp-for="ConceptUniqueKeyPropertyFamilyRef.ConceptPropertyFamilyKeyString" class="form-control" asp-items="Model.ConceptPropertyFamilySL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptUniqueKeyPropertyFamilyRef.ConceptPropertyFamilyKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptUniqueKeyPropertyFamilyRef.SeqNo" class="control-label"></label>
+                <input asp-for="ConceptUniqueKeyPropertyFamilyRef.SeqNo" class="form-control" />
+                <span asp-validation-for="ConceptUniqueKeyPropertyFamilyRef.SeqNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptUniqueKeyId="@Model.ConceptUniqueKeyId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

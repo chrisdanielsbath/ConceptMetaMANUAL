@@ -1,0 +1,48 @@
+@page "/ConceptModels/{conceptModelId:int}/Edit"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptModels.EditModel
+
+@{
+    ViewData["Title"] = "Edit ConceptModel";
+}
+
+<p>
+    <a asp-page="Index">ConceptModels</a> &gt;
+    @Model.ConceptModel.ValueString
+</p>
+<h1>Edit</h1>
+<h3>@Model.ConceptModel.ValueString</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ConceptModel.ConceptModelId" />
+            <h4>Core Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptModel.ConceptModelId" class="control-label"></label>
+                <input asp-for="ConceptModel.ConceptModelId" class="form-control" disabled="disabled" />
+                <span asp-validation-for="ConceptModel.ConceptModelId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptModel.ModelName" class="control-label"></label>
+                <input asp-for="ConceptModel.ModelName" class="form-control" />
+                <span asp-validation-for="ConceptModel.ModelName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptModel.DefaultStringLength" class="control-label"></label>
+                <input asp-for="ConceptModel.DefaultStringLength" class="form-control" />
+                <span asp-validation-for="ConceptModel.DefaultStringLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="Details" asp-route-conceptModelId="@Model.ConceptModel.ConceptModelId">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

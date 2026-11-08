@@ -1,0 +1,58 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Concepts.IndexModel
+
+@{
+    ViewData["Title"] = "Concepts";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    Concepts
+</p>
+<h1>Concepts</h1>
+<p>
+    <a asp-page="Create" asp-route-conceptModelId="@Model.ConceptModelId">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Concepts[0].ConceptName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Concepts[0].ConceptDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Concepts[0].ConceptType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Concepts[0].IsUpdatable)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Concepts)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConceptName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConceptDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConceptType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsUpdatable)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-conceptId="@item.ConceptId">Details</a> |
+                <a asp-page="./Edit" asp-route-conceptId="@item.ConceptId">Edit</a> |
+                <a asp-page="./Delete" asp-route-conceptId="@item.ConceptId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,154 @@
+{
+  "ConceptModels": [
+    {
+      "ModelName": "CsfMetaModel",
+      "DefaultStringLength": 200,
+      "DataTypes": [
+        {
+          "DataTypeName": "binary",
+          "SqlServerDataType": "binary",
+          "OracleDataType": "raw",
+          "MySqlDataType": "binary",
+          "MongoDbDataType": "binData",
+          "DotNetDataType": "byte[]",
+          "JavaDataType": "byte[]",
+          "XmlDataType": "xs:base64Binary",
+          "ExampleValueAsString": "a1b2c3d4",
+          "JsonDataType": "String",
+          "JsonFormat": "date-time",
+          "OpenApiDataType": "String",
+          "OpenApiFormat": "byte",
+          "ErsDataType": "BINARY",
+          "BasicDataType": "Binary",
+          "MinLength": 1,
+          "MaxLength": 4000,
+          "MinValue": 1,
+          "MaxValue": 4000,
+          "TotalDigits": 3,
+          "DecimalPlaces": 1,
+          "DatePrecision": 7,
+          "HasLength": true,
+          "HasTotalDigits": true,
+          "HasDecimalPlaces": true,
+          "HasIdentity": true,
+          "HasDatePrecision": true
+        }
+      ],
+      "Enumerations": [
+        {
+          "EnumerationName": "BasicDataType",
+          "EnumerationDescription": "The logical data type",
+          "DataTypeName": "string",
+          "EnumeratedValues": [
+            {
+              "EnumeratedValue": "String",
+              "EnumeratedValueDescription": "Accepts textual values"
+            }
+          ]
+        }
+      ],
+      "Concepts": [
+        {
+          "ConceptName": "bool",
+          "ConceptDescription": "Boolean",
+          "ConceptType": "Scalar",
+          "DataTypeName": "bit",
+          "EnumerationName": "string",
+          "BasedOnConceptName": "string",
+          "ExampleValueAsString": "Binary",
+          "MinLength": 200,
+          "MaxLength": 200,
+          "MinValue": 200,
+          "MaxValue": 200,
+          "TotalDigits": 3,
+          "DecimalPlaces": 1,
+          "DatePrecision": 7,
+          "DbSchemaName": "dbo",
+          "DbTableName": "BusinessIndexField",
+          "IsCollectionItem": true,
+          "ToStringExpression": "{x.}FieldName",
+          "IsCreatable": true,
+          "IsUpdatable": true,
+          "IsDeletable": true,
+          "SurrogateKeyFieldName": "True",
+          "PrimaryKeyName": "True",
+          "AlternateKeyName": "True",
+          "ReferencedConceptName": "bool",
+          "ReferencedUniqueKeyName": "PK_UniqueKey",
+          "SpecialisedConceptName": "bool",
+          "SpecialisedSubTypeName": "MySubType",
+          "Includes": [
+            "{x.}ParentLogicalIndexField"
+          ],
+          "Qualifiers": [
+            "Parent"
+          ],
+          "PropertyFamilies": [
+            "Index"
+          ],
+          "UniqueKeys": [
+            {
+              "UniqueKeyName": "string",
+              "PropertyFamilyRefs": [
+                "string"
+              ]
+            }
+          ],
+          "SubTypes": [
+            {
+              "SubTypeName": "string",
+              "PropertyFamilyRefs": [
+                "string"
+              ]
+            }
+          ],
+          "Properties": [
+            {
+              "PropertyName": "Index",
+              "PropertyDescription": "Index",
+              "ReferencedConceptName": "bool",
+              "ConceptRefType": "UniqueContainer",
+              "PropertyFamilyName": "string",
+              "IsPropagating": true,
+              "DbColumnName": "DbColumnName",
+              "IsIdentity": true,
+              "IsCoreField": true,
+              "FieldFamilyName": "CoreFields",
+              "IsUpdatable": true,
+              "FieldLabel": "Field Label",
+              "IsScalarFieldToSerialiseInPersistenceModel": true,
+              "IsScalarFieldToSerialiseInDomainModel": true,
+              "IsSeqNoField": true,
+              "IsDiscriminatorField": true,
+              "IsXmlAttribute": true,
+              "IsReferenceToChildEntity": true,
+              "ParentQualifier": "string",
+              "ChildQualifier": "string",
+              "MinChildOccurrences": 0,
+              "MaxChildOccurrences": 10,
+              "ChildVerbPhrase": "owns",
+              "ParentVerbPhrase": "is owned by",
+              "ChildPropertySeq": 7,
+              "ChildCollectionName": "BusinessFields",
+              "ChildItemName": "BusinessField",
+              "ChildPropertyDescription": "This field is useful",
+              "SelectorType": "Dropdown",
+              "RelationshipType": "ParentChild",
+              "OutputExplicitXmlCollection": true,
+              "IsSerialisedUsingScalarFieldInDomainModel": true,
+              "ScalarFieldNameInDomainModel": "FieldName",
+              "ExampleValueAsString": "This is an example",
+              "RelationshipName": "Class.Property",
+              "DbForeignKeyName": "FK_Child_ParentId",
+              "ParentIndexName": "PK_Parent",
+              "ForeignKeySurrogateKeyFieldName": "SurrogateId",
+              "ChildPropertyName": "PropertyName",
+              "IsNullable": true,
+              "PropertySeq": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

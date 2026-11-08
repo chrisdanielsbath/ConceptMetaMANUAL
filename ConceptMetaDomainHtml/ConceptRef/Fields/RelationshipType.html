@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title>ConceptMeta - ConceptRef.RelationshipType</title>
+  <link rel="stylesheet" href="../../Css/styles.css"></link>
+  <link rel="stylesheet" href="../../Css/prism.css"></link>
+  <script src="../../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../../ConceptMeta.html">ConceptMeta</a>
+  &gt; <a href="../../ConceptModel/ConceptModel.html">ConceptModel</a>
+  &gt; <a href="../../Concept/Concept.html">Concept</a>
+  &gt; <a href="../../ConceptRef/ConceptRef.html">ConceptRef</a>
+  &gt; RelationshipType
+  <br/>
+  <button class="accordion active field">ConceptRef.RelationshipType</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Entity name</th>
+        <td class="entity"><a href="../ConceptRef.html">ConceptRef</a></td>
+      </tr>
+      <tr>
+        <th>Field name</th>
+        <td class="field">RelationshipType</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Example Value</th>
+        <td>ParentChild</td>
+      </tr>
+      <tr>
+        <th>Domain</th>
+        <td class="domain"><a href="../../Domains/RelationshipType.html">RelationshipType</a></td>
+      </tr>
+      <tr>
+        <th>Data type</th>
+        <td>nvarchar(200)</td>
+      </tr>
+      <tr>
+        <th>Nullable</th>
+        <td>NULL</td>
+      </tr>
+      <tr>
+        <th>Field usage</th>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <th>Field Family</th>
+        <td>Object</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active enumeration">Values</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Reference</td>
+        <td>The primary entity contains a reference to the secondary entity</td>
+      </tr>
+      <tr>
+        <td>ParentChild</td>
+        <td>Multiple instances of the secondary entity are nested within the primary entity</td>
+      </tr>
+      <tr>
+        <td>NestedObject</td>
+        <td>Nesting is used to fully describe the single instance of the secondary entity which is referenced by the primary entity</td>
+      </tr>
+      <tr>
+        <td>DescriptiveReference</td>
+        <td>Nesting is used to partially describe the single instance of the secondary entity which is referenced by the primary entity.  The nested item is a &quot;reference&quot; which holds more than just an identifier - it also contains some additional information about the referenced object, with the aim of reducing the need for the secondary entity to be fetched separately.</td>
+      </tr>
+      <tr>
+        <td>Subtype</td>
+        <td>The secondary entity extends the primary entity, providing additional information that is relevant to a particular of that entity.</td>
+      </tr>
+      <tr>
+        <td>UniqueChild</td>
+        <td>A single instance of the secondary entity is nested within the primary entity</td>
+      </tr>
+      <tr>
+        <td>PassThrough</td>
+        <td>The relationship forms part of the path between two entities, but it is not exposed within hierarchical renderings: it is &quot;collapsed&quot; or &quot;passed-through&quot;) .</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

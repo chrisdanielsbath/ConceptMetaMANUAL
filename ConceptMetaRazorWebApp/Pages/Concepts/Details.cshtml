@@ -1,0 +1,342 @@
+@page "/Concepts/{conceptId:int}"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Concepts.DetailsModel
+
+@{
+    ViewData["Title"] = "Concept Details";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Concepts</a> &gt;
+    @Model.Concept.ValueString
+</p>
+<h1>Details</h1>
+<h3>@Model.Concept.ValueString</h3>
+<hr />
+<p>
+    <a asp-page="./Edit" asp-route-conceptId="@Model.Concept.ConceptId">Edit</a> |
+    <a asp-page="../Includes/Index" asp-route-conceptId="@Model.Concept.ConceptId">Includes</a> |
+    <a asp-page="../Qualifiers/Index" asp-route-conceptId="@Model.Concept.ConceptId">Qualifiers</a> |
+    <a asp-page="../ConceptPropertyFamilies/Index" asp-route-conceptId="@Model.Concept.ConceptId">PropertyFamilies</a> |
+    <a asp-page="../ConceptUniqueKeys/Index" asp-route-conceptId="@Model.Concept.ConceptId">UniqueKeys</a> |
+    <a asp-page="../ConceptSubTypes/Index" asp-route-conceptId="@Model.Concept.ConceptId">SubTypes</a> |
+    <a asp-page="../ConceptRefs/Index" asp-route-conceptId="@Model.Concept.ConceptId">Properties</a>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Concept.ConceptId" />
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptId" class="control-label"></label>
+                <input asp-for="Concept.ConceptId" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptModelValueString" class="control-label"></label>
+                <input asp-for="Concept.ConceptModelValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptName" class="control-label"></label>
+                <input asp-for="Concept.ConceptName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptDescription" class="control-label"></label>
+                <input asp-for="Concept.ConceptDescription" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptType" class="control-label"></label>
+                <input asp-for="Concept.ConceptType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.IsUpdatable" class="control-label"></label>
+                <input asp-for="Concept.IsUpdatable" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Enumeration Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.EnumerationValueString" class="control-label"></label>
+                <input asp-for="Concept.EnumerationValueString" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Data Type Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.DataTypeValueString" class="control-label"></label>
+                <input asp-for="Concept.DataTypeValueString" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Scalar Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.BasedOnConceptValueString" class="control-label"></label>
+                <input asp-for="Concept.BasedOnConceptValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ExampleValueAsString" class="control-label"></label>
+                <input asp-for="Concept.ExampleValueAsString" class="form-control" disabled="disabled" />
+            </div>
+            <h4>String Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.MinLength" class="control-label"></label>
+                <input asp-for="Concept.MinLength" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.MaxLength" class="control-label"></label>
+                <input asp-for="Concept.MaxLength" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Number Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.MinValue" class="control-label"></label>
+                <input asp-for="Concept.MinValue" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.MaxValue" class="control-label"></label>
+                <input asp-for="Concept.MaxValue" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.TotalDigits" class="control-label"></label>
+                <input asp-for="Concept.TotalDigits" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.DecimalPlaces" class="control-label"></label>
+                <input asp-for="Concept.DecimalPlaces" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Date Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.DatePrecision" class="control-label"></label>
+                <input asp-for="Concept.DatePrecision" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Object Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.DbSchemaName" class="control-label"></label>
+                <input asp-for="Concept.DbSchemaName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.DbTableName" class="control-label"></label>
+                <input asp-for="Concept.DbTableName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.IsCollectionItem" class="control-label"></label>
+                <input asp-for="Concept.IsCollectionItem" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ToStringExpression" class="control-label"></label>
+                <input asp-for="Concept.ToStringExpression" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.IsCreatable" class="control-label"></label>
+                <input asp-for="Concept.IsCreatable" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.IsDeletable" class="control-label"></label>
+                <input asp-for="Concept.IsDeletable" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.SurrogateKeyFieldName" class="control-label"></label>
+                <input asp-for="Concept.SurrogateKeyFieldName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.PrimaryKeyName" class="control-label"></label>
+                <input asp-for="Concept.PrimaryKeyName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.AlternateKeyName" class="control-label"></label>
+                <input asp-for="Concept.AlternateKeyName" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Unique Key Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.ReferencedConceptValueString" class="control-label"></label>
+                <input asp-for="Concept.ReferencedConceptValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ReferencedUniqueKeyValueString" class="control-label"></label>
+                <input asp-for="Concept.ReferencedUniqueKeyValueString" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Sub Type Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.SpecialisedConceptValueString" class="control-label"></label>
+                <input asp-for="Concept.SpecialisedConceptValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.SpecialisedSubTypeValueString" class="control-label"></label>
+                <input asp-for="Concept.SpecialisedSubTypeValueString" class="form-control" disabled="disabled" />
+            </div>
+        </form>
+    </div>
+    <!--dl class="row">
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.ConceptName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.ConceptName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.ConceptDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.ConceptDescription)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.ConceptType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.ConceptType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.ExampleValueAsString)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.ExampleValueAsString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.MinLength)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.MinLength)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.MaxLength)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.MaxLength)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.MinValue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.MinValue)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.MaxValue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.MaxValue)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.TotalDigits)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.TotalDigits)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.DecimalPlaces)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.DecimalPlaces)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.DatePrecision)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.DatePrecision)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.DbSchemaName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.DbSchemaName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.DbTableName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.DbTableName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.IsCollectionItem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.IsCollectionItem)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.ToStringExpression)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.ToStringExpression)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.IsCreatable)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.IsCreatable)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.IsUpdatable)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.IsUpdatable)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.IsDeletable)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.IsDeletable)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.SurrogateKeyFieldName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.SurrogateKeyFieldName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.PrimaryKeyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.PrimaryKeyName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.AlternateKeyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Concept.AlternateKeyName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.ConceptModelValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Concept.ConceptModelValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.DataTypeValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Concept.DataTypeValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.EnumerationValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Concept.EnumerationValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.BasedOnConceptValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Concept.BasedOnConceptValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.ReferencedConceptValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Concept.ReferencedConceptValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.ReferencedUniqueKeyValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Concept.ReferencedUniqueKeyValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.SpecialisedConceptValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Concept.SpecialisedConceptValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Concept.SpecialisedSubTypeValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Concept.SpecialisedSubTypeValueString)
+        </dd>
+    </dl-->
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-conceptId="@Model.Concept.ConceptId">Edit</a> |
+    <a asp-page="./Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+</div>

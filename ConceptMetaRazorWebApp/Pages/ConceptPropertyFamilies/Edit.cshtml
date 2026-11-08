@@ -1,0 +1,57 @@
+@page "/ConceptPropertyFamilies/{conceptPropertyFamilyId:int}/Edit"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptPropertyFamilies.EditModel
+
+@{
+    ViewData["Title"] = "Edit ConceptPropertyFamily";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">ConceptPropertyFamilies</a> &gt;
+    @Model.ConceptPropertyFamily.ValueString
+</p>
+<h1>Edit</h1>
+<h3>@Model.ConceptPropertyFamily.ValueString</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ConceptPropertyFamily.ConceptPropertyFamilyId" />
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptPropertyFamily.ConceptPropertyFamilyId" class="control-label"></label>
+                <input asp-for="ConceptPropertyFamily.ConceptPropertyFamilyId" class="form-control" disabled="disabled" />
+                <span asp-validation-for="ConceptPropertyFamily.ConceptPropertyFamilyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptPropertyFamily.ConceptKeyString" class="control-label"></label>
+                <select asp-for="ConceptPropertyFamily.ConceptKeyString" class="form-control" asp-items="Model.ConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptPropertyFamily.ConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptPropertyFamily.PropertyFamilyName" class="control-label"></label>
+                <input asp-for="ConceptPropertyFamily.PropertyFamilyName" class="form-control" />
+                <span asp-validation-for="ConceptPropertyFamily.PropertyFamilyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptPropertyFamily.SeqNo" class="control-label"></label>
+                <input asp-for="ConceptPropertyFamily.SeqNo" class="form-control" />
+                <span asp-validation-for="ConceptPropertyFamily.SeqNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="Details" asp-route-conceptPropertyFamilyId="@Model.ConceptPropertyFamily.ConceptPropertyFamilyId">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

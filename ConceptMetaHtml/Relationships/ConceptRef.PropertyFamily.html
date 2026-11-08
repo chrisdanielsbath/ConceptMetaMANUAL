@@ -1,0 +1,199 @@
+<html>
+<head>
+  <title>ConceptMeta - ConceptRef.PropertyFamily</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; ConceptRef.PropertyFamily
+  <button class="accordion active relationship">ConceptRef.PropertyFamily</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Relationship Name</th>
+        <td class="relationship">ConceptRef.PropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Db Foreign Key Name</th>
+        <td>FK_ConceptRef_ConceptPropertyFamilyId</td>
+      </tr>
+      <tr>
+        <th>Primary Entity</th>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef</a></td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Name</th>
+        <td class="entityproperty">ConceptRef.PropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Relationship Type</th>
+        <td>Reference</td>
+      </tr>
+      <tr>
+        <th>Simple Relationship Type</th>
+        <td>ReferenceRelationship</td>
+      </tr>
+      <tr>
+        <th>Conceptual Relationship Type</th>
+        <td>Descriptive</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active relationship">Class Model Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Primary Entity</th>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef</a></td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Name</th>
+        <td class="entityproperty">ConceptRef.PropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Description</th>
+        <td>The associated ConceptPropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Business Rule</th>
+        <td class="rule">A ConceptRef references up to one ConceptPropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity</th>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+      </tr>
+      <tr>
+        <th>Primary Entity Property Name</th>
+        <td class="entityproperty">ConceptPropertyFamily.Properties</td>
+      </tr>
+      <tr>
+        <th>Primary Entity Property Description</th>
+        <td>The set of ConceptRefs where the ConceptRef references this ConceptPropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Primary Entity Business Rule</th>
+        <td class="rule">A ConceptPropertyFamily is referenced by zero, one or many ConceptRefs</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active relationship">Relational Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Db Foreign Key Name</th>
+        <td>FK_ConceptRef_ConceptPropertyFamilyId</td>
+      </tr>
+      <tr>
+        <th>Is Identifying Relationship?</th>
+        <td>False</td>
+      </tr>
+      <tr>
+        <th>Is Mandatory Relationship?</th>
+        <td>False</td>
+      </tr>
+      <tr>
+        <th>Conceptual Relationship Type</th>
+        <td>Descriptive</td>
+      </tr>
+      <tr>
+        <th>Is Propagating Relationship?</th>
+        <td>False</td>
+      </tr>
+      <tr>
+        <th>Relationship Fields</th>
+        <td>ConceptRef(ConceptPropertyFamilyId) references ConceptPropertyFamily(ConceptPropertyFamilyId)</td>
+      </tr>
+      <tr>
+        <th>Logical Relationship Fields</th>
+        <td>ConceptRef(ConceptModelId, ConceptId, ConceptPropertyFamilyId) references ConceptPropertyFamily(ConceptModelId, ConceptId, ConceptPropertyFamilyId)</td>
+      </tr>
+      <tr>
+        <th>Logical Business Relationship Fields</th>
+        <td>ConceptRef(ModelName, ConceptName, PropertyFamilyName) references ConceptPropertyFamily(ModelName, ConceptName, PropertyFamilyName)</td>
+      </tr>
+      <tr>
+        <th>Business Relationship Fields</th>
+        <td>ConceptRef(ModelName, ConceptName, PropertyFamilyName) references ConceptPropertyFamily(ModelName, ConceptName, PropertyFamilyName)</td>
+      </tr>
+      <tr class="entity">
+        <th>Child Entity</th>
+        <td><a href="../ConceptRef/ConceptRef.html">ConceptRef</a></td>
+      </tr>
+      <tr>
+        <th>Parent Property Name</th>
+        <td class="entityproperty">ConceptRef.PropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Parent Property Description</th>
+        <td>The associated ConceptPropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Parent Business Rule</th>
+        <td class="rule">A ConceptRef references up to one ConceptPropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Parent Index Name</th>
+        <td>PK_ConceptPropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Parent Verb Phrase</th>
+        <td>references</td>
+      </tr>
+      <tr>
+        <th>Parent Property Sequence</th>
+        <td>15</td>
+      </tr>
+      <tr>
+        <th>Parent Property Selector Type</th>
+        <td>Dropdown</td>
+      </tr>
+      <tr>
+        <th>Child Fields</th>
+        <td>ConceptPropertyFamilyId</td>
+      </tr>
+      <tr>
+        <th>Parent Property Name Override</th>
+        <td>PropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Parent Entity</th>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+      </tr>
+      <tr>
+        <th>Child Property Name</th>
+        <td class="entityproperty">ConceptPropertyFamily.Properties</td>
+      </tr>
+      <tr>
+        <th>Child Property Description</th>
+        <td>The set of ConceptRefs where the ConceptRef references this ConceptPropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Child Business Rule</th>
+        <td class="rule">A ConceptPropertyFamily is referenced by zero, one or many ConceptRefs</td>
+      </tr>
+      <tr>
+        <th>Child Verb Phrase</th>
+        <td>is referenced by</td>
+      </tr>
+      <tr>
+        <th>Child Property Sequence</th>
+        <td>8</td>
+      </tr>
+      <tr>
+        <th>Parent Fields</th>
+        <td>ConceptPropertyFamilyId</td>
+      </tr>
+      <tr>
+        <th>Child Collection Name Override</th>
+        <td>Properties</td>
+      </tr>
+      <tr>
+        <th>Child Property Is Collection</th>
+        <td>True</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

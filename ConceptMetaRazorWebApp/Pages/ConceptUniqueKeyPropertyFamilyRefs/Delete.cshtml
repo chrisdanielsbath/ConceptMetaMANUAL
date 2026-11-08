@@ -1,0 +1,50 @@
+@page "/ConceptUniqueKeyPropertyFamilyRefs/{conceptUniqueKeyPropertyFamilyRefId:int}/Delete"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptUniqueKeyPropertyFamilyRefs.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete ConceptUniqueKeyPropertyFamilyRef";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="../ConceptUniqueKeys/Details" asp-route-conceptUniqueKeyId="@Model.Breadcrumb_ConceptUniqueKey_ConceptUniqueKeyId">@Model.Breadcrumb_ConceptUniqueKey_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptUniqueKeyId="@Model.ConceptUniqueKeyId">ConceptUniqueKeyPropertyFamilyRefs</a> &gt;
+    @Model.ConceptUniqueKeyPropertyFamilyRef.ValueString
+</p>
+<h1>Delete</h1>
+
+<h2>Are you sure you want to delete this?</h2>
+<div>
+    <h3>@Model.ConceptUniqueKeyPropertyFamilyRef.ValueString</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <h4>Common Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptUniqueKeyPropertyFamilyRef.ConceptUniqueKeyValueString)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.ConceptUniqueKeyPropertyFamilyRef.ConceptUniqueKeyValueString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptUniqueKeyPropertyFamilyRef.ConceptPropertyFamilyValueString)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.ConceptUniqueKeyPropertyFamilyRef.ConceptPropertyFamilyValueString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptUniqueKeyPropertyFamilyRef.SeqNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptUniqueKeyPropertyFamilyRef.SeqNo)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="ConceptUniqueKeyPropertyFamilyRef.ConceptUniqueKeyPropertyFamilyRefId" />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-page="./Index" asp-route-conceptUniqueKeyId="@Model.ConceptUniqueKeyId">Back to List</a>
+        </div>
+    </form>
+</div>

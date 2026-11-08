@@ -1,0 +1,297 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptRefs.CreateModel
+
+@{
+    ViewData["Title"] = "Create ConceptRef";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">ConceptRefs</a> &gt;
+    New ConceptRef
+</p>
+<h1>Create</h1>
+
+<h3>New ConceptRef</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ConceptKeyString" class="control-label"></label>
+                <select asp-for="ConceptRef.ConceptKeyString" class="form-control" asp-items="Model.ConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.ConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertyName" class="control-label"></label>
+                <input asp-for="ConceptRef.PropertyName" class="form-control" />
+                <span asp-validation-for="ConceptRef.PropertyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertyDescription" class="control-label"></label>
+                <input asp-for="ConceptRef.PropertyDescription" class="form-control" />
+                <span asp-validation-for="ConceptRef.PropertyDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ReferencedConceptValueString" class="control-label"></label>
+                <input asp-for="ConceptRef.ReferencedConceptKeyString" id="hdnReferencedConceptVal" type="hidden" class="form-control" />
+                <input id="hdnReferencedConceptText" type="hidden" class="form-control" />
+                <input id="txtReferencedConceptSearch" asp-for="ConceptRef.ReferencedConceptValueString" type="text" class="form-control" />
+                <select id="selReferencedConcept" class="form-control" multiple="multiple">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.ReferencedConceptValueString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ConceptRefType" class="control-label"></label>
+                <select asp-for="ConceptRef.ConceptRefType" class="form-control" asp-items="Model.ConceptRefTypeSL" >
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.ConceptRefType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertyFamilyKeyString" class="control-label"></label>
+                <select asp-for="ConceptRef.PropertyFamilyKeyString" class="form-control" asp-items="Model.PropertyFamilySL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.PropertyFamilyKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsPropagating" class="control-label"></label>
+                <select asp-for="ConceptRef.IsPropagating" class="form-control" asp-items="Model.IsPropagatingSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsPropagating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsUpdatable" class="control-label"></label>
+                <select asp-for="ConceptRef.IsUpdatable" class="form-control" asp-items="Model.IsUpdatableSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsUpdatable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsNullable" class="control-label"></label>
+                <select asp-for="ConceptRef.IsNullable" class="form-control" asp-items="Model.IsNullableSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsNullable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertySeq" class="control-label"></label>
+                <input asp-for="ConceptRef.PropertySeq" class="form-control" />
+                <span asp-validation-for="ConceptRef.PropertySeq" class="text-danger"></span>
+            </div>
+            <h4>Scalar Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptRef.DbColumnName" class="control-label"></label>
+                <input asp-for="ConceptRef.DbColumnName" class="form-control" />
+                <span asp-validation-for="ConceptRef.DbColumnName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsIdentity" class="control-label"></label>
+                <select asp-for="ConceptRef.IsIdentity" class="form-control" asp-items="Model.IsIdentitySL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsIdentity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsCoreField" class="control-label"></label>
+                <select asp-for="ConceptRef.IsCoreField" class="form-control" asp-items="Model.IsCoreFieldSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsCoreField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.FieldFamilyName" class="control-label"></label>
+                <input asp-for="ConceptRef.FieldFamilyName" class="form-control" />
+                <span asp-validation-for="ConceptRef.FieldFamilyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.FieldLabel" class="control-label"></label>
+                <input asp-for="ConceptRef.FieldLabel" class="form-control" />
+                <span asp-validation-for="ConceptRef.FieldLabel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsScalarFieldToSerialiseInPersistenceModel" class="control-label"></label>
+                <select asp-for="ConceptRef.IsScalarFieldToSerialiseInPersistenceModel" class="form-control" asp-items="Model.IsScalarFieldToSerialiseInPersistenceModelSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsScalarFieldToSerialiseInPersistenceModel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsScalarFieldToSerialiseInDomainModel" class="control-label"></label>
+                <select asp-for="ConceptRef.IsScalarFieldToSerialiseInDomainModel" class="form-control" asp-items="Model.IsScalarFieldToSerialiseInDomainModelSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsScalarFieldToSerialiseInDomainModel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsSeqNoField" class="control-label"></label>
+                <select asp-for="ConceptRef.IsSeqNoField" class="form-control" asp-items="Model.IsSeqNoFieldSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsSeqNoField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsDiscriminatorField" class="control-label"></label>
+                <select asp-for="ConceptRef.IsDiscriminatorField" class="form-control" asp-items="Model.IsDiscriminatorFieldSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsDiscriminatorField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsXmlAttribute" class="control-label"></label>
+                <select asp-for="ConceptRef.IsXmlAttribute" class="form-control" asp-items="Model.IsXmlAttributeSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsXmlAttribute" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsReferenceToChildEntity" class="control-label"></label>
+                <select asp-for="ConceptRef.IsReferenceToChildEntity" class="form-control" asp-items="Model.IsReferenceToChildEntitySL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsReferenceToChildEntity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ExampleValueAsString" class="control-label"></label>
+                <input asp-for="ConceptRef.ExampleValueAsString" class="form-control" />
+                <span asp-validation-for="ConceptRef.ExampleValueAsString" class="text-danger"></span>
+            </div>
+            <h4>Object Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ParentQualifier" class="control-label"></label>
+                <input asp-for="ConceptRef.ParentQualifier" class="form-control" />
+                <span asp-validation-for="ConceptRef.ParentQualifier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildQualifier" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildQualifier" class="form-control" />
+                <span asp-validation-for="ConceptRef.ChildQualifier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.MinChildOccurrences" class="control-label"></label>
+                <input asp-for="ConceptRef.MinChildOccurrences" class="form-control" />
+                <span asp-validation-for="ConceptRef.MinChildOccurrences" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.MaxChildOccurrences" class="control-label"></label>
+                <input asp-for="ConceptRef.MaxChildOccurrences" class="form-control" />
+                <span asp-validation-for="ConceptRef.MaxChildOccurrences" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildVerbPhrase" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildVerbPhrase" class="form-control" />
+                <span asp-validation-for="ConceptRef.ChildVerbPhrase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ParentVerbPhrase" class="control-label"></label>
+                <input asp-for="ConceptRef.ParentVerbPhrase" class="form-control" />
+                <span asp-validation-for="ConceptRef.ParentVerbPhrase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildPropertySeq" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildPropertySeq" class="form-control" />
+                <span asp-validation-for="ConceptRef.ChildPropertySeq" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildCollectionName" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildCollectionName" class="form-control" />
+                <span asp-validation-for="ConceptRef.ChildCollectionName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildItemName" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildItemName" class="form-control" />
+                <span asp-validation-for="ConceptRef.ChildItemName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildPropertyDescription" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildPropertyDescription" class="form-control" />
+                <span asp-validation-for="ConceptRef.ChildPropertyDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.SelectorType" class="control-label"></label>
+                <select asp-for="ConceptRef.SelectorType" class="form-control" asp-items="Model.SelectorTypeSL" >
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.SelectorType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.RelationshipType" class="control-label"></label>
+                <select asp-for="ConceptRef.RelationshipType" class="form-control" asp-items="Model.RelationshipTypeSL" >
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.RelationshipType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.OutputExplicitXmlCollection" class="control-label"></label>
+                <select asp-for="ConceptRef.OutputExplicitXmlCollection" class="form-control" asp-items="Model.OutputExplicitXmlCollectionSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.OutputExplicitXmlCollection" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsSerialisedUsingScalarFieldInDomainModel" class="control-label"></label>
+                <select asp-for="ConceptRef.IsSerialisedUsingScalarFieldInDomainModel" class="form-control" asp-items="Model.IsSerialisedUsingScalarFieldInDomainModelSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsSerialisedUsingScalarFieldInDomainModel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ScalarFieldNameInDomainModel" class="control-label"></label>
+                <input asp-for="ConceptRef.ScalarFieldNameInDomainModel" class="form-control" />
+                <span asp-validation-for="ConceptRef.ScalarFieldNameInDomainModel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.RelationshipName" class="control-label"></label>
+                <input asp-for="ConceptRef.RelationshipName" class="form-control" />
+                <span asp-validation-for="ConceptRef.RelationshipName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.DbForeignKeyName" class="control-label"></label>
+                <input asp-for="ConceptRef.DbForeignKeyName" class="form-control" />
+                <span asp-validation-for="ConceptRef.DbForeignKeyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ParentIndexName" class="control-label"></label>
+                <input asp-for="ConceptRef.ParentIndexName" class="form-control" />
+                <span asp-validation-for="ConceptRef.ParentIndexName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ForeignKeySurrogateKeyFieldName" class="control-label"></label>
+                <input asp-for="ConceptRef.ForeignKeySurrogateKeyFieldName" class="form-control" />
+                <span asp-validation-for="ConceptRef.ForeignKeySurrogateKeyFieldName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildPropertyName" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildPropertyName" class="form-control" />
+                <span asp-validation-for="ConceptRef.ChildPropertyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>
+@section Scripts {
+    <script src="~/js/SearchableSelector.js"></script>
+    <script>
+        function getReferencedConceptQueryString() {
+            return "?conceptModelId=@Model.ConceptModelId";
+        }
+
+        $(document).ready(function () {
+            setupSearch("hdnReferencedConceptVal", "hdnReferencedConceptText", "txtReferencedConceptSearch", "selReferencedConcept", "Concept", getReferencedConceptQueryString);
+        });
+    </script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

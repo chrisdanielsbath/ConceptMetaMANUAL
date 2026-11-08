@@ -1,0 +1,5818 @@
+{
+  "ModelName": "ConceptMeta",
+  "ModelPurpose": "Blueprint",
+  "DefaultStringLength": 200,
+  "DataTypes": [
+    {
+      "DataTypeName": "binary",
+      "SqlServerDataType": "binary",
+      "OracleDataType": "raw",
+      "MySqlDataType": "binary",
+      "MongoDbDataType": "binData",
+      "DotNetDataType": "byte[]",
+      "JavaDataType": "byte[]",
+      "XmlDataType": "xs:base64Binary",
+      "ExampleValueAsString": "a1b2c3d4",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "byte",
+      "ErsDataType": "BINARY",
+      "BasicDataType": "Binary",
+      "MaxLength": 4000,
+      "HasLength": true
+    },
+    {
+      "DataTypeName": "bit",
+      "SqlServerDataType": "bit",
+      "OracleDataType": "number",
+      "MySqlDataType": "bool",
+      "MongoDbDataType": "number",
+      "DotNetDataType": "bool",
+      "JavaDataType": "Boolean",
+      "XmlDataType": "xs:boolean",
+      "ExampleValueAsString": "1",
+      "JsonDataType": "Boolean",
+      "OpenApiDataType": "Boolean",
+      "ErsDataType": "BIT",
+      "BasicDataType": "Boolean"
+    },
+    {
+      "DataTypeName": "blob",
+      "SqlServerDataType": "varbinary",
+      "OracleDataType": "blob",
+      "MySqlDataType": "longblob",
+      "MongoDbDataType": "binData",
+      "DotNetDataType": "byte[]",
+      "JavaDataType": "byte[]",
+      "XmlDataType": "xs:base64Binary",
+      "ExampleValueAsString": "a1b2c3d4",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "byte",
+      "ErsDataType": "VARBINARY_slash_BLOB",
+      "BasicDataType": "Binary",
+      "MaxLength": 4000,
+      "HasLength": true
+    },
+    {
+      "DataTypeName": "byte",
+      "SqlServerDataType": "tinyint",
+      "OracleDataType": "number",
+      "MySqlDataType": "tinyint",
+      "MongoDbDataType": "int",
+      "DotNetDataType": "byte",
+      "JavaDataType": "Byte",
+      "XmlDataType": "xs:byte",
+      "ExampleValueAsString": "255",
+      "JsonDataType": "Number",
+      "OpenApiDataType": "Integer",
+      "OpenApiFormat": "int32",
+      "ErsDataType": "TINYINT",
+      "BasicDataType": "Integer",
+      "HasIdentity": true
+    },
+    {
+      "DataTypeName": "datetime",
+      "SqlServerDataType": "datetime2",
+      "OracleDataType": "timestamp",
+      "MySqlDataType": "datetime",
+      "MongoDbDataType": "date",
+      "DotNetDataType": "DateTime",
+      "JavaDataType": "java.sql.Date",
+      "XmlDataType": "xs:dateTime",
+      "ExampleValueAsString": "1900-01-01T00:00:00Z",
+      "JsonDataType": "String",
+      "JsonFormat": "date-time",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "date-time",
+      "ErsDataType": "DATETIMN",
+      "BasicDataType": "Date",
+      "DatePrecision": 7,
+      "HasDatePrecision": true
+    },
+    {
+      "DataTypeName": "datetimeoffset",
+      "SqlServerDataType": "datetimeoffset",
+      "OracleDataType": "timestamp with time zone",
+      "MySqlDataType": "datetime",
+      "MongoDbDataType": "date",
+      "DotNetDataType": "DateTimeOffset",
+      "JavaDataType": "java.sql.Timestamp",
+      "XmlDataType": "xs:dateTime",
+      "ExampleValueAsString": "1900-01-01T00:00:00Z",
+      "JsonDataType": "String",
+      "JsonFormat": "date-time",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "date-time",
+      "ErsDataType": "DATETIMEOFFSET",
+      "BasicDataType": "Date",
+      "DatePrecision": 7,
+      "HasDatePrecision": true
+    },
+    {
+      "DataTypeName": "decimal",
+      "SqlServerDataType": "decimal",
+      "OracleDataType": "number",
+      "MySqlDataType": "decimal",
+      "MongoDbDataType": "decimal",
+      "DotNetDataType": "decimal",
+      "JavaDataType": "Double",
+      "XmlDataType": "xs:decimal",
+      "ExampleValueAsString": "1.234",
+      "JsonDataType": "Number",
+      "OpenApiDataType": "Number",
+      "OpenApiFormat": "double",
+      "ErsDataType": "DECIMAL",
+      "BasicDataType": "Decimal",
+      "TotalDigits": 18,
+      "DecimalPlaces": 3,
+      "HasTotalDigits": true,
+      "HasDecimalPlaces": true,
+      "HasIdentity": true
+    },
+    {
+      "DataTypeName": "double",
+      "SqlServerDataType": "float",
+      "OracleDataType": "double",
+      "MySqlDataType": "double",
+      "MongoDbDataType": "double",
+      "DotNetDataType": "double",
+      "JavaDataType": "Double",
+      "XmlDataType": "xs:double",
+      "ExampleValueAsString": "1.234",
+      "JsonDataType": "Number",
+      "OpenApiDataType": "Number",
+      "OpenApiFormat": "double",
+      "ErsDataType": "DOUBLE_PRECISION",
+      "BasicDataType": "Decimal"
+    },
+    {
+      "DataTypeName": "float",
+      "SqlServerDataType": "real",
+      "OracleDataType": "float",
+      "MySqlDataType": "float",
+      "MongoDbDataType": "double",
+      "DotNetDataType": "float",
+      "JavaDataType": "Float",
+      "XmlDataType": "xs:float",
+      "ExampleValueAsString": "1.234",
+      "JsonDataType": "Number",
+      "OpenApiDataType": "Number",
+      "OpenApiFormat": "float",
+      "ErsDataType": "REAL_slash_SMALLFLOAT",
+      "BasicDataType": "Decimal"
+    },
+    {
+      "DataTypeName": "int16",
+      "SqlServerDataType": "smallint",
+      "OracleDataType": "number",
+      "MySqlDataType": "smallint",
+      "MongoDbDataType": "int",
+      "DotNetDataType": "short",
+      "JavaDataType": "Short",
+      "XmlDataType": "xs:short",
+      "ExampleValueAsString": "32767",
+      "JsonDataType": "Number",
+      "OpenApiDataType": "Integer",
+      "OpenApiFormat": "int32",
+      "ErsDataType": "SMALLINT",
+      "BasicDataType": "Integer",
+      "HasIdentity": true
+    },
+    {
+      "DataTypeName": "int32",
+      "SqlServerDataType": "int",
+      "OracleDataType": "number",
+      "MySqlDataType": "int",
+      "MongoDbDataType": "long",
+      "DotNetDataType": "int",
+      "JavaDataType": "Integer",
+      "XmlDataType": "xs:int",
+      "ExampleValueAsString": "2147483647",
+      "JsonDataType": "Number",
+      "OpenApiDataType": "Integer",
+      "OpenApiFormat": "int32",
+      "ErsDataType": "INTEGER",
+      "BasicDataType": "Integer",
+      "HasIdentity": true
+    },
+    {
+      "DataTypeName": "int64",
+      "SqlServerDataType": "bigint",
+      "OracleDataType": "number",
+      "MySqlDataType": "bigint",
+      "MongoDbDataType": "decimal",
+      "DotNetDataType": "long",
+      "JavaDataType": "Long",
+      "XmlDataType": "xs:integer",
+      "ExampleValueAsString": "9223372036854775807",
+      "JsonDataType": "Number",
+      "OpenApiDataType": "Integer",
+      "OpenApiFormat": "int64",
+      "ErsDataType": "BIGINT",
+      "BasicDataType": "Integer",
+      "HasIdentity": true
+    },
+    {
+      "DataTypeName": "numeric",
+      "SqlServerDataType": "numeric",
+      "OracleDataType": "number",
+      "MySqlDataType": "decimal",
+      "MongoDbDataType": "decimal",
+      "DotNetDataType": "decimal",
+      "JavaDataType": "Double",
+      "XmlDataType": "xs:decimal",
+      "ExampleValueAsString": "1.234",
+      "JsonDataType": "Number",
+      "OpenApiDataType": "Number",
+      "OpenApiFormat": "double",
+      "ErsDataType": "NUMERIC",
+      "BasicDataType": "Decimal",
+      "TotalDigits": 18,
+      "DecimalPlaces": 3,
+      "HasTotalDigits": true,
+      "HasDecimalPlaces": true,
+      "HasIdentity": true
+    },
+    {
+      "DataTypeName": "sqlchar",
+      "SqlServerDataType": "char",
+      "OracleDataType": "char",
+      "MySqlDataType": "char",
+      "MongoDbDataType": "string",
+      "DotNetDataType": "string",
+      "JavaDataType": "String",
+      "XmlDataType": "xs:string",
+      "ExampleValueAsString": "string",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "ErsDataType": "CHAR",
+      "BasicDataType": "String",
+      "HasLength": true
+    },
+    {
+      "DataTypeName": "sqldate",
+      "SqlServerDataType": "date",
+      "OracleDataType": "date",
+      "MySqlDataType": "date",
+      "MongoDbDataType": "date",
+      "DotNetDataType": "DateTime",
+      "JavaDataType": "java.sql.Date",
+      "XmlDataType": "xs:date",
+      "ExampleValueAsString": "1900-01-01",
+      "JsonDataType": "String",
+      "JsonFormat": "date",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "date",
+      "ErsDataType": "DATE",
+      "BasicDataType": "Date"
+    },
+    {
+      "DataTypeName": "sqldatetime",
+      "SqlServerDataType": "datetime",
+      "OracleDataType": "date",
+      "MySqlDataType": "datetime",
+      "MongoDbDataType": "date",
+      "DotNetDataType": "DateTime",
+      "JavaDataType": "java.sql.Date",
+      "XmlDataType": "xs:dateTime",
+      "ExampleValueAsString": "1900-01-01T00:00:00Z",
+      "JsonDataType": "String",
+      "JsonFormat": "date-time",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "date-time",
+      "ErsDataType": "DATETIME",
+      "BasicDataType": "Date"
+    },
+    {
+      "DataTypeName": "sqlmoney",
+      "SqlServerDataType": "money",
+      "OracleDataType": "number",
+      "MySqlDataType": "decimal",
+      "MongoDbDataType": "decimal",
+      "DotNetDataType": "decimal",
+      "JavaDataType": "Double",
+      "XmlDataType": "xs:decimal",
+      "ExampleValueAsString": "1.23",
+      "JsonDataType": "Number",
+      "OpenApiDataType": "Number",
+      "OpenApiFormat": "double",
+      "ErsDataType": "MONEY",
+      "BasicDataType": "Decimal"
+    },
+    {
+      "DataTypeName": "sqlnchar",
+      "SqlServerDataType": "nchar",
+      "OracleDataType": "nchar",
+      "MySqlDataType": "char",
+      "MongoDbDataType": "string",
+      "DotNetDataType": "string",
+      "JavaDataType": "String",
+      "XmlDataType": "xs:string",
+      "ExampleValueAsString": "string",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "ErsDataType": "NCHAR",
+      "BasicDataType": "String",
+      "HasLength": true
+    },
+    {
+      "DataTypeName": "sqlntext",
+      "SqlServerDataType": "ntext",
+      "OracleDataType": "nclob",
+      "MySqlDataType": "text",
+      "MongoDbDataType": "string",
+      "DotNetDataType": "string",
+      "JavaDataType": "String",
+      "XmlDataType": "xs:string",
+      "ExampleValueAsString": "string",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "ErsDataType": "NTEXT_slash_LONG_NVARCHAR",
+      "BasicDataType": "String"
+    },
+    {
+      "DataTypeName": "sqlrowversion",
+      "SqlServerDataType": "rowversion",
+      "OracleDataType": "ora-ROWSCN",
+      "MySqlDataType": "varbinary",
+      "MongoDbDataType": "binData",
+      "DotNetDataType": "byte[]",
+      "JavaDataType": "byte[]",
+      "XmlDataType": "xs:base64Binary",
+      "ExampleValueAsString": "a1b2c3d4",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "byte",
+      "ErsDataType": "ROWVERSION",
+      "BasicDataType": "Binary"
+    },
+    {
+      "DataTypeName": "sqlsmalldatetime",
+      "SqlServerDataType": "smalldatetime",
+      "OracleDataType": "date",
+      "MySqlDataType": "datetime",
+      "MongoDbDataType": "date",
+      "DotNetDataType": "DateTime",
+      "JavaDataType": "java.sql.Date",
+      "XmlDataType": "xs:dateTime",
+      "ExampleValueAsString": "1900-01-01T00:00:00Z",
+      "JsonDataType": "String",
+      "JsonFormat": "date-time",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "date-time",
+      "ErsDataType": "SMALLDATETIME",
+      "BasicDataType": "Date"
+    },
+    {
+      "DataTypeName": "sqlsmallmoney",
+      "SqlServerDataType": "smallmoney",
+      "OracleDataType": "number",
+      "MySqlDataType": "decimal",
+      "MongoDbDataType": "decimal",
+      "DotNetDataType": "decimal",
+      "JavaDataType": "Double",
+      "XmlDataType": "xs:decimal",
+      "ExampleValueAsString": "1.23",
+      "JsonDataType": "Number",
+      "OpenApiDataType": "Number",
+      "OpenApiFormat": "double",
+      "ErsDataType": "SMALLMONEY",
+      "BasicDataType": "Decimal"
+    },
+    {
+      "DataTypeName": "sqltext",
+      "SqlServerDataType": "text",
+      "OracleDataType": "clob",
+      "MySqlDataType": "text",
+      "MongoDbDataType": "string",
+      "DotNetDataType": "string",
+      "JavaDataType": "String",
+      "XmlDataType": "xs:string",
+      "ExampleValueAsString": "string",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "ErsDataType": "TEXT",
+      "BasicDataType": "String"
+    },
+    {
+      "DataTypeName": "sqltime",
+      "SqlServerDataType": "time",
+      "OracleDataType": "date",
+      "MySqlDataType": "time",
+      "MongoDbDataType": "string",
+      "DotNetDataType": "TimeSpan",
+      "JavaDataType": "java.sql.Time",
+      "XmlDataType": "xs:time",
+      "ExampleValueAsString": "00:00:00",
+      "JsonDataType": "String",
+      "JsonFormat": "time",
+      "OpenApiDataType": "String",
+      "ErsDataType": "TIME_slash_DATETIME",
+      "BasicDataType": "Date",
+      "DatePrecision": 7,
+      "HasDatePrecision": true
+    },
+    {
+      "DataTypeName": "sqluniqueidentifier",
+      "SqlServerDataType": "uniqueidentifier",
+      "OracleDataType": "raw",
+      "MySqlDataType": "varbinary",
+      "MongoDbDataType": "binData",
+      "DotNetDataType": "System.Guid",
+      "JavaDataType": "byte[]",
+      "XmlDataType": "xs:base64Binary",
+      "ExampleValueAsString": "a1b2c3d4",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "byte",
+      "ErsDataType": "UNIQUEID",
+      "BasicDataType": "Binary"
+    },
+    {
+      "DataTypeName": "sqlvariant",
+      "SqlServerDataType": "sql-variant",
+      "OracleDataType": "long raw",
+      "MySqlDataType": "varbinary",
+      "MongoDbDataType": "binData",
+      "DotNetDataType": "object",
+      "JavaDataType": "byte[]",
+      "XmlDataType": "xs:base64Binary",
+      "ExampleValueAsString": "anything",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "byte",
+      "ErsDataType": "VARIANT",
+      "BasicDataType": "Binary"
+    },
+    {
+      "DataTypeName": "string",
+      "SqlServerDataType": "nvarchar",
+      "OracleDataType": "nvarchar2",
+      "MySqlDataType": "varchar",
+      "MongoDbDataType": "string",
+      "DotNetDataType": "string",
+      "JavaDataType": "String",
+      "XmlDataType": "xs:string",
+      "ExampleValueAsString": "string",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "ErsDataType": "NVARCHAR",
+      "BasicDataType": "String",
+      "HasLength": true
+    },
+    {
+      "DataTypeName": "varbinary",
+      "SqlServerDataType": "varbinary",
+      "OracleDataType": "long raw",
+      "MySqlDataType": "varbinary",
+      "MongoDbDataType": "binData",
+      "DotNetDataType": "byte[]",
+      "JavaDataType": "byte[]",
+      "XmlDataType": "xs:base64Binary",
+      "ExampleValueAsString": "a1b2c3d4",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "OpenApiFormat": "byte",
+      "ErsDataType": "VARBINARY_slash_BLOB",
+      "BasicDataType": "Binary",
+      "MaxLength": 4000,
+      "HasLength": true
+    },
+    {
+      "DataTypeName": "varchar",
+      "SqlServerDataType": "varchar",
+      "OracleDataType": "varchar2",
+      "MySqlDataType": "varchar",
+      "MongoDbDataType": "string",
+      "DotNetDataType": "string",
+      "JavaDataType": "String",
+      "XmlDataType": "xs:string",
+      "ExampleValueAsString": "string",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "ErsDataType": "VARCHAR",
+      "BasicDataType": "String",
+      "HasLength": true
+    },
+    {
+      "DataTypeName": "xml",
+      "SqlServerDataType": "xml",
+      "OracleDataType": "xmltype",
+      "MySqlDataType": "text",
+      "MongoDbDataType": "string",
+      "DotNetDataType": "string",
+      "JavaDataType": "java.sql.SQLXML",
+      "XmlDataType": "xs:string",
+      "ExampleValueAsString": "<tag>content</tag>",
+      "JsonDataType": "String",
+      "OpenApiDataType": "String",
+      "ErsDataType": "XML",
+      "BasicDataType": "Xml"
+    }
+  ],
+  "Enumerations": [
+    {
+      "EnumerationName": "BasicDataType",
+      "EnumerationDescription": "The basic data type of a scalar field",
+      "DataTypeName": "string",
+      "EnumeratedValues": [
+        {
+          "EnumeratedValue": "Binary",
+          "EnumeratedValueDescription": "The scalar field holds binary values"
+        },
+        {
+          "EnumeratedValue": "Boolean",
+          "EnumeratedValueDescription": "The scalar field holds true/false values"
+        },
+        {
+          "EnumeratedValue": "Integer",
+          "EnumeratedValueDescription": "The scalar field holds integer values"
+        },
+        {
+          "EnumeratedValue": "Date",
+          "EnumeratedValueDescription": "The scalar field holds values that represent a date, datetime or time"
+        },
+        {
+          "EnumeratedValue": "Decimal",
+          "EnumeratedValueDescription": "The scalar field holds numeric values"
+        },
+        {
+          "EnumeratedValue": "String",
+          "EnumeratedValueDescription": "The scalar field holds string values"
+        },
+        {
+          "EnumeratedValue": "Xml",
+          "EnumeratedValueDescription": "The scalar field holds XML values"
+        }
+      ]
+    },
+    {
+      "EnumerationName": "ConceptRefType",
+      "EnumerationDescription": "The type of relationship that exists between two concepts",
+      "DataTypeName": "string",
+      "EnumeratedValues": [
+        {
+          "EnumeratedValue": "UniqueContainer",
+          "EnumeratedValueDescription": "The parent concept forms part of the unique identifier for the child concept, and acts as the unique container when the model is expressed in a hierarchical structure"
+        },
+        {
+          "EnumeratedValue": "Identifying",
+          "EnumeratedValueDescription": "The parent concept forms part of the unique identifier for the child concept, but does not act as the unique container"
+        },
+        {
+          "EnumeratedValue": "Descriptive",
+          "EnumeratedValueDescription": "The parent concept provides non-identifying, descriptive detail about the child concept"
+        }
+      ]
+    },
+    {
+      "EnumerationName": "ConceptType",
+      "EnumerationDescription": "The type of concept, either Data Type, Enumeration, Object, Scalar, UniqueKey or SubType",
+      "DataTypeName": "string",
+      "EnumeratedValues": [
+        {
+          "EnumeratedValue": "DataType",
+          "EnumeratedValueDescription": "The concept represents a Data Type"
+        },
+        {
+          "EnumeratedValue": "Enumeration",
+          "EnumeratedValueDescription": "The concept represents an Enumeration"
+        },
+        {
+          "EnumeratedValue": "Object",
+          "EnumeratedValueDescription": "The concept represents an Entity (i.e. a class of object)"
+        },
+        {
+          "EnumeratedValue": "Scalar",
+          "EnumeratedValueDescription": "The concept represents a scalar-valued property (either a Domain or a Field)"
+        },
+        {
+          "EnumeratedValue": "UniqueKey",
+          "EnumeratedValueDescription": "The concept represents a particular unique key through which an Entity may be referenced"
+        },
+        {
+          "EnumeratedValue": "SubType",
+          "EnumeratedValueDescription": "The concept represents an Entity Subtype (i.e. a particular specialised variant of a class of object)"
+        }
+      ]
+    },
+    {
+      "EnumerationName": "ParentOrChildDirection",
+      "EnumerationDescription": "The direction of the hierarchical relationship that exists between two concepts",
+      "DataTypeName": "string",
+      "EnumeratedValues": [
+        {
+          "EnumeratedValue": "ToChild",
+          "EnumeratedValueDescription": "The referenced concept may occur more than once, and acts as the child concept when the model is expressed in a relational structure"
+        },
+        {
+          "EnumeratedValue": "ToParent",
+          "EnumeratedValueDescription": "The referenced concept is single-valued, and acts as the parent concept when the model is expressed in a relational structure"
+        }
+      ]
+    },
+    {
+      "EnumerationName": "PropagatingFieldType",
+      "EnumerationDescription": "Reflects whether a propagating field acts as a business key or a surrogate key",
+      "DataTypeName": "string",
+      "EnumeratedValues": [
+        {
+          "EnumeratedValue": "BusinessKey",
+          "EnumeratedValueDescription": "The propagating field acts as a Business Key"
+        },
+        {
+          "EnumeratedValue": "SurrogateKey",
+          "EnumeratedValueDescription": "The propagating field acts as a Surrogate Key"
+        }
+      ]
+    },
+    {
+      "EnumerationName": "RelationshipType",
+      "EnumerationDescription": "The detailed manner in which the relationship is expressed within hierarchical structures such as XML documents or JSON documents",
+      "DataTypeName": "string",
+      "EnumeratedValues": [
+        {
+          "EnumeratedValue": "Reference",
+          "EnumeratedValueDescription": "The primary entity contains a reference to the secondary entity"
+        },
+        {
+          "EnumeratedValue": "ParentChild",
+          "EnumeratedValueDescription": "Multiple instances of the secondary entity are nested within the primary entity"
+        },
+        {
+          "EnumeratedValue": "NestedObject",
+          "EnumeratedValueDescription": "Nesting is used to fully describe the single instance of the secondary entity which is referenced by the primary entity"
+        },
+        {
+          "EnumeratedValue": "DescriptiveReference",
+          "EnumeratedValueDescription": "Nesting is used to partially describe the single instance of the secondary entity which is referenced by the primary entity.  The nested item is a \"reference\" which holds more than just an identifier - it also contains some additional information about the referenced object, with the aim of reducing the need for the secondary entity to be fetched separately."
+        },
+        {
+          "EnumeratedValue": "Subtype",
+          "EnumeratedValueDescription": "The secondary entity extends the primary entity, providing additional information that is relevant to a particular of that entity."
+        },
+        {
+          "EnumeratedValue": "UniqueChild",
+          "EnumeratedValueDescription": "A single instance of the secondary entity is nested within the primary entity"
+        },
+        {
+          "EnumeratedValue": "PassThrough",
+          "EnumeratedValueDescription": "The relationship forms part of the path between two entities, but it is not exposed within hierarchical renderings: it is \"collapsed\" or \"passed-through\") ."
+        }
+      ]
+    },
+    {
+      "EnumerationName": "SelectorType",
+      "EnumerationDescription": "The type of control that should be used when collecting data for this field",
+      "DataTypeName": "string",
+      "EnumeratedValues": [
+        {
+          "EnumeratedValue": "Dropdown",
+          "EnumeratedValueDescription": "A dropdown list should be rendered"
+        },
+        {
+          "EnumeratedValue": "Searchable",
+          "EnumeratedValueDescription": "A searchable text box should be rendered"
+        }
+      ]
+    }
+  ],
+  "Domains": [
+    {
+      "DomainName": "csf-autoid",
+      "DomainType": "Basic",
+      "DataTypeName": "int32"
+    },
+    {
+      "DomainName": "csf-seqno",
+      "DomainType": "Basic",
+      "DataTypeName": "int32"
+    },
+    {
+      "DomainName": "csf-string",
+      "DomainType": "Basic",
+      "DataTypeName": "string"
+    },
+    {
+      "DomainName": "int32",
+      "DomainType": "Basic",
+      "DataTypeName": "int32"
+    },
+    {
+      "DomainName": "json-boolean",
+      "DomainType": "Basic",
+      "DataTypeName": "bit"
+    },
+    {
+      "DomainName": "json-number",
+      "DomainType": "Basic",
+      "DataTypeName": "decimal"
+    },
+    {
+      "DomainName": "json-string",
+      "DomainType": "Basic",
+      "DataTypeName": "string"
+    },
+    {
+      "DomainName": "BasicDataTypeEnum",
+      "DomainType": "Enumeration",
+      "DataTypeName": "string",
+      "EnumerationName": "BasicDataType"
+    },
+    {
+      "DomainName": "ConceptRefTypeEnum",
+      "DomainType": "Enumeration",
+      "DataTypeName": "string",
+      "EnumerationName": "ConceptRefType"
+    },
+    {
+      "DomainName": "ConceptTypeEnum",
+      "DomainType": "Enumeration",
+      "DataTypeName": "string",
+      "EnumerationName": "ConceptType"
+    },
+    {
+      "DomainName": "RelationshipTypeEnum",
+      "DomainType": "Enumeration",
+      "DataTypeName": "string",
+      "EnumerationName": "RelationshipType"
+    },
+    {
+      "DomainName": "SelectorTypeEnum",
+      "DomainType": "Enumeration",
+      "DataTypeName": "string",
+      "EnumerationName": "SelectorType"
+    },
+    {
+      "DomainName": "AlternateKeyName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "BasedOnConceptId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the BasedOn Concept",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "ConceptId",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "BasedOnConceptName",
+      "DomainType": "Restriction",
+      "DomainDescription": "The business-facing identifier for the BasedOn Concept",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "ConceptName",
+      "ExampleValueAsString": "bool"
+    },
+    {
+      "DomainName": "BasicDataType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "BasicDataTypeEnum",
+      "MaxLength": 200
+    },
+    {
+      "DomainName": "ChildCollectionName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ChildItemName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ChildPropertyDescription",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ChildPropertyName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ChildPropertySeq",
+      "DomainType": "Restriction",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32"
+    },
+    {
+      "DomainName": "ChildQualifier",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ChildVerbPhrase",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ConceptDescription",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string",
+      "MaxLength": 500
+    },
+    {
+      "DomainName": "ConceptId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the Concept",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "ConceptModelId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the ConceptModel",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "ConceptName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ConceptPropertyFamilyId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the ConceptPropertyFamily",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "ConceptRefId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the ConceptRef",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "ConceptRefType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "ConceptRefTypeEnum",
+      "MaxLength": 200
+    },
+    {
+      "DomainName": "ConceptSubTypeId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the ConceptSubType",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "ConceptSubTypePropertyFamilyRefId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the ConceptSubTypePropertyFamilyRef",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "ConceptUniqueKeyId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the ConceptUniqueKey",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "ConceptUniqueKeyPropertyFamilyRefId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the ConceptUniqueKeyPropertyFamilyRef",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "DataTypeId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the DataType",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "DataTypeName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "DatePrecision",
+      "DomainType": "Restriction",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32"
+    },
+    {
+      "DomainName": "DbColumnName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "DbForeignKeyName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "DbSchemaName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "DbTableName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "DecimalPlaces",
+      "DomainType": "Restriction",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32"
+    },
+    {
+      "DomainName": "DefaultStringLength",
+      "DomainType": "Restriction",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32"
+    },
+    {
+      "DomainName": "DotNetDataType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "EnumeratedValue",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "EnumeratedValueDescription",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string",
+      "MaxLength": 500
+    },
+    {
+      "DomainName": "EnumerationDescription",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string",
+      "MaxLength": 500
+    },
+    {
+      "DomainName": "EnumerationId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the Enumeration",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "EnumerationMemberId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the EnumerationMember",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "EnumerationName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ErsDataType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ExampleValueAsString",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "FieldFamilyName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "FieldLabel",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ForeignKeySurrogateKeyFieldName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "HasDatePrecision",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "HasDecimalPlaces",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "HasIdentity",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "HasLength",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "HasTotalDigits",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IncludeId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the Include",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "IncludeLinqExpression",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "IsCollectionItem",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsCoreField",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsCreatable",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsDeletable",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsDiscriminatorField",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsIdentity",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsNullable",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsPropagating",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsReferenceToChildEntity",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsScalarFieldToSerialiseInDomainModel",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsScalarFieldToSerialiseInPersistenceModel",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsSeqNoField",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsSerialisedUsingScalarFieldInDomainModel",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsUpdatable",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "IsXmlAttribute",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "JavaDataType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "JsonDataType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "JsonFormat",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "MaxChildOccurrences",
+      "DomainType": "Restriction",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32"
+    },
+    {
+      "DomainName": "MaxLength",
+      "DomainType": "Restriction",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32"
+    },
+    {
+      "DomainName": "MaxValue",
+      "DomainType": "Restriction",
+      "DataTypeName": "decimal",
+      "BasedOnDomainName": "json-number"
+    },
+    {
+      "DomainName": "MinChildOccurrences",
+      "DomainType": "Restriction",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32"
+    },
+    {
+      "DomainName": "MinLength",
+      "DomainType": "Restriction",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32"
+    },
+    {
+      "DomainName": "MinValue",
+      "DomainType": "Restriction",
+      "DataTypeName": "decimal",
+      "BasedOnDomainName": "json-number"
+    },
+    {
+      "DomainName": "ModelName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "MongoDbDataType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "MySqlDbDataType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "OpenApiDataType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "OpenApiFormat",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "OracleDataType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "OutputExplicitXmlCollection",
+      "DomainType": "Restriction",
+      "DataTypeName": "bit",
+      "BasedOnDomainName": "json-boolean"
+    },
+    {
+      "DomainName": "ParentIndexName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ParentQualifier",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ParentVerbPhrase",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "PrimaryKeyName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "PropertyDescription",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "PropertyFamilyName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "PropertyName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "PropertySeq",
+      "DomainType": "Restriction",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32"
+    },
+    {
+      "DomainName": "QualifierId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the Qualifier",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "QualifierTerm",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ReferencedConceptId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the Referenced Concept",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "ConceptId",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "ReferencedConceptName",
+      "DomainType": "Restriction",
+      "DomainDescription": "The business-facing identifier for the Referenced Concept",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "ConceptName",
+      "ExampleValueAsString": "bool"
+    },
+    {
+      "DomainName": "ReferencedConceptUniqueKeyId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the Referenced ConceptUniqueKey",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "ConceptUniqueKeyId",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "ReferencedUniqueKeyName",
+      "DomainType": "Restriction",
+      "DomainDescription": "The business-facing identifier for the Referenced ConceptUniqueKey",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "UniqueKeyName",
+      "ExampleValueAsString": "PK_UniqueKey"
+    },
+    {
+      "DomainName": "RelationshipName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "RelationshipType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "RelationshipTypeEnum",
+      "MaxLength": 200
+    },
+    {
+      "DomainName": "ScalarFieldNameInDomainModel",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "SelectorType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "SelectorTypeEnum",
+      "MaxLength": 200
+    },
+    {
+      "DomainName": "SpecialisedConceptId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the Specialised Concept",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "ConceptId",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "SpecialisedConceptName",
+      "DomainType": "Restriction",
+      "DomainDescription": "The business-facing identifier for the Specialised Concept",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "ConceptName",
+      "ExampleValueAsString": "bool"
+    },
+    {
+      "DomainName": "SpecialisedConceptSubTypeId",
+      "DomainType": "Restriction",
+      "DomainDescription": "The ID of the Specialised ConceptSubType",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "ConceptSubTypeId",
+      "ExampleValueAsString": "1"
+    },
+    {
+      "DomainName": "SpecialisedSubTypeName",
+      "DomainType": "Restriction",
+      "DomainDescription": "The business-facing identifier for the Specialised ConceptSubType",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "SubTypeName",
+      "ExampleValueAsString": "MySubType"
+    },
+    {
+      "DomainName": "SqlServerDataType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "SubTypeName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "SurrogateKeyFieldName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "ToStringExpression",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "TotalDigits",
+      "DomainType": "Restriction",
+      "DataTypeName": "int32",
+      "BasedOnDomainName": "int32"
+    },
+    {
+      "DomainName": "UniqueKeyName",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    },
+    {
+      "DomainName": "XmlDateType",
+      "DomainType": "Restriction",
+      "DataTypeName": "string",
+      "BasedOnDomainName": "json-string"
+    }
+  ],
+  "Entities": [
+    {
+      "EntityName": "Concept",
+      "DbSchemaName": "dbo",
+      "DbTableName": "Concept",
+      "EntityDescription": "An entity, a domain, a unique key or a sub type",
+      "ToStringExpression": "{x.}ConceptName",
+      "Includes": [],
+      "FieldFamilies": [
+        "Common",
+        "Enumeration",
+        "DataType",
+        "Scalar",
+        "String",
+        "Number",
+        "Date",
+        "Object",
+        "UniqueKey",
+        "SubType"
+      ],
+      "SubTypes": [
+        {
+          "SubTypeName": "Common",
+          "FieldFamilyRefs": [
+            "Common"
+          ]
+        },
+        {
+          "SubTypeName": "DataType",
+          "FieldFamilyRefs": [
+            "DataType",
+            "Common"
+          ]
+        },
+        {
+          "SubTypeName": "Enumeration",
+          "FieldFamilyRefs": [
+            "Enumeration",
+            "DataType",
+            "Common"
+          ]
+        },
+        {
+          "SubTypeName": "Object",
+          "FieldFamilyRefs": [
+            "Common",
+            "Object"
+          ]
+        },
+        {
+          "SubTypeName": "Scalar",
+          "FieldFamilyRefs": [
+            "Scalar",
+            "String",
+            "Number",
+            "Date",
+            "Common"
+          ]
+        },
+        {
+          "SubTypeName": "UniqueKey",
+          "FieldFamilyRefs": [
+            "UniqueKey",
+            "Common"
+          ]
+        },
+        {
+          "SubTypeName": "SubType",
+          "FieldFamilyRefs": [
+            "SubType",
+            "Common"
+          ]
+        }
+      ],
+      "Fields": [
+        {
+          "FieldName": "ConceptId",
+          "DbColumnName": "ConceptId",
+          "DomainName": "ConceptId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "ConceptName",
+          "DbColumnName": "ConceptName",
+          "DomainName": "ConceptName",
+          "IsNullable": false,
+          "ExampleValueAsString": "bool",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "ConceptDescription",
+          "DbColumnName": "ConceptDescription",
+          "DomainName": "ConceptDescription",
+          "IsNullable": true,
+          "ExampleValueAsString": "Boolean",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 6
+        },
+        {
+          "FieldName": "ConceptType",
+          "DbColumnName": "ConceptType",
+          "DomainName": "ConceptTypeEnum",
+          "IsNullable": false,
+          "ExampleValueAsString": "Scalar",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 7
+        },
+        {
+          "FieldName": "DataTypeId",
+          "DbColumnName": "DataTypeId",
+          "DomainName": "DataTypeId",
+          "IsNullable": true,
+          "FieldDescription": "The ID of the DataType",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "DataType",
+          "PropertySeq": 8
+        },
+        {
+          "FieldName": "DataTypeName",
+          "DbColumnName": "DataTypeName",
+          "DomainName": "DataTypeName",
+          "IsNullable": true,
+          "FieldDescription": "The DataTypeName value for the DataType",
+          "ExampleValueAsString": "bit",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "DataType",
+          "PropertySeq": 9
+        },
+        {
+          "FieldName": "EnumerationId",
+          "DbColumnName": "EnumerationId",
+          "DomainName": "EnumerationId",
+          "IsNullable": true,
+          "FieldDescription": "The ID of the Enumeration",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Enumeration",
+          "PropertySeq": 11
+        },
+        {
+          "FieldName": "EnumerationName",
+          "DbColumnName": "EnumerationName",
+          "DomainName": "EnumerationName",
+          "IsNullable": true,
+          "FieldDescription": "The EnumerationName value for the Enumeration",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Enumeration",
+          "PropertySeq": 12
+        },
+        {
+          "FieldName": "BasedOnConceptId",
+          "DbColumnName": "BasedOnConceptId",
+          "DomainName": "BasedOnConceptId",
+          "IsNullable": true,
+          "FieldDescription": "The ID of the BasedOn Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 14
+        },
+        {
+          "FieldName": "BasedOnConceptName",
+          "DbColumnName": "BasedOnConceptName",
+          "DomainName": "BasedOnConceptName",
+          "IsNullable": true,
+          "FieldDescription": "The ConceptName value for the BasedOn Concept",
+          "ExampleValueAsString": "string",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 15
+        },
+        {
+          "FieldName": "ExampleValueAsString",
+          "DbColumnName": "ExampleValueAsString",
+          "DomainName": "ExampleValueAsString",
+          "IsNullable": true,
+          "ExampleValueAsString": "Binary",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 17
+        },
+        {
+          "FieldName": "MinLength",
+          "DbColumnName": "MinLength",
+          "DomainName": "MinLength",
+          "IsNullable": true,
+          "ExampleValueAsString": "200",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "String",
+          "PropertySeq": 18
+        },
+        {
+          "FieldName": "MaxLength",
+          "DbColumnName": "MaxLength",
+          "DomainName": "MaxLength",
+          "IsNullable": true,
+          "ExampleValueAsString": "200",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "String",
+          "PropertySeq": 19
+        },
+        {
+          "FieldName": "MinValue",
+          "DbColumnName": "MinValue",
+          "DomainName": "MinValue",
+          "IsNullable": true,
+          "ExampleValueAsString": "200",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Number",
+          "PropertySeq": 20
+        },
+        {
+          "FieldName": "MaxValue",
+          "DbColumnName": "MaxValue",
+          "DomainName": "MaxValue",
+          "IsNullable": true,
+          "ExampleValueAsString": "200",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Number",
+          "PropertySeq": 21
+        },
+        {
+          "FieldName": "TotalDigits",
+          "DbColumnName": "TotalDigits",
+          "DomainName": "TotalDigits",
+          "IsNullable": true,
+          "ExampleValueAsString": "3",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Number",
+          "PropertySeq": 22
+        },
+        {
+          "FieldName": "DecimalPlaces",
+          "DbColumnName": "DecimalPlaces",
+          "DomainName": "DecimalPlaces",
+          "IsNullable": true,
+          "ExampleValueAsString": "1",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Number",
+          "PropertySeq": 23
+        },
+        {
+          "FieldName": "DatePrecision",
+          "DbColumnName": "DatePrecision",
+          "DomainName": "DatePrecision",
+          "IsNullable": true,
+          "ExampleValueAsString": "7",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Date",
+          "PropertySeq": 24
+        },
+        {
+          "FieldName": "DbSchemaName",
+          "DbColumnName": "DbSchemaName",
+          "DomainName": "DbSchemaName",
+          "IsNullable": true,
+          "ExampleValueAsString": "dbo",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 25
+        },
+        {
+          "FieldName": "DbTableName",
+          "DbColumnName": "DbTableName",
+          "DomainName": "DbTableName",
+          "IsNullable": true,
+          "ExampleValueAsString": "BusinessIndexField",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 26
+        },
+        {
+          "FieldName": "IsCollectionItem",
+          "DbColumnName": "IsCollectionItem",
+          "DomainName": "IsCollectionItem",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 27
+        },
+        {
+          "FieldName": "ToStringExpression",
+          "DbColumnName": "ToStringExpression",
+          "DomainName": "ToStringExpression",
+          "IsNullable": true,
+          "ExampleValueAsString": "{x.}FieldName",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 28
+        },
+        {
+          "FieldName": "IsCreatable",
+          "DbColumnName": "IsCreatable",
+          "DomainName": "IsCreatable",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 29
+        },
+        {
+          "FieldName": "IsUpdatable",
+          "DbColumnName": "IsUpdatable",
+          "DomainName": "IsUpdatable",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 30
+        },
+        {
+          "FieldName": "IsDeletable",
+          "DbColumnName": "IsDeletable",
+          "DomainName": "IsDeletable",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 31
+        },
+        {
+          "FieldName": "SurrogateKeyFieldName",
+          "DbColumnName": "SurrogateKeyFieldName",
+          "DomainName": "SurrogateKeyFieldName",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 32
+        },
+        {
+          "FieldName": "PrimaryKeyName",
+          "DbColumnName": "PrimaryKeyName",
+          "DomainName": "PrimaryKeyName",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 33
+        },
+        {
+          "FieldName": "AlternateKeyName",
+          "DbColumnName": "AlternateKeyName",
+          "DomainName": "AlternateKeyName",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 34
+        },
+        {
+          "FieldName": "ReferencedConceptId",
+          "DbColumnName": "ReferencedConceptId",
+          "DomainName": "ReferencedConceptId",
+          "IsNullable": true,
+          "FieldDescription": "The ID of the Referenced Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "UniqueKey",
+          "PropertySeq": 35
+        },
+        {
+          "FieldName": "ReferencedConceptName",
+          "DbColumnName": "ReferencedConceptName",
+          "DomainName": "ReferencedConceptName",
+          "IsNullable": true,
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "UniqueKey",
+          "PropertySeq": 36
+        },
+        {
+          "FieldName": "ReferencedConceptUniqueKeyId",
+          "DbColumnName": "ReferencedConceptUniqueKeyId",
+          "DomainName": "ReferencedConceptUniqueKeyId",
+          "IsNullable": true,
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "UniqueKey",
+          "PropertySeq": 38
+        },
+        {
+          "FieldName": "ReferencedUniqueKeyName",
+          "DbColumnName": "ReferencedUniqueKeyName",
+          "DomainName": "ReferencedUniqueKeyName",
+          "IsNullable": true,
+          "ExampleValueAsString": "PK_UniqueKey",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "UniqueKey",
+          "PropertySeq": 39
+        },
+        {
+          "FieldName": "SpecialisedConceptId",
+          "DbColumnName": "SpecialisedConceptId",
+          "DomainName": "SpecialisedConceptId",
+          "IsNullable": true,
+          "FieldDescription": "The ID of the Specialised Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "SubType",
+          "PropertySeq": 41
+        },
+        {
+          "FieldName": "SpecialisedConceptName",
+          "DbColumnName": "SpecialisedConceptName",
+          "DomainName": "SpecialisedConceptName",
+          "IsNullable": true,
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "SubType",
+          "PropertySeq": 42
+        },
+        {
+          "FieldName": "SpecialisedConceptSubTypeId",
+          "DbColumnName": "SpecialisedConceptSubTypeId",
+          "DomainName": "SpecialisedConceptSubTypeId",
+          "IsNullable": true,
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "SubType",
+          "PropertySeq": 44
+        },
+        {
+          "FieldName": "SpecialisedSubTypeName",
+          "DbColumnName": "SpecialisedSubTypeName",
+          "DomainName": "SpecialisedSubTypeName",
+          "IsNullable": true,
+          "ExampleValueAsString": "MySubType",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "SubType",
+          "PropertySeq": 45
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_Concept",
+          "DbIndexName": "PK_Concept",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "ConceptId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "DataTypeId",
+            "ConceptId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "DataTypeName",
+            "ConceptName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ]
+        },
+        {
+          "IndexName": "AK_Concept_ConceptModelId_ConceptName",
+          "DbIndexName": "AK_Concept_ConceptModelId_ConceptName",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptModelId",
+            "ConceptName"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "DataTypeId",
+            "ConceptName"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "DataTypeName",
+            "ConceptName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ]
+        },
+        {
+          "IndexName": "PK2_CommonConcept",
+          "DbIndexName": "PK2_CommonConcept",
+          "IndexType": "AlternateKey",
+          "IndexFields": [
+            "ConceptId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ]
+        },
+        {
+          "IndexName": "PK3_ScalarConcept",
+          "DbIndexName": "PK3_ScalarConcept",
+          "IndexType": "AlternateKey",
+          "IndexFields": [
+            "ConceptId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "DataTypeId",
+            "ConceptId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "DataTypeName",
+            "ConceptName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ]
+        },
+        {
+          "IndexName": "PK4_ObjectConcept",
+          "DbIndexName": "PK4_ObjectConcept",
+          "IndexType": "AlternateKey",
+          "IndexFields": [
+            "ConceptId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ]
+        },
+        {
+          "IndexName": "PK5_UniqueKeyConcept",
+          "DbIndexName": "PK5_UniqueKeyConcept",
+          "IndexType": "AlternateKey",
+          "IndexFields": [
+            "ConceptId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ]
+        },
+        {
+          "IndexName": "PK6_SubTypeConcept",
+          "DbIndexName": "PK6_SubTypeConcept",
+          "IndexType": "AlternateKey",
+          "IndexFields": [
+            "ConceptId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "ConceptModel",
+      "DbSchemaName": "dbo",
+      "DbTableName": "ConceptModel",
+      "EntityDescription": "A model, made primarily of scalar concepts and object concepts",
+      "ToStringExpression": "{x.}ModelName",
+      "Includes": [],
+      "FieldFamilies": [
+        "Core"
+      ],
+      "SubTypes": [],
+      "Fields": [
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": true,
+          "ExampleValueAsString": "CsfMetaModel",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "DefaultStringLength",
+          "DbColumnName": "DefaultStringLength",
+          "DomainName": "DefaultStringLength",
+          "IsNullable": true,
+          "ExampleValueAsString": "200",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 3
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_ConceptModel",
+          "DbIndexName": "PK_ConceptModel",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "ConceptModelId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName"
+          ],
+          "BusinessFields": [
+            "ModelName"
+          ]
+        },
+        {
+          "IndexName": "AK_ConceptModel_ModelName",
+          "DbIndexName": "AK_ConceptModel_ModelName",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ModelName"
+          ],
+          "LogicalIndexFields": [
+            "ModelName"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName"
+          ],
+          "BusinessFields": [
+            "ModelName"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "ConceptPropertyFamily",
+      "DbSchemaName": "dbo",
+      "DbTableName": "ConceptPropertyFamily",
+      "EntityDescription": "A family of properties",
+      "ToStringExpression": "{x.}PropertyFamilyName",
+      "Includes": [],
+      "FieldFamilies": [
+        "Common"
+      ],
+      "SubTypes": [],
+      "Fields": [
+        {
+          "FieldName": "ConceptPropertyFamilyId",
+          "DbColumnName": "ConceptPropertyFamilyId",
+          "DomainName": "ConceptPropertyFamilyId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the ConceptPropertyFamily",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "ConceptId",
+          "DbColumnName": "ConceptId",
+          "DomainName": "ConceptId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 4
+        },
+        {
+          "FieldName": "ConceptName",
+          "DbColumnName": "ConceptName",
+          "DomainName": "ConceptName",
+          "IsNullable": false,
+          "FieldDescription": "The name of the Concept",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "PropertyFamilyName",
+          "DbColumnName": "PropertyFamilyName",
+          "DomainName": "PropertyFamilyName",
+          "IsNullable": false,
+          "ExampleValueAsString": "Index",
+          "FieldUsage": "Common",
+          "IsScalarFieldToSerialiseInPersistenceModel": true,
+          "IsScalarFieldToSerialiseInDomainModel": true,
+          "FieldFamilyName": "Common",
+          "PropertySeq": 7
+        },
+        {
+          "FieldName": "SeqNo",
+          "DbColumnName": "SeqNo",
+          "DomainName": "csf-seqno",
+          "IsNullable": false,
+          "FieldDescription": "Sequence number",
+          "ExampleValueAsString": "1",
+          "FieldUsage": "PersistenceOnly",
+          "IsSeqNoField": true,
+          "FieldFamilyName": "Common",
+          "PropertySeq": 11
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_ConceptPropertyFamily",
+          "DbIndexName": "PK_ConceptPropertyFamily",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "ConceptPropertyFamilyId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "ConceptPropertyFamilyId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "PropertyFamilyName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "PropertyFamilyName"
+          ]
+        },
+        {
+          "IndexName": "AK_ConceptPropertyFamily_ConceptId_PropertyFamilyName",
+          "DbIndexName": "AK_ConceptPropertyFamily_ConceptId_PropertyFamilyName",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptId",
+            "PropertyFamilyName"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "PropertyFamilyName"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "PropertyFamilyName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "PropertyFamilyName"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "ConceptRef",
+      "DbSchemaName": "dbo",
+      "DbTableName": "ConceptRef",
+      "EntityDescription": "A field or relationship",
+      "ToStringExpression": "{x.}PropertyName",
+      "Includes": [],
+      "FieldFamilies": [
+        "Common",
+        "Scalar",
+        "Object"
+      ],
+      "SubTypes": [
+        {
+          "SubTypeName": "Common",
+          "FieldFamilyRefs": [
+            "Common"
+          ]
+        },
+        {
+          "SubTypeName": "Scalar",
+          "FieldFamilyRefs": [
+            "Scalar",
+            "Common"
+          ]
+        },
+        {
+          "SubTypeName": "Object",
+          "FieldFamilyRefs": [
+            "Object",
+            "Common"
+          ]
+        }
+      ],
+      "Fields": [
+        {
+          "FieldName": "ConceptRefId",
+          "DbColumnName": "ConceptRefId",
+          "DomainName": "ConceptRefId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the ConceptRef",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "ConceptId",
+          "DbColumnName": "ConceptId",
+          "DomainName": "ConceptId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 4
+        },
+        {
+          "FieldName": "ConceptName",
+          "DbColumnName": "ConceptName",
+          "DomainName": "ConceptName",
+          "IsNullable": false,
+          "FieldDescription": "The name of the Concept",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "PropertyName",
+          "DbColumnName": "PropertyName",
+          "DomainName": "PropertyName",
+          "IsNullable": true,
+          "ExampleValueAsString": "Index",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 7
+        },
+        {
+          "FieldName": "PropertyDescription",
+          "DbColumnName": "PropertyDescription",
+          "DomainName": "PropertyDescription",
+          "IsNullable": true,
+          "ExampleValueAsString": "Index",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 8
+        },
+        {
+          "FieldName": "ReferencedConceptId",
+          "DbColumnName": "ReferencedConceptId",
+          "DomainName": "ReferencedConceptId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the Referenced Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 9
+        },
+        {
+          "FieldName": "ReferencedConceptName",
+          "DbColumnName": "ReferencedConceptName",
+          "DomainName": "ReferencedConceptName",
+          "IsNullable": false,
+          "FieldDescription": "The ConceptName value for the Referenced Concept",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 10
+        },
+        {
+          "FieldName": "ConceptRefType",
+          "DbColumnName": "ConceptRefType",
+          "DomainName": "ConceptRefType",
+          "IsNullable": false,
+          "ExampleValueAsString": "UniqueContainer",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 12
+        },
+        {
+          "FieldName": "ConceptPropertyFamilyId",
+          "DbColumnName": "ConceptPropertyFamilyId",
+          "DomainName": "ConceptPropertyFamilyId",
+          "IsNullable": true,
+          "FieldDescription": "The ID of the ConceptPropertyFamily",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 13
+        },
+        {
+          "FieldName": "PropertyFamilyName",
+          "DbColumnName": "PropertyFamilyName",
+          "DomainName": "PropertyFamilyName",
+          "IsNullable": true,
+          "FieldDescription": "The PropertyFamilyName value for the ConceptPropertyFamily",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 14
+        },
+        {
+          "FieldName": "IsPropagating",
+          "DbColumnName": "IsPropagating",
+          "DomainName": "IsPropagating",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 16
+        },
+        {
+          "FieldName": "DbColumnName",
+          "DbColumnName": "DbColumnName",
+          "DomainName": "DbColumnName",
+          "IsNullable": true,
+          "ExampleValueAsString": "DbColumnName",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 17
+        },
+        {
+          "FieldName": "IsIdentity",
+          "DbColumnName": "IsIdentity",
+          "DomainName": "IsIdentity",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 18
+        },
+        {
+          "FieldName": "IsCoreField",
+          "DbColumnName": "IsCoreField",
+          "DomainName": "IsCoreField",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 19
+        },
+        {
+          "FieldName": "FieldFamilyName",
+          "DbColumnName": "FieldFamilyName",
+          "DomainName": "FieldFamilyName",
+          "IsNullable": true,
+          "ExampleValueAsString": "CoreFields",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 20
+        },
+        {
+          "FieldName": "IsUpdatable",
+          "DbColumnName": "IsUpdatable",
+          "DomainName": "IsUpdatable",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 21
+        },
+        {
+          "FieldName": "FieldLabel",
+          "DbColumnName": "FieldLabel",
+          "DomainName": "FieldLabel",
+          "IsNullable": true,
+          "ExampleValueAsString": "Field Label",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 22
+        },
+        {
+          "FieldName": "IsScalarFieldToSerialiseInPersistenceModel",
+          "DbColumnName": "IsScalarFieldToSerialiseInPersistenceModel",
+          "DomainName": "IsScalarFieldToSerialiseInPersistenceModel",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 23
+        },
+        {
+          "FieldName": "IsScalarFieldToSerialiseInDomainModel",
+          "DbColumnName": "IsScalarFieldToSerialiseInDomainModel",
+          "DomainName": "IsScalarFieldToSerialiseInDomainModel",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 24
+        },
+        {
+          "FieldName": "IsSeqNoField",
+          "DbColumnName": "IsSeqNoField",
+          "DomainName": "IsSeqNoField",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 25
+        },
+        {
+          "FieldName": "IsDiscriminatorField",
+          "DbColumnName": "IsDiscriminatorField",
+          "DomainName": "IsDiscriminatorField",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 26
+        },
+        {
+          "FieldName": "IsXmlAttribute",
+          "DbColumnName": "IsXmlAttribute",
+          "DomainName": "IsXmlAttribute",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 27
+        },
+        {
+          "FieldName": "IsReferenceToChildEntity",
+          "DbColumnName": "IsReferenceToChildEntity",
+          "DomainName": "IsReferenceToChildEntity",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 28
+        },
+        {
+          "FieldName": "ParentQualifier",
+          "DbColumnName": "ParentQualifier",
+          "DomainName": "ParentQualifier",
+          "IsNullable": true,
+          "ExampleValueAsString": "",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 29
+        },
+        {
+          "FieldName": "ChildQualifier",
+          "DbColumnName": "ChildQualifier",
+          "DomainName": "ChildQualifier",
+          "IsNullable": true,
+          "ExampleValueAsString": "",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 30
+        },
+        {
+          "FieldName": "MinChildOccurrences",
+          "DbColumnName": "MinChildOccurrences",
+          "DomainName": "MinChildOccurrences",
+          "IsNullable": true,
+          "ExampleValueAsString": "0",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 31
+        },
+        {
+          "FieldName": "MaxChildOccurrences",
+          "DbColumnName": "MaxChildOccurrences",
+          "DomainName": "MaxChildOccurrences",
+          "IsNullable": true,
+          "ExampleValueAsString": "10",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 32
+        },
+        {
+          "FieldName": "ChildVerbPhrase",
+          "DbColumnName": "ChildVerbPhrase",
+          "DomainName": "ChildVerbPhrase",
+          "IsNullable": true,
+          "ExampleValueAsString": "owns",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 33
+        },
+        {
+          "FieldName": "ParentVerbPhrase",
+          "DbColumnName": "ParentVerbPhrase",
+          "DomainName": "ParentVerbPhrase",
+          "IsNullable": true,
+          "ExampleValueAsString": "is owned by",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 34
+        },
+        {
+          "FieldName": "ChildPropertySeq",
+          "DbColumnName": "ChildPropertySeq",
+          "DomainName": "ChildPropertySeq",
+          "IsNullable": true,
+          "ExampleValueAsString": "7",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 35
+        },
+        {
+          "FieldName": "ChildCollectionName",
+          "DbColumnName": "ChildCollectionName",
+          "DomainName": "ChildCollectionName",
+          "IsNullable": true,
+          "ExampleValueAsString": "BusinessFields",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 36
+        },
+        {
+          "FieldName": "ChildItemName",
+          "DbColumnName": "ChildItemName",
+          "DomainName": "ChildItemName",
+          "IsNullable": true,
+          "ExampleValueAsString": "BusinessField",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 37
+        },
+        {
+          "FieldName": "ChildPropertyDescription",
+          "DbColumnName": "ChildPropertyDescription",
+          "DomainName": "ChildPropertyDescription",
+          "IsNullable": true,
+          "ExampleValueAsString": "This field is useful",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 38
+        },
+        {
+          "FieldName": "SelectorType",
+          "DbColumnName": "SelectorType",
+          "DomainName": "SelectorType",
+          "IsNullable": true,
+          "ExampleValueAsString": "Dropdown",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 39
+        },
+        {
+          "FieldName": "RelationshipType",
+          "DbColumnName": "RelationshipType",
+          "DomainName": "RelationshipType",
+          "IsNullable": true,
+          "ExampleValueAsString": "ParentChild",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 40
+        },
+        {
+          "FieldName": "OutputExplicitXmlCollection",
+          "DbColumnName": "OutputExplicitXmlCollection",
+          "DomainName": "OutputExplicitXmlCollection",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 41
+        },
+        {
+          "FieldName": "IsSerialisedUsingScalarFieldInDomainModel",
+          "DbColumnName": "IsSerialisedUsingScalarFieldInDomainModel",
+          "DomainName": "IsSerialisedUsingScalarFieldInDomainModel",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 42
+        },
+        {
+          "FieldName": "ScalarFieldNameInDomainModel",
+          "DbColumnName": "ScalarFieldNameInDomainModel",
+          "DomainName": "ScalarFieldNameInDomainModel",
+          "IsNullable": true,
+          "ExampleValueAsString": "FieldName",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 43
+        },
+        {
+          "FieldName": "ExampleValueAsString",
+          "DbColumnName": "ExampleValueAsString",
+          "DomainName": "ExampleValueAsString",
+          "IsNullable": true,
+          "ExampleValueAsString": "This is an example",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Scalar",
+          "PropertySeq": 44
+        },
+        {
+          "FieldName": "RelationshipName",
+          "DbColumnName": "RelationshipName",
+          "DomainName": "RelationshipName",
+          "IsNullable": true,
+          "ExampleValueAsString": "Class.Property",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 45
+        },
+        {
+          "FieldName": "DbForeignKeyName",
+          "DbColumnName": "DbForeignKeyName",
+          "DomainName": "DbForeignKeyName",
+          "IsNullable": true,
+          "ExampleValueAsString": "FK_Child_ParentId",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 46
+        },
+        {
+          "FieldName": "ParentIndexName",
+          "DbColumnName": "ParentIndexName",
+          "DomainName": "ParentIndexName",
+          "IsNullable": true,
+          "ExampleValueAsString": "PK_Parent",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 47
+        },
+        {
+          "FieldName": "ForeignKeySurrogateKeyFieldName",
+          "DbColumnName": "ForeignKeySurrogateKeyFieldName",
+          "DomainName": "ForeignKeySurrogateKeyFieldName",
+          "IsNullable": true,
+          "ExampleValueAsString": "SurrogateId",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 48
+        },
+        {
+          "FieldName": "ChildPropertyName",
+          "DbColumnName": "ChildPropertyName",
+          "DomainName": "ChildPropertyName",
+          "IsNullable": true,
+          "ExampleValueAsString": "PropertyName",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Object",
+          "PropertySeq": 49
+        },
+        {
+          "FieldName": "IsNullable",
+          "DbColumnName": "IsNullable",
+          "DomainName": "IsNullable",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 50
+        },
+        {
+          "FieldName": "PropertySeq",
+          "DbColumnName": "PropertySeq",
+          "DomainName": "PropertySeq",
+          "IsNullable": true,
+          "ExampleValueAsString": "2",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 51
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_ConceptRef",
+          "DbIndexName": "PK_ConceptRef",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "ConceptRefId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "ConceptRefId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "PropertyName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "PropertyName"
+          ]
+        },
+        {
+          "IndexName": "AK_ConceptRef_ConceptId_PropertyName",
+          "DbIndexName": "AK_ConceptRef_ConceptId_PropertyName",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptId",
+            "PropertyName"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "PropertyName"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "PropertyName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "PropertyName"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "ConceptSubType",
+      "DbSchemaName": "dbo",
+      "DbTableName": "ConceptSubType",
+      "EntityDescription": "A specialised variety of an entity",
+      "ToStringExpression": "{x.}SubTypeName",
+      "Includes": [],
+      "FieldFamilies": [
+        "Common"
+      ],
+      "SubTypes": [],
+      "Fields": [
+        {
+          "FieldName": "ConceptSubTypeId",
+          "DbColumnName": "ConceptSubTypeId",
+          "DomainName": "ConceptSubTypeId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the ConceptSubType",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "ConceptId",
+          "DbColumnName": "ConceptId",
+          "DomainName": "ConceptId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 4
+        },
+        {
+          "FieldName": "ConceptName",
+          "DbColumnName": "ConceptName",
+          "DomainName": "ConceptName",
+          "IsNullable": false,
+          "FieldDescription": "The name of the Concept",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "SubTypeName",
+          "DbColumnName": "SubTypeName",
+          "DomainName": "SubTypeName",
+          "IsNullable": false,
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 7
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_ConceptSubType",
+          "DbIndexName": "PK_ConceptSubType",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "ConceptSubTypeId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "ConceptSubTypeId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "SubTypeName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "SubTypeName"
+          ]
+        },
+        {
+          "IndexName": "AK_ConceptSubType_ConceptId_SubTypeName",
+          "DbIndexName": "AK_ConceptSubType_ConceptId_SubTypeName",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptId",
+            "SubTypeName"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "SubTypeName"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "SubTypeName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "SubTypeName"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "ConceptSubTypePropertyFamilyRef",
+      "DbSchemaName": "dbo",
+      "DbTableName": "ConceptSubTypePropertyFamilyRef",
+      "EntityDescription": "A record which associates a given sub type with a particular family of properties, signifying that the family is relevant to that sub type",
+      "ToStringExpression": "{x.}PropertyFamilyName",
+      "Includes": [],
+      "FieldFamilies": [
+        "Common"
+      ],
+      "SubTypes": [],
+      "Fields": [
+        {
+          "FieldName": "ConceptSubTypePropertyFamilyRefId",
+          "DbColumnName": "ConceptSubTypePropertyFamilyRefId",
+          "DomainName": "ConceptSubTypePropertyFamilyRefId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the ConceptSubTypePropertyFamilyRef",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "ConceptId",
+          "DbColumnName": "ConceptId",
+          "DomainName": "ConceptId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the Concept",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 4
+        },
+        {
+          "FieldName": "ConceptName",
+          "DbColumnName": "ConceptName",
+          "DomainName": "ConceptName",
+          "IsNullable": false,
+          "FieldDescription": "The name of the Concept",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "ConceptSubTypeId",
+          "DbColumnName": "ConceptSubTypeId",
+          "DomainName": "ConceptSubTypeId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptSubType",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 6
+        },
+        {
+          "FieldName": "SubTypeName",
+          "DbColumnName": "SubTypeName",
+          "DomainName": "SubTypeName",
+          "IsNullable": false,
+          "FieldDescription": "The SubTypeName value for the ConceptSubType",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 7
+        },
+        {
+          "FieldName": "ConceptPropertyFamilyId",
+          "DbColumnName": "ConceptPropertyFamilyId",
+          "DomainName": "ConceptPropertyFamilyId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptPropertyFamily",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 9
+        },
+        {
+          "FieldName": "PropertyFamilyName",
+          "DbColumnName": "PropertyFamilyName",
+          "DomainName": "PropertyFamilyName",
+          "IsNullable": false,
+          "FieldDescription": "The business-facing identifier for the ConceptPropertyFamily",
+          "FieldUsage": "ImpliedInPersistence",
+          "IsScalarFieldToSerialiseInPersistenceModel": true,
+          "IsScalarFieldToSerialiseInDomainModel": true,
+          "FieldFamilyName": "Common",
+          "PropertySeq": 10
+        },
+        {
+          "FieldName": "SeqNo",
+          "DbColumnName": "SeqNo",
+          "DomainName": "csf-seqno",
+          "IsNullable": false,
+          "FieldDescription": "Sequence number",
+          "ExampleValueAsString": "1",
+          "FieldUsage": "PersistenceOnly",
+          "IsSeqNoField": true,
+          "FieldFamilyName": "Common",
+          "PropertySeq": 12
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_ConceptSubTypePropertyFamilyRef",
+          "DbIndexName": "PK_ConceptSubTypePropertyFamilyRef",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "ConceptSubTypePropertyFamilyRefId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "ConceptSubTypeId",
+            "ConceptPropertyFamilyId",
+            "ConceptSubTypePropertyFamilyRefId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "SubTypeName",
+            "PropertyFamilyName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "SubTypeName",
+            "PropertyFamilyName"
+          ]
+        },
+        {
+          "IndexName": "AK_ConceptSubTypePropertyFamilyRef_ConceptSubTypeId_ConceptPropertyFamilyId",
+          "DbIndexName": "AK_ConceptSubTypePropertyFamilyRef_ConceptSubTypeId_ConceptPropertyFamilyId",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptSubTypeId",
+            "ConceptPropertyFamilyId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "ConceptSubTypeId",
+            "ConceptPropertyFamilyId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "SubTypeName",
+            "PropertyFamilyName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "SubTypeName",
+            "PropertyFamilyName"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "ConceptUniqueKey",
+      "DbSchemaName": "dbo",
+      "DbTableName": "ConceptUniqueKey",
+      "EntityDescription": "A unique key index that can be used to uniquely identify objects of a particular type",
+      "ToStringExpression": "{x.}UniqueKeyName",
+      "Includes": [],
+      "FieldFamilies": [
+        "Common"
+      ],
+      "SubTypes": [],
+      "Fields": [
+        {
+          "FieldName": "ConceptUniqueKeyId",
+          "DbColumnName": "ConceptUniqueKeyId",
+          "DomainName": "ConceptUniqueKeyId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the ConceptUniqueKey",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "ConceptId",
+          "DbColumnName": "ConceptId",
+          "DomainName": "ConceptId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 4
+        },
+        {
+          "FieldName": "ConceptName",
+          "DbColumnName": "ConceptName",
+          "DomainName": "ConceptName",
+          "IsNullable": false,
+          "FieldDescription": "The Name value of the Concept",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "UniqueKeyName",
+          "DbColumnName": "UniqueKeyName",
+          "DomainName": "UniqueKeyName",
+          "IsNullable": false,
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 7
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_ConceptUniqueKey",
+          "DbIndexName": "PK_ConceptUniqueKey",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "ConceptUniqueKeyId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "ConceptUniqueKeyId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "UniqueKeyName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "UniqueKeyName"
+          ]
+        },
+        {
+          "IndexName": "AK_ConceptUniqueKey_ConceptId_UniqueKeyName",
+          "DbIndexName": "AK_ConceptUniqueKey_ConceptId_UniqueKeyName",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptId",
+            "UniqueKeyName"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "UniqueKeyName"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "UniqueKeyName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "UniqueKeyName"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "ConceptUniqueKeyPropertyFamilyRef",
+      "DbSchemaName": "dbo",
+      "DbTableName": "ConceptUniqueKeyPropertyFamilyRef",
+      "EntityDescription": "A record that associates a given unique key with a particular family of properties, signifying that the family of properties is relevant to that unique key",
+      "ToStringExpression": "{x.}PropertyFamilyName",
+      "Includes": [],
+      "FieldFamilies": [
+        "Common"
+      ],
+      "SubTypes": [],
+      "Fields": [
+        {
+          "FieldName": "ConceptUniqueKeyPropertyFamilyRefId",
+          "DbColumnName": "ConceptUniqueKeyPropertyFamilyRefId",
+          "DomainName": "ConceptUniqueKeyPropertyFamilyRefId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the ConceptUniqueKeyPropertyFamilyRef",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "ConceptId",
+          "DbColumnName": "ConceptId",
+          "DomainName": "ConceptId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the Concept",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 4
+        },
+        {
+          "FieldName": "ConceptName",
+          "DbColumnName": "ConceptName",
+          "DomainName": "ConceptName",
+          "IsNullable": false,
+          "FieldDescription": "The name of the Concept",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "ConceptUniqueKeyId",
+          "DbColumnName": "ConceptUniqueKeyId",
+          "DomainName": "ConceptUniqueKeyId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptUniqueKey",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 6
+        },
+        {
+          "FieldName": "UniqueKeyName",
+          "DbColumnName": "UniqueKeyName",
+          "DomainName": "UniqueKeyName",
+          "IsNullable": false,
+          "FieldDescription": "The UniqueKeyName value for the ConceptUniqueKey",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 7
+        },
+        {
+          "FieldName": "ConceptPropertyFamilyId",
+          "DbColumnName": "ConceptPropertyFamilyId",
+          "DomainName": "ConceptPropertyFamilyId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptPropertyFamily",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Common",
+          "PropertySeq": 9
+        },
+        {
+          "FieldName": "PropertyFamilyName",
+          "DbColumnName": "PropertyFamilyName",
+          "DomainName": "PropertyFamilyName",
+          "IsNullable": false,
+          "FieldDescription": "The business-facing identifier for the ConceptPropertyFamily",
+          "FieldUsage": "ImpliedInPersistence",
+          "IsScalarFieldToSerialiseInPersistenceModel": true,
+          "IsScalarFieldToSerialiseInDomainModel": true,
+          "FieldFamilyName": "Common",
+          "PropertySeq": 10
+        },
+        {
+          "FieldName": "SeqNo",
+          "DbColumnName": "SeqNo",
+          "DomainName": "csf-seqno",
+          "IsNullable": false,
+          "FieldDescription": "Sequence number",
+          "ExampleValueAsString": "1",
+          "FieldUsage": "PersistenceOnly",
+          "IsSeqNoField": true,
+          "FieldFamilyName": "Common",
+          "PropertySeq": 12
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_ConceptUniqueKeyPropertyFamilyRef",
+          "DbIndexName": "PK_ConceptUniqueKeyPropertyFamilyRef",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "ConceptUniqueKeyPropertyFamilyRefId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "ConceptUniqueKeyId",
+            "ConceptPropertyFamilyId",
+            "ConceptUniqueKeyPropertyFamilyRefId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "UniqueKeyName",
+            "PropertyFamilyName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "UniqueKeyName",
+            "PropertyFamilyName"
+          ]
+        },
+        {
+          "IndexName": "AK_ConceptUniqueKeyPropertyFamilyRef_ConceptUniqueKeyId_ConceptPropertyFamilyId",
+          "DbIndexName": "AK_ConceptUniqueKeyPropertyFamilyRef_ConceptUniqueKeyId_ConceptPropertyFamilyId",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptUniqueKeyId",
+            "ConceptPropertyFamilyId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "ConceptUniqueKeyId",
+            "ConceptPropertyFamilyId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "UniqueKeyName",
+            "PropertyFamilyName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "UniqueKeyName",
+            "PropertyFamilyName"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "DataType",
+      "DbSchemaName": "dbo",
+      "DbTableName": "DataType",
+      "EntityDescription": "A data type",
+      "ToStringExpression": "{x.}DataTypeName",
+      "Includes": [],
+      "FieldFamilies": [
+        "Core",
+        "Database",
+        "Language",
+        "String",
+        "Number",
+        "Decimal",
+        "Date"
+      ],
+      "SubTypes": [
+        {
+          "SubTypeName": "Binary",
+          "FieldFamilyRefs": [
+            "Core",
+            "Database",
+            "Language",
+            "String"
+          ]
+        },
+        {
+          "SubTypeName": "Boolean",
+          "FieldFamilyRefs": [
+            "Core",
+            "Database",
+            "Language"
+          ]
+        },
+        {
+          "SubTypeName": "Integer",
+          "FieldFamilyRefs": [
+            "Core",
+            "Database",
+            "Language",
+            "Number"
+          ]
+        },
+        {
+          "SubTypeName": "Date",
+          "FieldFamilyRefs": [
+            "Core",
+            "Database",
+            "Language",
+            "Date"
+          ]
+        },
+        {
+          "SubTypeName": "Decimal",
+          "FieldFamilyRefs": [
+            "Core",
+            "Database",
+            "Language",
+            "Number",
+            "Decimal"
+          ]
+        },
+        {
+          "SubTypeName": "String",
+          "FieldFamilyRefs": [
+            "Core",
+            "Database",
+            "Language",
+            "String"
+          ]
+        },
+        {
+          "SubTypeName": "Xml",
+          "FieldFamilyRefs": [
+            "Core",
+            "Database",
+            "Language",
+            "String"
+          ]
+        }
+      ],
+      "Fields": [
+        {
+          "FieldName": "DataTypeId",
+          "DbColumnName": "DataTypeId",
+          "DomainName": "DataTypeId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the DataType",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "DataTypeName",
+          "DbColumnName": "DataTypeName",
+          "DomainName": "DataTypeName",
+          "IsNullable": false,
+          "ExampleValueAsString": "binary",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "SqlServerDataType",
+          "DbColumnName": "SqlServerDataType",
+          "DomainName": "SqlServerDataType",
+          "IsNullable": true,
+          "ExampleValueAsString": "binary",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Database",
+          "PropertySeq": 6
+        },
+        {
+          "FieldName": "OracleDataType",
+          "DbColumnName": "OracleDataType",
+          "DomainName": "OracleDataType",
+          "IsNullable": true,
+          "ExampleValueAsString": "raw",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Database",
+          "PropertySeq": 7
+        },
+        {
+          "FieldName": "MySqlDataType",
+          "DbColumnName": "MySqlDataType",
+          "DomainName": "MySqlDbDataType",
+          "IsNullable": true,
+          "ExampleValueAsString": "binary",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Database",
+          "PropertySeq": 8
+        },
+        {
+          "FieldName": "MongoDbDataType",
+          "DbColumnName": "MongoDbDataType",
+          "DomainName": "MongoDbDataType",
+          "IsNullable": true,
+          "ExampleValueAsString": "binData",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Database",
+          "PropertySeq": 9
+        },
+        {
+          "FieldName": "DotNetDataType",
+          "DbColumnName": "DotNetDataType",
+          "DomainName": "DotNetDataType",
+          "IsNullable": true,
+          "ExampleValueAsString": "byte[]",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Language",
+          "PropertySeq": 10
+        },
+        {
+          "FieldName": "JavaDataType",
+          "DbColumnName": "JavaDataType",
+          "DomainName": "JavaDataType",
+          "IsNullable": true,
+          "ExampleValueAsString": "byte[]",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Language",
+          "PropertySeq": 11
+        },
+        {
+          "FieldName": "XmlDataType",
+          "DbColumnName": "XmlDataType",
+          "DomainName": "XmlDateType",
+          "IsNullable": true,
+          "ExampleValueAsString": "xs:base64Binary",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Language",
+          "PropertySeq": 12
+        },
+        {
+          "FieldName": "ExampleValueAsString",
+          "DbColumnName": "ExampleValueAsString",
+          "DomainName": "ExampleValueAsString",
+          "IsNullable": true,
+          "ExampleValueAsString": "a1b2c3d4",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 13
+        },
+        {
+          "FieldName": "JsonDataType",
+          "DbColumnName": "JsonDataType",
+          "DomainName": "JsonDataType",
+          "IsNullable": true,
+          "ExampleValueAsString": "String",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Language",
+          "PropertySeq": 14
+        },
+        {
+          "FieldName": "JsonFormat",
+          "DbColumnName": "JsonFormat",
+          "DomainName": "JsonFormat",
+          "IsNullable": true,
+          "ExampleValueAsString": "date-time",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Language",
+          "PropertySeq": 15
+        },
+        {
+          "FieldName": "OpenApiDataType",
+          "DbColumnName": "OpenApiDataType",
+          "DomainName": "OpenApiDataType",
+          "IsNullable": true,
+          "ExampleValueAsString": "String",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Language",
+          "PropertySeq": 16
+        },
+        {
+          "FieldName": "OpenApiFormat",
+          "DbColumnName": "OpenApiFormat",
+          "DomainName": "OpenApiFormat",
+          "IsNullable": true,
+          "ExampleValueAsString": "byte",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Language",
+          "PropertySeq": 17
+        },
+        {
+          "FieldName": "ErsDataType",
+          "DbColumnName": "ErsDataType",
+          "DomainName": "ErsDataType",
+          "IsNullable": true,
+          "ExampleValueAsString": "BINARY",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Database",
+          "PropertySeq": 18
+        },
+        {
+          "FieldName": "BasicDataType",
+          "DbColumnName": "BasicDataType",
+          "DomainName": "BasicDataType",
+          "IsNullable": true,
+          "ExampleValueAsString": "Binary",
+          "FieldUsage": "Common",
+          "IsDiscriminatorField": true,
+          "FieldFamilyName": "Core",
+          "PropertySeq": 19
+        },
+        {
+          "FieldName": "MinLength",
+          "DbColumnName": "MinLength",
+          "DomainName": "MinLength",
+          "IsNullable": true,
+          "ExampleValueAsString": "1",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "String",
+          "PropertySeq": 20
+        },
+        {
+          "FieldName": "MaxLength",
+          "DbColumnName": "MaxLength",
+          "DomainName": "MaxLength",
+          "IsNullable": true,
+          "ExampleValueAsString": "4000",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "String",
+          "PropertySeq": 21
+        },
+        {
+          "FieldName": "MinValue",
+          "DbColumnName": "MinValue",
+          "DomainName": "MinValue",
+          "IsNullable": true,
+          "ExampleValueAsString": "1",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Number",
+          "PropertySeq": 22
+        },
+        {
+          "FieldName": "MaxValue",
+          "DbColumnName": "MaxValue",
+          "DomainName": "MaxValue",
+          "IsNullable": true,
+          "ExampleValueAsString": "4000",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Number",
+          "PropertySeq": 23
+        },
+        {
+          "FieldName": "TotalDigits",
+          "DbColumnName": "TotalDigits",
+          "DomainName": "TotalDigits",
+          "IsNullable": true,
+          "ExampleValueAsString": "3",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Decimal",
+          "PropertySeq": 24
+        },
+        {
+          "FieldName": "DecimalPlaces",
+          "DbColumnName": "DecimalPlaces",
+          "DomainName": "DecimalPlaces",
+          "IsNullable": true,
+          "ExampleValueAsString": "1",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Decimal",
+          "PropertySeq": 25
+        },
+        {
+          "FieldName": "DatePrecision",
+          "DbColumnName": "DatePrecision",
+          "DomainName": "DatePrecision",
+          "IsNullable": true,
+          "ExampleValueAsString": "7",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Date",
+          "PropertySeq": 26
+        },
+        {
+          "FieldName": "HasLength",
+          "DbColumnName": "HasLength",
+          "DomainName": "HasLength",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "String",
+          "PropertySeq": 27
+        },
+        {
+          "FieldName": "HasTotalDigits",
+          "DbColumnName": "HasTotalDigits",
+          "DomainName": "HasTotalDigits",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Decimal",
+          "PropertySeq": 28
+        },
+        {
+          "FieldName": "HasDecimalPlaces",
+          "DbColumnName": "HasDecimalPlaces",
+          "DomainName": "HasDecimalPlaces",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Decimal",
+          "PropertySeq": 29
+        },
+        {
+          "FieldName": "HasIdentity",
+          "DbColumnName": "HasIdentity",
+          "DomainName": "HasIdentity",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Number",
+          "PropertySeq": 30
+        },
+        {
+          "FieldName": "HasDatePrecision",
+          "DbColumnName": "HasDatePrecision",
+          "DomainName": "HasDatePrecision",
+          "IsNullable": true,
+          "ExampleValueAsString": "True",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Date",
+          "PropertySeq": 31
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_DataType",
+          "DbIndexName": "PK_DataType",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "DataTypeId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "DataTypeId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "DataTypeName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "DataTypeName"
+          ]
+        },
+        {
+          "IndexName": "AK_DataType_ConceptModelId_DataTypeName",
+          "DbIndexName": "AK_DataType_ConceptModelId_DataTypeName",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptModelId",
+            "DataTypeName"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "DataTypeName"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "DataTypeName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "DataTypeName"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "Enumeration",
+      "DbSchemaName": "dbo",
+      "DbTableName": "Enumeration",
+      "EntityDescription": "A constrained vocabulary",
+      "ToStringExpression": "{x.}EnumerationName",
+      "Includes": [],
+      "FieldFamilies": [
+        "Core"
+      ],
+      "SubTypes": [],
+      "Fields": [
+        {
+          "FieldName": "EnumerationId",
+          "DbColumnName": "EnumerationId",
+          "DomainName": "EnumerationId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the Enumeration",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "EnumerationName",
+          "DbColumnName": "EnumerationName",
+          "DomainName": "EnumerationName",
+          "IsNullable": true,
+          "ExampleValueAsString": "BasicDataType",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "EnumerationDescription",
+          "DbColumnName": "EnumerationDescription",
+          "DomainName": "EnumerationDescription",
+          "IsNullable": true,
+          "ExampleValueAsString": "The logical data type",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 6
+        },
+        {
+          "FieldName": "DataTypeId",
+          "DbColumnName": "DataTypeId",
+          "DomainName": "DataTypeId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the DataType",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 7
+        },
+        {
+          "FieldName": "DataTypeName",
+          "DbColumnName": "DataTypeName",
+          "DomainName": "DataTypeName",
+          "IsNullable": false,
+          "FieldDescription": "The DataTypeName value for the DataType",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 8
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_Enumeration",
+          "DbIndexName": "PK_Enumeration",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "EnumerationId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "DataTypeId",
+            "EnumerationId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "DataTypeName",
+            "EnumerationName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "EnumerationName"
+          ]
+        },
+        {
+          "IndexName": "AK_Enumeration_ConceptModelId_EnumerationName",
+          "DbIndexName": "AK_Enumeration_ConceptModelId_EnumerationName",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptModelId",
+            "EnumerationName"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "DataTypeId",
+            "EnumerationName"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "DataTypeName",
+            "EnumerationName"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "EnumerationName"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "EnumerationMember",
+      "DbSchemaName": "dbo",
+      "DbTableName": "EnumerationMember",
+      "EntityDescription": "An item within a constrained vocabulary",
+      "ToStringExpression": "{x.}EnumeratedValue",
+      "Includes": [],
+      "FieldFamilies": [
+        "Core"
+      ],
+      "SubTypes": [],
+      "Fields": [
+        {
+          "FieldName": "EnumerationMemberId",
+          "DbColumnName": "EnumerationMemberId",
+          "DomainName": "EnumerationMemberId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the EnumerationMember",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "DataTypeId",
+          "DbColumnName": "DataTypeId",
+          "DomainName": "DataTypeId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the DataType",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 4
+        },
+        {
+          "FieldName": "DataTypeName",
+          "DbColumnName": "DataTypeName",
+          "DomainName": "DataTypeName",
+          "IsNullable": false,
+          "FieldDescription": "The DataTypeName value for the DataType",
+          "FieldUsage": "Implied",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "EnumerationId",
+          "DbColumnName": "EnumerationId",
+          "DomainName": "EnumerationId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the Enumeration",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 6
+        },
+        {
+          "FieldName": "EnumerationName",
+          "DbColumnName": "EnumerationName",
+          "DomainName": "EnumerationName",
+          "IsNullable": false,
+          "FieldDescription": "The EnumerationName value for the Enumeration",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 7
+        },
+        {
+          "FieldName": "EnumeratedValue",
+          "DbColumnName": "EnumeratedValue",
+          "DomainName": "EnumeratedValue",
+          "IsNullable": false,
+          "ExampleValueAsString": "String",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 9
+        },
+        {
+          "FieldName": "EnumeratedValueDescription",
+          "DbColumnName": "EnumeratedValueDescription",
+          "DomainName": "EnumeratedValueDescription",
+          "IsNullable": true,
+          "ExampleValueAsString": "Accepts textual values",
+          "FieldUsage": "Common",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 10
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_EnumerationMember",
+          "DbIndexName": "PK_EnumerationMember",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "EnumerationMemberId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "DataTypeId",
+            "EnumerationId",
+            "EnumerationMemberId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "DataTypeName",
+            "EnumerationName",
+            "EnumeratedValue"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "EnumerationName",
+            "EnumeratedValue"
+          ]
+        },
+        {
+          "IndexName": "AK_EnumerationMember_EnumerationId_EnumeratedValue",
+          "DbIndexName": "AK_EnumerationMember_EnumerationId_EnumeratedValue",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "EnumerationId",
+            "EnumeratedValue"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "DataTypeId",
+            "EnumerationId",
+            "EnumeratedValue"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "DataTypeName",
+            "EnumerationName",
+            "EnumeratedValue"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "EnumerationName",
+            "EnumeratedValue"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "Include",
+      "DbSchemaName": "dbo",
+      "DbTableName": "Include",
+      "EntityDescription": "A Linq expression, starting from the current entity, that defines an item to be hydrated when hydrating the current entity",
+      "ToStringExpression": "{x.}ItemValue",
+      "Includes": [],
+      "FieldFamilies": [
+        "Core"
+      ],
+      "SubTypes": [],
+      "Fields": [
+        {
+          "FieldName": "IncludeId",
+          "DbColumnName": "IncludeId",
+          "DomainName": "IncludeId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the Include",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "ConceptId",
+          "DbColumnName": "ConceptId",
+          "DomainName": "ConceptId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 4
+        },
+        {
+          "FieldName": "ConceptName",
+          "DbColumnName": "ConceptName",
+          "DomainName": "ConceptName",
+          "IsNullable": false,
+          "FieldDescription": "The ConceptName value for the Concept",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "ItemValue",
+          "DbColumnName": "ItemValue",
+          "DomainName": "IncludeLinqExpression",
+          "IsNullable": true,
+          "ExampleValueAsString": "{x.}ParentLogicalIndexField",
+          "FieldUsage": "Common",
+          "IsScalarFieldToSerialiseInPersistenceModel": true,
+          "IsScalarFieldToSerialiseInDomainModel": true,
+          "FieldFamilyName": "Core",
+          "PropertySeq": 7
+        },
+        {
+          "FieldName": "SeqNo",
+          "DbColumnName": "SeqNo",
+          "DomainName": "csf-seqno",
+          "IsNullable": false,
+          "FieldDescription": "Sequence number",
+          "ExampleValueAsString": "1",
+          "FieldUsage": "PersistenceOnly",
+          "IsSeqNoField": true,
+          "FieldFamilyName": "Core",
+          "PropertySeq": 8
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_Include",
+          "DbIndexName": "PK_Include",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "IncludeId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "IncludeId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "ItemValue"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "ItemValue"
+          ]
+        },
+        {
+          "IndexName": "AK_Include_ConceptId_ItemValue",
+          "DbIndexName": "AK_Include_ConceptId_ItemValue",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptId",
+            "ItemValue"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "ItemValue"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "ItemValue"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "ItemValue"
+          ]
+        }
+      ]
+    },
+    {
+      "EntityName": "Qualifier",
+      "DbSchemaName": "dbo",
+      "DbTableName": "Qualifier",
+      "EntityDescription": "A prefix that can be placed before the name of the current entity to specify the role it plays",
+      "ToStringExpression": "{x.}ItemValue",
+      "Includes": [],
+      "FieldFamilies": [
+        "Core"
+      ],
+      "SubTypes": [],
+      "Fields": [
+        {
+          "FieldName": "QualifierId",
+          "DbColumnName": "QualifierId",
+          "DomainName": "QualifierId",
+          "IsNullable": false,
+          "IsIdentity": true,
+          "FieldDescription": "The ID of the Qualifier",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 1
+        },
+        {
+          "FieldName": "ConceptModelId",
+          "DbColumnName": "ConceptModelId",
+          "DomainName": "ConceptModelId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the ConceptModel",
+          "FieldUsage": "ImpliedInPersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 2
+        },
+        {
+          "FieldName": "ModelName",
+          "DbColumnName": "ModelName",
+          "DomainName": "ModelName",
+          "IsNullable": false,
+          "FieldDescription": "The ModelName value for the ConceptModel",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 3
+        },
+        {
+          "FieldName": "ConceptId",
+          "DbColumnName": "ConceptId",
+          "DomainName": "ConceptId",
+          "IsNullable": false,
+          "FieldDescription": "The ID of the Concept",
+          "FieldUsage": "PersistenceOnly",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 4
+        },
+        {
+          "FieldName": "ConceptName",
+          "DbColumnName": "ConceptName",
+          "DomainName": "ConceptName",
+          "IsNullable": false,
+          "FieldDescription": "The ConceptName value for the Concept",
+          "FieldUsage": "ImpliedInPersistence",
+          "FieldFamilyName": "Core",
+          "PropertySeq": 5
+        },
+        {
+          "FieldName": "ItemValue",
+          "DbColumnName": "ItemValue",
+          "DomainName": "QualifierTerm",
+          "IsNullable": false,
+          "ExampleValueAsString": "Parent",
+          "FieldUsage": "Common",
+          "IsScalarFieldToSerialiseInPersistenceModel": true,
+          "IsScalarFieldToSerialiseInDomainModel": true,
+          "FieldFamilyName": "Core",
+          "PropertySeq": 7
+        },
+        {
+          "FieldName": "SeqNo",
+          "DbColumnName": "SeqNo",
+          "DomainName": "csf-seqno",
+          "IsNullable": false,
+          "FieldDescription": "Sequence number",
+          "ExampleValueAsString": "1",
+          "FieldUsage": "PersistenceOnly",
+          "IsSeqNoField": true,
+          "FieldFamilyName": "Core",
+          "PropertySeq": 8
+        }
+      ],
+      "Indexes": [
+        {
+          "IndexName": "PK_Qualifier",
+          "DbIndexName": "PK_Qualifier",
+          "IndexType": "PrimaryKey",
+          "IndexFields": [
+            "QualifierId"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "QualifierId"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "ItemValue"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "ItemValue"
+          ]
+        },
+        {
+          "IndexName": "AK_Qualifier_ConceptId_ItemValue",
+          "DbIndexName": "AK_Qualifier_ConceptId_ItemValue",
+          "IndexType": "AlternateKeyLogicalKey",
+          "IndexFields": [
+            "ConceptId",
+            "ItemValue"
+          ],
+          "LogicalIndexFields": [
+            "ConceptModelId",
+            "ConceptId",
+            "ItemValue"
+          ],
+          "LogicalBusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "ItemValue"
+          ],
+          "BusinessFields": [
+            "ModelName",
+            "ConceptName",
+            "ItemValue"
+          ]
+        }
+      ]
+    }
+  ],
+  "Relationships": [
+    {
+      "RelationshipName": "Concept.BasedOnConcept",
+      "DbForeignKeyName": "FK_Concept_BasedOnConceptId",
+      "ChildCollectionName": "DerivedConcepts",
+      "ChildItemName": "DerivedConcept",
+      "ChildFieldFamilyName": "Scalar",
+      "ChildPropertySeq": 53,
+      "ChildQualifier": "",
+      "ChildEntityName": "Concept",
+      "ParentPropertyName": "BasedOnConcept",
+      "ParentFieldFamilyName": "Scalar",
+      "ParentPropertySeq": 16,
+      "ParentQualifier": "BasedOn",
+      "ParentEntityName": "Concept",
+      "ParentIndexName": "PK3_ScalarConcept",
+      "ConceptualRelationshipType": "Descriptive",
+      "RelationshipType": "Reference",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "BasedOnConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "DataTypeId",
+          "ParentFieldName": "DataTypeId"
+        },
+        {
+          "ChildFieldName": "BasedOnConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "DataTypeName",
+          "ParentFieldName": "DataTypeName"
+        },
+        {
+          "ChildFieldName": "BasedOnConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "BasedOnConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.DataType",
+      "DbForeignKeyName": "FK_Concept_DataTypeId",
+      "ChildCollectionName": "Concepts",
+      "ChildItemName": "Concept",
+      "ChildFieldFamilyName": "Usage",
+      "ChildPropertySeq": 32,
+      "ChildQualifier": "",
+      "ChildEntityName": "Concept",
+      "ParentPropertyName": "DataType",
+      "ParentFieldFamilyName": "DataType",
+      "ParentPropertySeq": 10,
+      "ParentQualifier": "",
+      "ParentEntityName": "DataType",
+      "ParentIndexName": "PK_DataType",
+      "ConceptualRelationshipType": "Descriptive",
+      "IsPropagating": true,
+      "RelationshipType": "Reference",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "DataTypeId",
+          "ParentFieldName": "DataTypeId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "DataTypeId",
+          "ParentFieldName": "DataTypeId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "DataTypeName",
+          "ParentFieldName": "DataTypeName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "DataTypeName",
+          "ParentFieldName": "DataTypeName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.Enumeration",
+      "DbForeignKeyName": "FK_Concept_EnumerationId",
+      "ChildCollectionName": "Concepts",
+      "ChildItemName": "Concept",
+      "ChildFieldFamilyName": "Usage",
+      "ChildPropertySeq": 11,
+      "ChildQualifier": "",
+      "ChildEntityName": "Concept",
+      "ParentPropertyName": "Enumeration",
+      "ParentFieldFamilyName": "Enumeration",
+      "ParentPropertySeq": 13,
+      "ParentQualifier": "",
+      "ParentEntityName": "Enumeration",
+      "ParentIndexName": "PK_Enumeration",
+      "ConceptualRelationshipType": "Descriptive",
+      "RelationshipType": "Reference",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "EnumerationId",
+          "ParentFieldName": "EnumerationId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "DataTypeId",
+          "ParentFieldName": "DataTypeId"
+        },
+        {
+          "ChildFieldName": "EnumerationId",
+          "ParentFieldName": "EnumerationId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "DataTypeName",
+          "ParentFieldName": "DataTypeName"
+        },
+        {
+          "ChildFieldName": "EnumerationName",
+          "ParentFieldName": "EnumerationName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "EnumerationName",
+          "ParentFieldName": "EnumerationName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.Includes",
+      "DbForeignKeyName": "FK_Include_ConceptId",
+      "ChildCollectionName": "Includes",
+      "ChildItemName": "Include",
+      "ChildFieldFamilyName": "Object",
+      "ChildPropertySeq": 47,
+      "ChildQualifier": "",
+      "ChildEntityName": "Include",
+      "ParentPropertyName": "Concept",
+      "ParentFieldFamilyName": "Core",
+      "ParentPropertySeq": 6,
+      "ParentQualifier": "",
+      "ParentEntityName": "Concept",
+      "ParentIndexName": "PK4_ObjectConcept",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.Properties",
+      "DbForeignKeyName": "FK_ConceptRef_ConceptId",
+      "ChildCollectionName": "Properties",
+      "ChildItemName": "Property",
+      "ChildFieldFamilyName": "Object",
+      "ChildPropertySeq": 52,
+      "ChildQualifier": "",
+      "ChildEntityName": "ConceptRef",
+      "ParentPropertyName": "Concept",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 6,
+      "ParentQualifier": "",
+      "ParentEntityName": "Concept",
+      "ParentIndexName": "PK4_ObjectConcept",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.PropertyFamilies",
+      "DbForeignKeyName": "FK_ConceptPropertyFamily_ConceptId",
+      "ChildCollectionName": "PropertyFamilies",
+      "ChildItemName": "PropertyFamily",
+      "ChildFieldFamilyName": "Object",
+      "ChildPropertySeq": 49,
+      "ChildQualifier": "",
+      "ChildEntityName": "ConceptPropertyFamily",
+      "ParentPropertyName": "Concept",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 6,
+      "ParentQualifier": "",
+      "ParentEntityName": "Concept",
+      "ParentIndexName": "PK4_ObjectConcept",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.Qualifiers",
+      "DbForeignKeyName": "FK_Qualifier_ConceptId",
+      "ChildCollectionName": "Qualifiers",
+      "ChildItemName": "Qualifier",
+      "ChildFieldFamilyName": "Object",
+      "ChildPropertySeq": 48,
+      "ChildQualifier": "",
+      "ChildEntityName": "Qualifier",
+      "ParentPropertyName": "Concept",
+      "ParentFieldFamilyName": "Core",
+      "ParentPropertySeq": 6,
+      "ParentQualifier": "",
+      "ParentEntityName": "Concept",
+      "ParentIndexName": "PK4_ObjectConcept",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.ReferencedConcept",
+      "DbForeignKeyName": "FK_Concept_ReferencedConceptId",
+      "ChildCollectionName": "ReferencedByConcepts",
+      "ChildItemName": "ReferencedByConcept",
+      "ChildFieldFamilyName": "Object",
+      "ChildPropertySeq": 55,
+      "ChildQualifier": "ReferencedBy",
+      "ChildEntityName": "Concept",
+      "ParentPropertyName": "ReferencedConcept",
+      "ParentFieldFamilyName": "UniqueKey",
+      "ParentPropertySeq": 37,
+      "ParentQualifier": "Referenced",
+      "ParentEntityName": "Concept",
+      "ParentIndexName": "PK5_UniqueKeyConcept",
+      "ConceptualRelationshipType": "Descriptive",
+      "RelationshipType": "Reference",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ReferencedConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ReferencedConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ReferencedConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ReferencedConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.ReferencedUniqueKey",
+      "DbForeignKeyName": "FK_Concept_ReferencedConceptUniqueKeyId",
+      "IsReferenceToChildEntity": true,
+      "ChildCollectionName": "UniqueKeyRefs",
+      "ChildItemName": "UniqueKeyRef",
+      "ChildFieldFamilyName": "Common",
+      "ChildPropertySeq": 8,
+      "ChildQualifier": "",
+      "ChildEntityName": "Concept",
+      "ParentPropertyName": "ReferencedUniqueKey",
+      "ParentFieldFamilyName": "UniqueKey",
+      "ParentPropertySeq": 40,
+      "ParentQualifier": "Referenced",
+      "ParentEntityName": "ConceptUniqueKey",
+      "ParentIndexName": "PK_ConceptUniqueKey",
+      "ConceptualRelationshipType": "Descriptive",
+      "RelationshipType": "Reference",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ReferencedConceptUniqueKeyId",
+          "ParentFieldName": "ConceptUniqueKeyId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ReferencedConceptId",
+          "ParentFieldName": "ConceptId"
+        },
+        {
+          "ChildFieldName": "ReferencedConceptUniqueKeyId",
+          "ParentFieldName": "ConceptUniqueKeyId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ReferencedConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "ReferencedUniqueKeyName",
+          "ParentFieldName": "UniqueKeyName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ReferencedConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "ReferencedUniqueKeyName",
+          "ParentFieldName": "UniqueKeyName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.SpecialisedConcept",
+      "DbForeignKeyName": "FK_Concept_SpecialisedConceptId",
+      "ChildCollectionName": "SpecialisedByConcepts",
+      "ChildItemName": "SpecialisedByConcept",
+      "ChildFieldFamilyName": "Object",
+      "ChildPropertySeq": 56,
+      "ChildQualifier": "SpecialisedBy",
+      "ChildEntityName": "Concept",
+      "ParentPropertyName": "SpecialisedConcept",
+      "ParentFieldFamilyName": "SubType",
+      "ParentPropertySeq": 43,
+      "ParentQualifier": "Specialised",
+      "ParentEntityName": "Concept",
+      "ParentIndexName": "PK6_SubTypeConcept",
+      "ConceptualRelationshipType": "Descriptive",
+      "RelationshipType": "Reference",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "SpecialisedConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "SpecialisedConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "SpecialisedConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "SpecialisedConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.SpecialisedSubType",
+      "DbForeignKeyName": "FK_Concept_SpecialisedConceptSubTypeId",
+      "IsReferenceToChildEntity": true,
+      "ChildCollectionName": "SubTypeRefs",
+      "ChildItemName": "SubTypeRef",
+      "ChildFieldFamilyName": "Common",
+      "ChildPropertySeq": 9,
+      "ChildQualifier": "",
+      "ChildEntityName": "Concept",
+      "ParentPropertyName": "SpecialisedSubType",
+      "ParentFieldFamilyName": "SubType",
+      "ParentPropertySeq": 46,
+      "ParentQualifier": "Specialised",
+      "ParentEntityName": "ConceptSubType",
+      "ParentIndexName": "PK_ConceptSubType",
+      "ConceptualRelationshipType": "Descriptive",
+      "RelationshipType": "Reference",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "SpecialisedConceptSubTypeId",
+          "ParentFieldName": "ConceptSubTypeId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "SpecialisedConceptId",
+          "ParentFieldName": "ConceptId"
+        },
+        {
+          "ChildFieldName": "SpecialisedConceptSubTypeId",
+          "ParentFieldName": "ConceptSubTypeId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "SpecialisedConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "SpecialisedSubTypeName",
+          "ParentFieldName": "SubTypeName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "SpecialisedConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "SpecialisedSubTypeName",
+          "ParentFieldName": "SubTypeName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.SubTypes",
+      "DbForeignKeyName": "FK_ConceptSubType_ConceptId",
+      "ChildCollectionName": "SubTypes",
+      "ChildItemName": "SubType",
+      "ChildFieldFamilyName": "Object",
+      "ChildPropertySeq": 51,
+      "ChildQualifier": "",
+      "ChildEntityName": "ConceptSubType",
+      "ParentPropertyName": "Concept",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 6,
+      "ParentQualifier": "",
+      "ParentEntityName": "Concept",
+      "ParentIndexName": "PK4_ObjectConcept",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Concept.UniqueKeys",
+      "DbForeignKeyName": "FK_ConceptUniqueKey_ConceptId",
+      "ChildCollectionName": "UniqueKeys",
+      "ChildItemName": "UniqueKey",
+      "ChildFieldFamilyName": "Object",
+      "ChildPropertySeq": 50,
+      "ChildQualifier": "",
+      "ChildEntityName": "ConceptUniqueKey",
+      "ParentPropertyName": "Concept",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 6,
+      "ParentQualifier": "",
+      "ParentEntityName": "Concept",
+      "ParentIndexName": "PK4_ObjectConcept",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "ConceptModel.Concepts",
+      "DbForeignKeyName": "FK_Concept_ConceptModelId",
+      "ChildCollectionName": "Concepts",
+      "ChildItemName": "Concept",
+      "ChildFieldFamilyName": "Core",
+      "ChildPropertySeq": 6,
+      "ChildQualifier": "",
+      "ChildEntityName": "Concept",
+      "ParentPropertyName": "ConceptModel",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 4,
+      "ParentQualifier": "",
+      "ParentEntityName": "ConceptModel",
+      "ParentIndexName": "PK_ConceptModel",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "ConceptModel.DataTypes",
+      "DbForeignKeyName": "FK_DataType_ConceptModelId",
+      "ChildCollectionName": "DataTypes",
+      "ChildItemName": "DataType",
+      "ChildFieldFamilyName": "Core",
+      "ChildPropertySeq": 4,
+      "ChildQualifier": "",
+      "ChildEntityName": "DataType",
+      "ParentPropertyName": "ConceptModel",
+      "ParentFieldFamilyName": "Core",
+      "ParentPropertySeq": 4,
+      "ParentQualifier": "",
+      "ParentEntityName": "ConceptModel",
+      "ParentIndexName": "PK_ConceptModel",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "ConceptModel.Enumerations",
+      "DbForeignKeyName": "FK_Enumeration_ConceptModelId",
+      "ChildCollectionName": "Enumerations",
+      "ChildItemName": "Enumeration",
+      "ChildFieldFamilyName": "Core",
+      "ChildPropertySeq": 5,
+      "ChildQualifier": "",
+      "ChildEntityName": "Enumeration",
+      "ParentPropertyName": "ConceptModel",
+      "ParentFieldFamilyName": "Core",
+      "ParentPropertySeq": 4,
+      "ParentQualifier": "",
+      "ParentEntityName": "ConceptModel",
+      "ParentIndexName": "PK_ConceptModel",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "ConceptRef.PropertyFamily",
+      "DbForeignKeyName": "FK_ConceptRef_ConceptPropertyFamilyId",
+      "ChildCollectionName": "Properties",
+      "ChildFieldFamilyName": "Core",
+      "ChildPropertySeq": 8,
+      "ChildQualifier": "",
+      "ChildEntityName": "ConceptRef",
+      "ParentPropertyName": "PropertyFamily",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 15,
+      "ParentQualifier": "",
+      "ParentEntityName": "ConceptPropertyFamily",
+      "ParentIndexName": "PK_ConceptPropertyFamily",
+      "ConceptualRelationshipType": "Descriptive",
+      "RelationshipType": "Reference",
+      "SelectorType": "Dropdown",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptPropertyFamilyId",
+          "ParentFieldName": "ConceptPropertyFamilyId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        },
+        {
+          "ChildFieldName": "ConceptPropertyFamilyId",
+          "ParentFieldName": "ConceptPropertyFamilyId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "PropertyFamilyName",
+          "ParentFieldName": "PropertyFamilyName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "PropertyFamilyName",
+          "ParentFieldName": "PropertyFamilyName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "ConceptRef.ReferencedConcept",
+      "DbForeignKeyName": "FK_ConceptRef_ReferencedConceptId",
+      "ChildCollectionName": "ReferencedByProperties",
+      "ChildFieldFamilyName": "Usage",
+      "ChildPropertySeq": 54,
+      "ChildQualifier": "ReferencedBy",
+      "ChildEntityName": "ConceptRef",
+      "ParentPropertyName": "ReferencedConcept",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 11,
+      "ParentQualifier": "Referenced",
+      "ParentEntityName": "Concept",
+      "ParentIndexName": "PK2_CommonConcept",
+      "ConceptualRelationshipType": "Descriptive",
+      "RelationshipType": "Reference",
+      "SelectorType": "Searchable",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ReferencedConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ReferencedConceptId",
+          "ParentFieldName": "ConceptId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ReferencedConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ReferencedConceptName",
+          "ParentFieldName": "ConceptName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "ConceptSubType.PropertyFamilyRefs",
+      "DbForeignKeyName": "FK_ConceptSubTypePropertyFamilyRef_ConceptSubTypeId",
+      "ChildCollectionName": "PropertyFamilyRefs",
+      "ChildItemName": "PropertyFamilyRef",
+      "ChildFieldFamilyName": "Common",
+      "ChildPropertySeq": 8,
+      "ChildQualifier": "",
+      "ChildEntityName": "ConceptSubTypePropertyFamilyRef",
+      "ParentPropertyName": "ConceptSubType",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 8,
+      "ParentQualifier": "",
+      "ParentEntityName": "ConceptSubType",
+      "ParentIndexName": "PK_ConceptSubType",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptSubTypeId",
+          "ParentFieldName": "ConceptSubTypeId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        },
+        {
+          "ChildFieldName": "ConceptSubTypeId",
+          "ParentFieldName": "ConceptSubTypeId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "SubTypeName",
+          "ParentFieldName": "SubTypeName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "SubTypeName",
+          "ParentFieldName": "SubTypeName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "ConceptSubTypePropertyFamilyRef.ConceptPropertyFamily",
+      "DbForeignKeyName": "FK_ConceptSubTypePropertyFamilyRef_ConceptPropertyFamilyId",
+      "ChildCollectionName": "PropertyFamilyRefs",
+      "ChildItemName": "PropertyFamilyRef",
+      "ChildFieldFamilyName": "Common",
+      "ChildPropertySeq": 9,
+      "ChildQualifier": "",
+      "ChildEntityName": "ConceptSubTypePropertyFamilyRef",
+      "ParentPropertyName": "ConceptPropertyFamily",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 11,
+      "ParentQualifier": "",
+      "ParentEntityName": "ConceptPropertyFamily",
+      "ParentIndexName": "PK_ConceptPropertyFamily",
+      "ConceptualRelationshipType": "Identifying",
+      "RelationshipType": "Reference",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptPropertyFamilyId",
+          "ParentFieldName": "ConceptPropertyFamilyId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        },
+        {
+          "ChildFieldName": "ConceptPropertyFamilyId",
+          "ParentFieldName": "ConceptPropertyFamilyId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "PropertyFamilyName",
+          "ParentFieldName": "PropertyFamilyName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "PropertyFamilyName",
+          "ParentFieldName": "PropertyFamilyName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "ConceptUniqueKey.PropertyFamilyRefs",
+      "DbForeignKeyName": "FK_ConceptUniqueKeyPropertyFamilyRef_ConceptUniqueKeyId",
+      "ChildCollectionName": "PropertyFamilyRefs",
+      "ChildItemName": "PropertyFamilyRef",
+      "ChildFieldFamilyName": "Common",
+      "ChildPropertySeq": 9,
+      "ChildQualifier": "",
+      "ChildEntityName": "ConceptUniqueKeyPropertyFamilyRef",
+      "ParentPropertyName": "ConceptUniqueKey",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 8,
+      "ParentQualifier": "",
+      "ParentEntityName": "ConceptUniqueKey",
+      "ParentIndexName": "PK_ConceptUniqueKey",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptUniqueKeyId",
+          "ParentFieldName": "ConceptUniqueKeyId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        },
+        {
+          "ChildFieldName": "ConceptUniqueKeyId",
+          "ParentFieldName": "ConceptUniqueKeyId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "UniqueKeyName",
+          "ParentFieldName": "UniqueKeyName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "UniqueKeyName",
+          "ParentFieldName": "UniqueKeyName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "ConceptUniqueKeyPropertyFamilyRef.ConceptPropertyFamily",
+      "DbForeignKeyName": "FK_ConceptUniqueKeyPropertyFamilyRef_ConceptPropertyFamilyId",
+      "ChildCollectionName": "UniqueKeyPropertyFamilyRefs",
+      "ChildItemName": "UniqueKeyPropertyFamilyRef",
+      "ChildFieldFamilyName": "Common",
+      "ChildPropertySeq": 10,
+      "ChildQualifier": "",
+      "ChildEntityName": "ConceptUniqueKeyPropertyFamilyRef",
+      "ParentPropertyName": "ConceptPropertyFamily",
+      "ParentFieldFamilyName": "Common",
+      "ParentPropertySeq": 11,
+      "ParentQualifier": "",
+      "ParentEntityName": "ConceptPropertyFamily",
+      "ParentIndexName": "PK_ConceptPropertyFamily",
+      "ConceptualRelationshipType": "Identifying",
+      "RelationshipType": "Reference",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "ConceptPropertyFamilyId",
+          "ParentFieldName": "ConceptPropertyFamilyId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "ConceptId",
+          "ParentFieldName": "ConceptId"
+        },
+        {
+          "ChildFieldName": "ConceptPropertyFamilyId",
+          "ParentFieldName": "ConceptPropertyFamilyId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "PropertyFamilyName",
+          "ParentFieldName": "PropertyFamilyName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "ConceptName",
+          "ParentFieldName": "ConceptName"
+        },
+        {
+          "ChildFieldName": "PropertyFamilyName",
+          "ParentFieldName": "PropertyFamilyName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Enumeration.DataType",
+      "DbForeignKeyName": "FK_Enumeration_DataTypeId",
+      "ChildCollectionName": "Enumerations",
+      "ChildItemName": "Enumeration",
+      "ChildFieldFamilyName": "Usage",
+      "ChildPropertySeq": 33,
+      "ChildQualifier": "",
+      "ChildEntityName": "Enumeration",
+      "ParentPropertyName": "DataType",
+      "ParentFieldFamilyName": "Core",
+      "ParentPropertySeq": 9,
+      "ParentQualifier": "",
+      "ParentEntityName": "DataType",
+      "ParentIndexName": "PK_DataType",
+      "ConceptualRelationshipType": "Descriptive",
+      "IsPropagating": true,
+      "RelationshipType": "Reference",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "DataTypeId",
+          "ParentFieldName": "DataTypeId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "DataTypeId",
+          "ParentFieldName": "DataTypeId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "DataTypeName",
+          "ParentFieldName": "DataTypeName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "DataTypeName",
+          "ParentFieldName": "DataTypeName"
+        }
+      ]
+    },
+    {
+      "RelationshipName": "Enumeration.EnumeratedValues",
+      "DbForeignKeyName": "FK_EnumerationMember_EnumerationId",
+      "ChildCollectionName": "EnumeratedValues",
+      "ChildItemName": "EnumerationMember",
+      "ChildFieldFamilyName": "Core",
+      "ChildPropertySeq": 10,
+      "ChildQualifier": "",
+      "ChildEntityName": "EnumerationMember",
+      "ParentPropertyName": "Enumeration",
+      "ParentFieldFamilyName": "Core",
+      "ParentPropertySeq": 8,
+      "ParentQualifier": "",
+      "ParentEntityName": "Enumeration",
+      "ParentIndexName": "PK_Enumeration",
+      "ConceptualRelationshipType": "UniqueContainer",
+      "RelationshipType": "ParentChild",
+      "RelationshipFields": [
+        {
+          "ChildFieldName": "EnumerationId",
+          "ParentFieldName": "EnumerationId"
+        }
+      ],
+      "LogicalRelationshipFields": [
+        {
+          "ChildFieldName": "ConceptModelId",
+          "ParentFieldName": "ConceptModelId"
+        },
+        {
+          "ChildFieldName": "DataTypeId",
+          "ParentFieldName": "DataTypeId"
+        },
+        {
+          "ChildFieldName": "EnumerationId",
+          "ParentFieldName": "EnumerationId"
+        }
+      ],
+      "LogicalBusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "DataTypeName",
+          "ParentFieldName": "DataTypeName"
+        },
+        {
+          "ChildFieldName": "EnumerationName",
+          "ParentFieldName": "EnumerationName"
+        }
+      ],
+      "BusinessRelationshipFields": [
+        {
+          "ChildFieldName": "ModelName",
+          "ParentFieldName": "ModelName"
+        },
+        {
+          "ChildFieldName": "EnumerationName",
+          "ParentFieldName": "EnumerationName"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+@page "/ConceptModels/{conceptModelId:int}/EditJson"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptModels.EditJsonModel
+
+@{
+    ViewData["Title"] = "Edit ConceptModel Json";
+}
+
+<p>
+    <a asp-page="Index">ConceptModels</a> &gt;
+    @Model.ConceptModel.ToString()
+</p>
+<h1>Edit</h1>
+<h3>@Model.ConceptModel.ToString()</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="@Model.ConceptModelId" />
+            <div class="form-group">
+                <label asp-for="@Model.ConceptModelJson" class="control-label"></label>
+                <textarea asp-for="@Model.ConceptModelJson" class="form-control"></textarea>
+                <span asp-validation-for="@Model.ConceptModelJson" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="./ViewJson" asp-route-conceptModelId="@Model.ConceptModelId">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

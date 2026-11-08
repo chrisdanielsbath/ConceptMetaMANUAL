@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>XML Schema Definition for the ConceptMeta (Persistence) data model.</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="BasicDataType_Enum">
+    <xs:annotation>
+      <xs:documentation>The basic data type of a scalar field</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Binary">
+        <xs:annotation>
+          <xs:documentation>The scalar field holds binary values</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Boolean">
+        <xs:annotation>
+          <xs:documentation>The scalar field holds true/false values</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Integer">
+        <xs:annotation>
+          <xs:documentation>The scalar field holds integer values</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Date">
+        <xs:annotation>
+          <xs:documentation>The scalar field holds values that represent a date, datetime or time</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Decimal">
+        <xs:annotation>
+          <xs:documentation>The scalar field holds numeric values</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="String">
+        <xs:annotation>
+          <xs:documentation>The scalar field holds string values</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Xml">
+        <xs:annotation>
+          <xs:documentation>The scalar field holds XML values</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConceptRefType_Enum">
+    <xs:annotation>
+      <xs:documentation>The type of relationship that exists between two concepts</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UniqueContainer">
+        <xs:annotation>
+          <xs:documentation>The parent concept forms part of the unique identifier for the child concept, and acts as the unique container when the model is expressed in a hierarchical structure</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Identifying">
+        <xs:annotation>
+          <xs:documentation>The parent concept forms part of the unique identifier for the child concept, but does not act as the unique container</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Descriptive">
+        <xs:annotation>
+          <xs:documentation>The parent concept provides non-identifying, descriptive detail about the child concept</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConceptType_Enum">
+    <xs:annotation>
+      <xs:documentation>The type of concept, either Data Type, Enumeration, Object, Scalar, UniqueKey or SubType</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DataType">
+        <xs:annotation>
+          <xs:documentation>The concept represents a Data Type</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Enumeration">
+        <xs:annotation>
+          <xs:documentation>The concept represents an Enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Object">
+        <xs:annotation>
+          <xs:documentation>The concept represents an Entity (i.e. a class of object)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Scalar">
+        <xs:annotation>
+          <xs:documentation>The concept represents a scalar-valued property (either a Domain or a Field)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UniqueKey">
+        <xs:annotation>
+          <xs:documentation>The concept represents a particular unique key through which an Entity may be referenced</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SubType">
+        <xs:annotation>
+          <xs:documentation>The concept represents an Entity Subtype (i.e. a particular specialised variant of a class of object)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RelationshipType_Enum">
+    <xs:annotation>
+      <xs:documentation>The detailed manner in which the relationship is expressed within hierarchical structures such as XML documents or JSON documents</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Reference">
+        <xs:annotation>
+          <xs:documentation>The primary entity contains a reference to the secondary entity</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ParentChild">
+        <xs:annotation>
+          <xs:documentation>Multiple instances of the secondary entity are nested within the primary entity</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NestedObject">
+        <xs:annotation>
+          <xs:documentation>Nesting is used to fully describe the single instance of the secondary entity which is referenced by the primary entity</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DescriptiveReference">
+        <xs:annotation>
+          <xs:documentation>Nesting is used to partially describe the single instance of the secondary entity which is referenced by the primary entity.  The nested item is a &quot;reference&quot; which holds more than just an identifier - it also contains some additional information about the referenced object, with the aim of reducing the need for the secondary entity to be fetched separately.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Subtype">
+        <xs:annotation>
+          <xs:documentation>The secondary entity extends the primary entity, providing additional information that is relevant to a particular of that entity.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UniqueChild">
+        <xs:annotation>
+          <xs:documentation>A single instance of the secondary entity is nested within the primary entity</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PassThrough">
+        <xs:annotation>
+          <xs:documentation>The relationship forms part of the path between two entities, but it is not exposed within hierarchical renderings: it is &quot;collapsed&quot; or &quot;passed-through&quot;) .</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SelectorType_Enum">
+    <xs:annotation>
+      <xs:documentation>The type of control that should be used when collecting data for this field</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Dropdown">
+        <xs:annotation>
+          <xs:documentation>A dropdown list should be rendered</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Searchable">
+        <xs:annotation>
+          <xs:documentation>A searchable text box should be rendered</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="csf-seqno">
+    <xs:restriction base="xs:int" />
+  </xs:simpleType>
+  <xs:simpleType name="int32">
+    <xs:restriction base="xs:int" />
+  </xs:simpleType>
+  <xs:simpleType name="json-boolean">
+    <xs:restriction base="xs:boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="json-number">
+    <xs:restriction base="xs:decimal" />
+  </xs:simpleType>
+  <xs:simpleType name="json-string">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="BasicDataTypeEnum">
+    <xs:restriction base="BasicDataType_Enum" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptRefTypeEnum">
+    <xs:restriction base="ConceptRefType_Enum" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptTypeEnum">
+    <xs:restriction base="ConceptType_Enum" />
+  </xs:simpleType>
+  <xs:simpleType name="RelationshipTypeEnum">
+    <xs:restriction base="RelationshipType_Enum" />
+  </xs:simpleType>
+  <xs:simpleType name="SelectorTypeEnum">
+    <xs:restriction base="SelectorType_Enum" />
+  </xs:simpleType>
+  <xs:simpleType name="AlternateKeyName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="BasedOnConceptId">
+    <xs:annotation>
+      <xs:documentation>The ID of the BasedOn Concept</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="ConceptId" />
+  </xs:simpleType>
+  <xs:simpleType name="BasedOnConceptName">
+    <xs:annotation>
+      <xs:documentation>The business-facing identifier for the BasedOn Concept</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="ConceptName" />
+  </xs:simpleType>
+  <xs:simpleType name="BasicDataType">
+    <xs:restriction base="BasicDataTypeEnum">
+      <xs:maxLength value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ChildCollectionName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ChildItemName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ChildPropertyDescription">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ChildPropertyName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ChildPropertySeq">
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="ChildQualifier">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ChildVerbPhrase">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptDescription">
+    <xs:restriction base="json-string">
+      <xs:maxLength value="500" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConceptId">
+    <xs:annotation>
+      <xs:documentation>The ID of the Concept</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptModelId">
+    <xs:annotation>
+      <xs:documentation>The ID of the ConceptModel</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptPropertyFamilyId">
+    <xs:annotation>
+      <xs:documentation>The ID of the ConceptPropertyFamily</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptRefId">
+    <xs:annotation>
+      <xs:documentation>The ID of the ConceptRef</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptRefType">
+    <xs:restriction base="ConceptRefTypeEnum">
+      <xs:maxLength value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConceptSubTypeId">
+    <xs:annotation>
+      <xs:documentation>The ID of the ConceptSubType</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptSubTypePropertyFamilyRefId">
+    <xs:annotation>
+      <xs:documentation>The ID of the ConceptSubTypePropertyFamilyRef</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptUniqueKeyId">
+    <xs:annotation>
+      <xs:documentation>The ID of the ConceptUniqueKey</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptUniqueKeyPropertyFamilyRefId">
+    <xs:annotation>
+      <xs:documentation>The ID of the ConceptUniqueKeyPropertyFamilyRef</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="DataTypeId">
+    <xs:annotation>
+      <xs:documentation>The ID of the DataType</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="DataTypeName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="DatePrecision">
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="DbColumnName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="DbForeignKeyName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="DbSchemaName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="DbTableName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="DecimalPlaces">
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="DefaultStringLength">
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="DotNetDataType">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="EnumeratedValue">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="EnumeratedValueDescription">
+    <xs:restriction base="json-string">
+      <xs:maxLength value="500" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EnumerationDescription">
+    <xs:restriction base="json-string">
+      <xs:maxLength value="500" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EnumerationId">
+    <xs:annotation>
+      <xs:documentation>The ID of the Enumeration</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="EnumerationMemberId">
+    <xs:annotation>
+      <xs:documentation>The ID of the EnumerationMember</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="EnumerationName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ErsDataType">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ExampleValueAsString">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="FieldFamilyName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="FieldLabel">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ForeignKeySurrogateKeyFieldName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="HasDatePrecision">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="HasDecimalPlaces">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="HasIdentity">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="HasLength">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="HasTotalDigits">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IncludeId">
+    <xs:annotation>
+      <xs:documentation>The ID of the Include</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="IncludeLinqExpression">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="IsCollectionItem">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsCoreField">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsCreatable">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsDeletable">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsDiscriminatorField">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsIdentity">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsNullable">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsPropagating">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsReferenceToChildEntity">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsScalarFieldToSerialiseInDomainModel">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsScalarFieldToSerialiseInPersistenceModel">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsSeqNoField">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsSerialisedUsingScalarFieldInDomainModel">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsUpdatable">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="IsXmlAttribute">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="JavaDataType">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="JsonDataType">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="JsonFormat">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="MaxChildOccurrences">
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="MaxLength">
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="MaxValue">
+    <xs:restriction base="json-number" />
+  </xs:simpleType>
+  <xs:simpleType name="MinChildOccurrences">
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="MinLength">
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="MinValue">
+    <xs:restriction base="json-number" />
+  </xs:simpleType>
+  <xs:simpleType name="ModelName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="MongoDbDataType">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="MySqlDbDataType">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="OpenApiDataType">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="OpenApiFormat">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="OracleDataType">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="OutputExplicitXmlCollection">
+    <xs:restriction base="json-boolean" />
+  </xs:simpleType>
+  <xs:simpleType name="ParentIndexName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ParentQualifier">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ParentVerbPhrase">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="PrimaryKeyName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="PropertyDescription">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="PropertyFamilyName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="PropertyName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="PropertySeq">
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="QualifierId">
+    <xs:annotation>
+      <xs:documentation>The ID of the Qualifier</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="QualifierTerm">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ReferencedConceptId">
+    <xs:annotation>
+      <xs:documentation>The ID of the Referenced Concept</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="ConceptId" />
+  </xs:simpleType>
+  <xs:simpleType name="ReferencedConceptName">
+    <xs:annotation>
+      <xs:documentation>The business-facing identifier for the Referenced Concept</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="ConceptName" />
+  </xs:simpleType>
+  <xs:simpleType name="ReferencedConceptUniqueKeyId">
+    <xs:annotation>
+      <xs:documentation>The ID of the Referenced ConceptUniqueKey</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="ConceptUniqueKeyId" />
+  </xs:simpleType>
+  <xs:simpleType name="ReferencedUniqueKeyName">
+    <xs:annotation>
+      <xs:documentation>The business-facing identifier for the Referenced ConceptUniqueKey</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="UniqueKeyName" />
+  </xs:simpleType>
+  <xs:simpleType name="RelationshipName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="RelationshipType">
+    <xs:restriction base="RelationshipTypeEnum">
+      <xs:maxLength value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ScalarFieldNameInDomainModel">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="SelectorType">
+    <xs:restriction base="SelectorTypeEnum">
+      <xs:maxLength value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SpecialisedConceptId">
+    <xs:annotation>
+      <xs:documentation>The ID of the Specialised Concept</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="ConceptId" />
+  </xs:simpleType>
+  <xs:simpleType name="SpecialisedConceptName">
+    <xs:annotation>
+      <xs:documentation>The business-facing identifier for the Specialised Concept</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="ConceptName" />
+  </xs:simpleType>
+  <xs:simpleType name="SpecialisedConceptSubTypeId">
+    <xs:annotation>
+      <xs:documentation>The ID of the Specialised ConceptSubType</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="ConceptSubTypeId" />
+  </xs:simpleType>
+  <xs:simpleType name="SpecialisedSubTypeName">
+    <xs:annotation>
+      <xs:documentation>The business-facing identifier for the Specialised ConceptSubType</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="SubTypeName" />
+  </xs:simpleType>
+  <xs:simpleType name="SqlServerDataType">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="SubTypeName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="SurrogateKeyFieldName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ToStringExpression">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="TotalDigits">
+    <xs:restriction base="int32" />
+  </xs:simpleType>
+  <xs:simpleType name="UniqueKeyName">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="XmlDateType">
+    <xs:restriction base="json-string" />
+  </xs:simpleType>
+  <xs:simpleType name="ConceptPropertyFamily">
+    <xs:annotation>
+      <xs:documentation>A family of properties</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="PropertyFamilyName" />
+  </xs:simpleType>
+  <xs:simpleType name="Include">
+    <xs:annotation>
+      <xs:documentation>A Linq expression, starting from the current entity, that defines an item to be hydrated when hydrating the current entity</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="IncludeLinqExpression" />
+  </xs:simpleType>
+  <xs:simpleType name="Qualifier">
+    <xs:annotation>
+      <xs:documentation>A prefix that can be placed before the name of the current entity to specify the role it plays</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="QualifierTerm" />
+  </xs:simpleType>
+  <xs:complexType name="Concept">
+    <xs:annotation>
+      <xs:documentation>An entity, a domain, a unique key or a sub type</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ConceptId" minOccurs="0" maxOccurs="1" type="ConceptId">
+        <xs:annotation>
+          <xs:documentation>The ID of the Concept</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConceptName" minOccurs="1" maxOccurs="1" type="ConceptName" />
+      <xs:element name="ConceptDescription" minOccurs="0" maxOccurs="1" type="ConceptDescription" />
+      <xs:element name="ConceptType" minOccurs="1" maxOccurs="1" type="ConceptTypeEnum" />
+      <xs:element name="DataTypeId" minOccurs="0" maxOccurs="1" type="DataTypeId">
+        <xs:annotation>
+          <xs:documentation>The ID of the DataType</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EnumerationId" minOccurs="0" maxOccurs="1" type="EnumerationId">
+        <xs:annotation>
+          <xs:documentation>The ID of the Enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BasedOnConceptId" minOccurs="0" maxOccurs="1" type="BasedOnConceptId">
+        <xs:annotation>
+          <xs:documentation>The ID of the BasedOn Concept</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExampleValueAsString" minOccurs="0" maxOccurs="1" type="ExampleValueAsString" />
+      <xs:element name="MinLength" minOccurs="0" maxOccurs="1" type="MinLength" />
+      <xs:element name="MaxLength" minOccurs="0" maxOccurs="1" type="MaxLength" />
+      <xs:element name="MinValue" minOccurs="0" maxOccurs="1" type="MinValue" />
+      <xs:element name="MaxValue" minOccurs="0" maxOccurs="1" type="MaxValue" />
+      <xs:element name="TotalDigits" minOccurs="0" maxOccurs="1" type="TotalDigits" />
+      <xs:element name="DecimalPlaces" minOccurs="0" maxOccurs="1" type="DecimalPlaces" />
+      <xs:element name="DatePrecision" minOccurs="0" maxOccurs="1" type="DatePrecision" />
+      <xs:element name="DbSchemaName" minOccurs="0" maxOccurs="1" type="DbSchemaName" />
+      <xs:element name="DbTableName" minOccurs="0" maxOccurs="1" type="DbTableName" />
+      <xs:element name="IsCollectionItem" minOccurs="0" maxOccurs="1" type="IsCollectionItem" />
+      <xs:element name="ToStringExpression" minOccurs="0" maxOccurs="1" type="ToStringExpression" />
+      <xs:element name="IsCreatable" minOccurs="0" maxOccurs="1" type="IsCreatable" />
+      <xs:element name="IsUpdatable" minOccurs="0" maxOccurs="1" type="IsUpdatable" />
+      <xs:element name="IsDeletable" minOccurs="0" maxOccurs="1" type="IsDeletable" />
+      <xs:element name="SurrogateKeyFieldName" minOccurs="0" maxOccurs="1" type="SurrogateKeyFieldName" />
+      <xs:element name="PrimaryKeyName" minOccurs="0" maxOccurs="1" type="PrimaryKeyName" />
+      <xs:element name="AlternateKeyName" minOccurs="0" maxOccurs="1" type="AlternateKeyName" />
+      <xs:element name="ReferencedConceptId" minOccurs="0" maxOccurs="1" type="ReferencedConceptId">
+        <xs:annotation>
+          <xs:documentation>The ID of the Referenced Concept</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReferencedConceptUniqueKeyId" minOccurs="0" maxOccurs="1" type="ReferencedConceptUniqueKeyId">
+        <xs:annotation>
+          <xs:documentation>The ID of the Referenced ConceptUniqueKey</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecialisedConceptId" minOccurs="0" maxOccurs="1" type="SpecialisedConceptId">
+        <xs:annotation>
+          <xs:documentation>The ID of the Specialised Concept</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecialisedConceptSubTypeId" minOccurs="0" maxOccurs="1" type="SpecialisedConceptSubTypeId">
+        <xs:annotation>
+          <xs:documentation>The ID of the Specialised ConceptSubType</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Include" minOccurs="0" maxOccurs="unbounded" type="IncludeLinqExpression" />
+      <xs:element name="Qualifier" minOccurs="0" maxOccurs="unbounded" type="QualifierTerm" />
+      <xs:element name="PropertyFamily" minOccurs="0" maxOccurs="unbounded" type="PropertyFamilyName" />
+      <xs:element name="UniqueKey" minOccurs="0" maxOccurs="unbounded" type="ConceptUniqueKey" />
+      <xs:element name="SubType" minOccurs="0" maxOccurs="unbounded" type="ConceptSubType" />
+      <xs:element name="Property" minOccurs="0" maxOccurs="unbounded" type="ConceptRef" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConceptModel">
+    <xs:annotation>
+      <xs:documentation>A model, made primarily of scalar concepts and object concepts</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ConceptModelId" minOccurs="0" maxOccurs="1" type="ConceptModelId">
+        <xs:annotation>
+          <xs:documentation>The ID of the ConceptModel</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ModelName" minOccurs="0" maxOccurs="1" type="ModelName" />
+      <xs:element name="DefaultStringLength" minOccurs="0" maxOccurs="1" type="DefaultStringLength" />
+      <xs:element name="DataType" minOccurs="0" maxOccurs="unbounded" type="DataType" />
+      <xs:element name="Enumeration" minOccurs="0" maxOccurs="unbounded" type="Enumeration" />
+      <xs:element name="Concept" minOccurs="0" maxOccurs="unbounded" type="Concept" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConceptRef">
+    <xs:annotation>
+      <xs:documentation>A field or relationship</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element name="ConceptRefId" minOccurs="0" maxOccurs="1" type="ConceptRefId">
+        <xs:annotation>
+          <xs:documentation>The ID of the ConceptRef</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PropertyName" minOccurs="0" maxOccurs="1" type="PropertyName" />
+      <xs:element name="PropertyDescription" minOccurs="0" maxOccurs="1" type="PropertyDescription" />
+      <xs:element name="ReferencedConceptId" minOccurs="1" maxOccurs="1" type="ReferencedConceptId">
+        <xs:annotation>
+          <xs:documentation>The ID of the Referenced Concept</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConceptRefType" minOccurs="1" maxOccurs="1" type="ConceptRefType" />
+      <xs:element name="ConceptPropertyFamilyId" minOccurs="0" maxOccurs="1" type="ConceptPropertyFamilyId">
+        <xs:annotation>
+          <xs:documentation>The ID of the ConceptPropertyFamily</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IsPropagating" minOccurs="0" maxOccurs="1" type="IsPropagating" />
+      <xs:element name="DbColumnName" minOccurs="0" maxOccurs="1" type="DbColumnName" />
+      <xs:element name="IsIdentity" minOccurs="0" maxOccurs="1" type="IsIdentity" />
+      <xs:element name="IsCoreField" minOccurs="0" maxOccurs="1" type="IsCoreField" />
+      <xs:element name="FieldFamilyName" minOccurs="0" maxOccurs="1" type="FieldFamilyName" />
+      <xs:element name="IsUpdatable" minOccurs="0" maxOccurs="1" type="IsUpdatable" />
+      <xs:element name="FieldLabel" minOccurs="0" maxOccurs="1" type="FieldLabel" />
+      <xs:element name="IsScalarFieldToSerialiseInPersistenceModel" minOccurs="0" maxOccurs="1" type="IsScalarFieldToSerialiseInPersistenceModel" />
+      <xs:element name="IsScalarFieldToSerialiseInDomainModel" minOccurs="0" maxOccurs="1" type="IsScalarFieldToSerialiseInDomainModel" />
+      <xs:element name="IsSeqNoField" minOccurs="0" maxOccurs="1" type="IsSeqNoField" />
+      <xs:element name="IsDiscriminatorField" minOccurs="0" maxOccurs="1" type="IsDiscriminatorField" />
+      <xs:element name="IsXmlAttribute" minOccurs="0" maxOccurs="1" type="IsXmlAttribute" />
+      <xs:element name="IsReferenceToChildEntity" minOccurs="0" maxOccurs="1" type="IsReferenceToChildEntity" />
+      <xs:element name="ParentQualifier" minOccurs="0" maxOccurs="1" type="ParentQualifier" />
+      <xs:element name="ChildQualifier" minOccurs="0" maxOccurs="1" type="ChildQualifier" />
+      <xs:element name="MinChildOccurrences" minOccurs="0" maxOccurs="1" type="MinChildOccurrences" />
+      <xs:element name="MaxChildOccurrences" minOccurs="0" maxOccurs="1" type="MaxChildOccurrences" />
+      <xs:element name="ChildVerbPhrase" minOccurs="0" maxOccurs="1" type="ChildVerbPhrase" />
+      <xs:element name="ParentVerbPhrase" minOccurs="0" maxOccurs="1" type="ParentVerbPhrase" />
+      <xs:element name="ChildPropertySeq" minOccurs="0" maxOccurs="1" type="ChildPropertySeq" />
+      <xs:element name="ChildCollectionName" minOccurs="0" maxOccurs="1" type="ChildCollectionName" />
+      <xs:element name="ChildItemName" minOccurs="0" maxOccurs="1" type="ChildItemName" />
+      <xs:element name="ChildPropertyDescription" minOccurs="0" maxOccurs="1" type="ChildPropertyDescription" />
+      <xs:element name="SelectorType" minOccurs="0" maxOccurs="1" type="SelectorType" />
+      <xs:element name="RelationshipType" minOccurs="0" maxOccurs="1" type="RelationshipType" />
+      <xs:element name="OutputExplicitXmlCollection" minOccurs="0" maxOccurs="1" type="OutputExplicitXmlCollection" />
+      <xs:element name="IsSerialisedUsingScalarFieldInDomainModel" minOccurs="0" maxOccurs="1" type="IsSerialisedUsingScalarFieldInDomainModel" />
+      <xs:element name="ScalarFieldNameInDomainModel" minOccurs="0" maxOccurs="1" type="ScalarFieldNameInDomainModel" />
+      <xs:element name="ExampleValueAsString" minOccurs="0" maxOccurs="1" type="ExampleValueAsString" />
+      <xs:element name="RelationshipName" minOccurs="0" maxOccurs="1" type="RelationshipName" />
+      <xs:element name="DbForeignKeyName" minOccurs="0" maxOccurs="1" type="DbForeignKeyName" />
+      <xs:element name="ParentIndexName" minOccurs="0" maxOccurs="1" type="ParentIndexName" />
+      <xs:element name="ForeignKeySurrogateKeyFieldName" minOccurs="0" maxOccurs="1" type="ForeignKeySurrogateKeyFieldName" />
+      <xs:element name="ChildPropertyName" minOccurs="0" maxOccurs="1" type="ChildPropertyName" />
+      <xs:element name="IsNullable" minOccurs="0" maxOccurs="1" type="IsNullable" />
+      <xs:element name="PropertySeq" minOccurs="0" maxOccurs="1" type="PropertySeq" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="ConceptSubType">
+    <xs:annotation>
+      <xs:documentation>A specialised variety of an entity</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ConceptSubTypeId" minOccurs="0" maxOccurs="1" type="ConceptSubTypeId">
+        <xs:annotation>
+          <xs:documentation>The ID of the ConceptSubType</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SubTypeName" minOccurs="1" maxOccurs="1" type="SubTypeName" />
+      <xs:element name="PropertyFamilyRef" minOccurs="0" maxOccurs="unbounded" type="ConceptSubTypePropertyFamilyRef" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConceptSubTypePropertyFamilyRef">
+    <xs:annotation>
+      <xs:documentation>A record which associates a given sub type with a particular family of properties, signifying that the family is relevant to that sub type</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element name="ConceptSubTypePropertyFamilyRefId" minOccurs="0" maxOccurs="1" type="ConceptSubTypePropertyFamilyRefId">
+        <xs:annotation>
+          <xs:documentation>The ID of the ConceptSubTypePropertyFamilyRef</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConceptPropertyFamilyId" minOccurs="1" maxOccurs="1" type="ConceptPropertyFamilyId">
+        <xs:annotation>
+          <xs:documentation>The ID of the ConceptPropertyFamily</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SeqNo" minOccurs="1" maxOccurs="1" type="csf-seqno">
+        <xs:annotation>
+          <xs:documentation>Sequence number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="ConceptUniqueKey">
+    <xs:annotation>
+      <xs:documentation>A unique key index that can be used to uniquely identify objects of a particular type</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ConceptUniqueKeyId" minOccurs="0" maxOccurs="1" type="ConceptUniqueKeyId">
+        <xs:annotation>
+          <xs:documentation>The ID of the ConceptUniqueKey</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UniqueKeyName" minOccurs="1" maxOccurs="1" type="UniqueKeyName" />
+      <xs:element name="PropertyFamilyRef" minOccurs="0" maxOccurs="unbounded" type="ConceptUniqueKeyPropertyFamilyRef" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConceptUniqueKeyPropertyFamilyRef">
+    <xs:annotation>
+      <xs:documentation>A record that associates a given unique key with a particular family of properties, signifying that the family of properties is relevant to that unique key</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element name="ConceptUniqueKeyPropertyFamilyRefId" minOccurs="0" maxOccurs="1" type="ConceptUniqueKeyPropertyFamilyRefId">
+        <xs:annotation>
+          <xs:documentation>The ID of the ConceptUniqueKeyPropertyFamilyRef</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConceptPropertyFamilyId" minOccurs="1" maxOccurs="1" type="ConceptPropertyFamilyId">
+        <xs:annotation>
+          <xs:documentation>The ID of the ConceptPropertyFamily</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SeqNo" minOccurs="1" maxOccurs="1" type="csf-seqno">
+        <xs:annotation>
+          <xs:documentation>Sequence number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="DataType">
+    <xs:annotation>
+      <xs:documentation>A data type</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element name="DataTypeId" minOccurs="0" maxOccurs="1" type="DataTypeId">
+        <xs:annotation>
+          <xs:documentation>The ID of the DataType</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DataTypeName" minOccurs="1" maxOccurs="1" type="DataTypeName" />
+      <xs:element name="SqlServerDataType" minOccurs="0" maxOccurs="1" type="SqlServerDataType" />
+      <xs:element name="OracleDataType" minOccurs="0" maxOccurs="1" type="OracleDataType" />
+      <xs:element name="MySqlDataType" minOccurs="0" maxOccurs="1" type="MySqlDbDataType" />
+      <xs:element name="MongoDbDataType" minOccurs="0" maxOccurs="1" type="MongoDbDataType" />
+      <xs:element name="DotNetDataType" minOccurs="0" maxOccurs="1" type="DotNetDataType" />
+      <xs:element name="JavaDataType" minOccurs="0" maxOccurs="1" type="JavaDataType" />
+      <xs:element name="XmlDataType" minOccurs="0" maxOccurs="1" type="XmlDateType" />
+      <xs:element name="ExampleValueAsString" minOccurs="0" maxOccurs="1" type="ExampleValueAsString" />
+      <xs:element name="JsonDataType" minOccurs="0" maxOccurs="1" type="JsonDataType" />
+      <xs:element name="JsonFormat" minOccurs="0" maxOccurs="1" type="JsonFormat" />
+      <xs:element name="OpenApiDataType" minOccurs="0" maxOccurs="1" type="OpenApiDataType" />
+      <xs:element name="OpenApiFormat" minOccurs="0" maxOccurs="1" type="OpenApiFormat" />
+      <xs:element name="ErsDataType" minOccurs="0" maxOccurs="1" type="ErsDataType" />
+      <xs:element name="BasicDataType" minOccurs="0" maxOccurs="1" type="BasicDataType" />
+      <xs:element name="MinLength" minOccurs="0" maxOccurs="1" type="MinLength" />
+      <xs:element name="MaxLength" minOccurs="0" maxOccurs="1" type="MaxLength" />
+      <xs:element name="MinValue" minOccurs="0" maxOccurs="1" type="MinValue" />
+      <xs:element name="MaxValue" minOccurs="0" maxOccurs="1" type="MaxValue" />
+      <xs:element name="TotalDigits" minOccurs="0" maxOccurs="1" type="TotalDigits" />
+      <xs:element name="DecimalPlaces" minOccurs="0" maxOccurs="1" type="DecimalPlaces" />
+      <xs:element name="DatePrecision" minOccurs="0" maxOccurs="1" type="DatePrecision" />
+      <xs:element name="HasLength" minOccurs="0" maxOccurs="1" type="HasLength" />
+      <xs:element name="HasTotalDigits" minOccurs="0" maxOccurs="1" type="HasTotalDigits" />
+      <xs:element name="HasDecimalPlaces" minOccurs="0" maxOccurs="1" type="HasDecimalPlaces" />
+      <xs:element name="HasIdentity" minOccurs="0" maxOccurs="1" type="HasIdentity" />
+      <xs:element name="HasDatePrecision" minOccurs="0" maxOccurs="1" type="HasDatePrecision" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="Enumeration">
+    <xs:annotation>
+      <xs:documentation>A constrained vocabulary</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EnumerationId" minOccurs="0" maxOccurs="1" type="EnumerationId">
+        <xs:annotation>
+          <xs:documentation>The ID of the Enumeration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EnumerationName" minOccurs="0" maxOccurs="1" type="EnumerationName" />
+      <xs:element name="EnumerationDescription" minOccurs="0" maxOccurs="1" type="EnumerationDescription" />
+      <xs:element name="DataTypeId" minOccurs="1" maxOccurs="1" type="DataTypeId">
+        <xs:annotation>
+          <xs:documentation>The ID of the DataType</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EnumerationMember" minOccurs="0" maxOccurs="unbounded" type="EnumerationMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EnumerationMember">
+    <xs:annotation>
+      <xs:documentation>An item within a constrained vocabulary</xs:documentation>
+    </xs:annotation>
+    <xs:all>
+      <xs:element name="EnumerationMemberId" minOccurs="0" maxOccurs="1" type="EnumerationMemberId">
+        <xs:annotation>
+          <xs:documentation>The ID of the EnumerationMember</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EnumeratedValue" minOccurs="1" maxOccurs="1" type="EnumeratedValue" />
+      <xs:element name="EnumeratedValueDescription" minOccurs="0" maxOccurs="1" type="EnumeratedValueDescription" />
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="ConceptModel" type="ConceptModel">
+    <xs:annotation>
+      <xs:documentation>A model, made primarily of scalar concepts and object concepts</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

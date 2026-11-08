@@ -1,0 +1,69 @@
+@page "/ConceptSubTypePropertyFamilyRefs/{conceptSubTypePropertyFamilyRefId:int}"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptSubTypePropertyFamilyRefs.DetailsModel
+
+@{
+    ViewData["Title"] = "ConceptSubTypePropertyFamilyRef Details";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="../ConceptSubTypes/Details" asp-route-conceptSubTypeId="@Model.Breadcrumb_ConceptSubType_ConceptSubTypeId">@Model.Breadcrumb_ConceptSubType_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptSubTypeId="@Model.ConceptSubTypeId">ConceptSubTypePropertyFamilyRefs</a> &gt;
+    @Model.ConceptSubTypePropertyFamilyRef.ValueString
+</p>
+<h1>Details</h1>
+<h3>@Model.ConceptSubTypePropertyFamilyRef.ValueString</h3>
+<hr />
+<p>
+    <a asp-page="./Edit" asp-route-conceptSubTypePropertyFamilyRefId="@Model.ConceptSubTypePropertyFamilyRef.ConceptSubTypePropertyFamilyRefId">Edit</a>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ConceptSubTypePropertyFamilyRef.ConceptSubTypePropertyFamilyRefId" />
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptSubTypePropertyFamilyRef.ConceptSubTypePropertyFamilyRefId" class="control-label"></label>
+                <input asp-for="ConceptSubTypePropertyFamilyRef.ConceptSubTypePropertyFamilyRefId" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptSubTypePropertyFamilyRef.ConceptSubTypeValueString" class="control-label"></label>
+                <input asp-for="ConceptSubTypePropertyFamilyRef.ConceptSubTypeValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptSubTypePropertyFamilyRef.ConceptPropertyFamilyValueString" class="control-label"></label>
+                <input asp-for="ConceptSubTypePropertyFamilyRef.ConceptPropertyFamilyValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptSubTypePropertyFamilyRef.SeqNo" class="control-label"></label>
+                <input asp-for="ConceptSubTypePropertyFamilyRef.SeqNo" class="form-control" disabled="disabled" />
+            </div>
+        </form>
+    </div>
+    <!--dl class="row">
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptSubTypePropertyFamilyRef.SeqNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptSubTypePropertyFamilyRef.SeqNo)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptSubTypePropertyFamilyRef.ConceptSubTypeValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.ConceptSubTypePropertyFamilyRef.ConceptSubTypeValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptSubTypePropertyFamilyRef.ConceptPropertyFamilyValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.ConceptSubTypePropertyFamilyRef.ConceptPropertyFamilyValueString)
+        </dd>
+    </dl-->
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-conceptSubTypePropertyFamilyRefId="@Model.ConceptSubTypePropertyFamilyRef.ConceptSubTypePropertyFamilyRefId">Edit</a> |
+    <a asp-page="./Index" asp-route-conceptSubTypeId="@Model.ConceptSubTypeId">Back to List</a>
+</div>

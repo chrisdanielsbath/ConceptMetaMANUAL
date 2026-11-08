@@ -1,0 +1,199 @@
+@page "/DataTypes/{dataTypeId:int}/Edit"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.DataTypes.EditModel
+
+@{
+    ViewData["Title"] = "Edit DataType";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">DataTypes</a> &gt;
+    @Model.DataType.ValueString
+</p>
+<h1>Edit</h1>
+<h3>@Model.DataType.ValueString</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DataType.DataTypeId" />
+            <h4>Core Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.DataTypeId" class="control-label"></label>
+                <input asp-for="DataType.DataTypeId" class="form-control" disabled="disabled" />
+                <span asp-validation-for="DataType.DataTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.ConceptModelKeyString" class="control-label"></label>
+                <select asp-for="DataType.ConceptModelKeyString" class="form-control" asp-items="Model.ConceptModelSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="DataType.ConceptModelKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.DataTypeName" class="control-label"></label>
+                <input asp-for="DataType.DataTypeName" class="form-control" />
+                <span asp-validation-for="DataType.DataTypeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.ExampleValueAsString" class="control-label"></label>
+                <input asp-for="DataType.ExampleValueAsString" class="form-control" />
+                <span asp-validation-for="DataType.ExampleValueAsString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.BasicDataType" class="control-label"></label>
+                <select asp-for="DataType.BasicDataType" class="form-control" asp-items="Model.BasicDataTypeSL" >
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="DataType.BasicDataType" class="text-danger"></span>
+            </div>
+            <h4>Database Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.SqlServerDataType" class="control-label"></label>
+                <input asp-for="DataType.SqlServerDataType" class="form-control" />
+                <span asp-validation-for="DataType.SqlServerDataType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.OracleDataType" class="control-label"></label>
+                <input asp-for="DataType.OracleDataType" class="form-control" />
+                <span asp-validation-for="DataType.OracleDataType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.MySqlDataType" class="control-label"></label>
+                <input asp-for="DataType.MySqlDataType" class="form-control" />
+                <span asp-validation-for="DataType.MySqlDataType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.MongoDbDataType" class="control-label"></label>
+                <input asp-for="DataType.MongoDbDataType" class="form-control" />
+                <span asp-validation-for="DataType.MongoDbDataType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.ErsDataType" class="control-label"></label>
+                <input asp-for="DataType.ErsDataType" class="form-control" />
+                <span asp-validation-for="DataType.ErsDataType" class="text-danger"></span>
+            </div>
+            <h4>Language Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.DotNetDataType" class="control-label"></label>
+                <input asp-for="DataType.DotNetDataType" class="form-control" />
+                <span asp-validation-for="DataType.DotNetDataType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.JavaDataType" class="control-label"></label>
+                <input asp-for="DataType.JavaDataType" class="form-control" />
+                <span asp-validation-for="DataType.JavaDataType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.XmlDataType" class="control-label"></label>
+                <input asp-for="DataType.XmlDataType" class="form-control" />
+                <span asp-validation-for="DataType.XmlDataType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.JsonDataType" class="control-label"></label>
+                <input asp-for="DataType.JsonDataType" class="form-control" />
+                <span asp-validation-for="DataType.JsonDataType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.JsonFormat" class="control-label"></label>
+                <input asp-for="DataType.JsonFormat" class="form-control" />
+                <span asp-validation-for="DataType.JsonFormat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.OpenApiDataType" class="control-label"></label>
+                <input asp-for="DataType.OpenApiDataType" class="form-control" />
+                <span asp-validation-for="DataType.OpenApiDataType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.OpenApiFormat" class="control-label"></label>
+                <input asp-for="DataType.OpenApiFormat" class="form-control" />
+                <span asp-validation-for="DataType.OpenApiFormat" class="text-danger"></span>
+            </div>
+            <h4>String Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.MinLength" class="control-label"></label>
+                <input asp-for="DataType.MinLength" class="form-control" />
+                <span asp-validation-for="DataType.MinLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.MaxLength" class="control-label"></label>
+                <input asp-for="DataType.MaxLength" class="form-control" />
+                <span asp-validation-for="DataType.MaxLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.HasLength" class="control-label"></label>
+                <select asp-for="DataType.HasLength" class="form-control" asp-items="Model.HasLengthSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="DataType.HasLength" class="text-danger"></span>
+            </div>
+            <h4>Number Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.MinValue" class="control-label"></label>
+                <input asp-for="DataType.MinValue" class="form-control" />
+                <span asp-validation-for="DataType.MinValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.MaxValue" class="control-label"></label>
+                <input asp-for="DataType.MaxValue" class="form-control" />
+                <span asp-validation-for="DataType.MaxValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.HasIdentity" class="control-label"></label>
+                <select asp-for="DataType.HasIdentity" class="form-control" asp-items="Model.HasIdentitySL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="DataType.HasIdentity" class="text-danger"></span>
+            </div>
+            <h4>Decimal Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.TotalDigits" class="control-label"></label>
+                <input asp-for="DataType.TotalDigits" class="form-control" />
+                <span asp-validation-for="DataType.TotalDigits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.DecimalPlaces" class="control-label"></label>
+                <input asp-for="DataType.DecimalPlaces" class="form-control" />
+                <span asp-validation-for="DataType.DecimalPlaces" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.HasTotalDigits" class="control-label"></label>
+                <select asp-for="DataType.HasTotalDigits" class="form-control" asp-items="Model.HasTotalDigitsSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="DataType.HasTotalDigits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.HasDecimalPlaces" class="control-label"></label>
+                <select asp-for="DataType.HasDecimalPlaces" class="form-control" asp-items="Model.HasDecimalPlacesSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="DataType.HasDecimalPlaces" class="text-danger"></span>
+            </div>
+            <h4>Date Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.DatePrecision" class="control-label"></label>
+                <input asp-for="DataType.DatePrecision" class="form-control" />
+                <span asp-validation-for="DataType.DatePrecision" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.HasDatePrecision" class="control-label"></label>
+                <select asp-for="DataType.HasDatePrecision" class="form-control" asp-items="Model.HasDatePrecisionSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="DataType.HasDatePrecision" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="Details" asp-route-dataTypeId="@Model.DataType.DataTypeId">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

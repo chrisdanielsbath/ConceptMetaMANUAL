@@ -1,0 +1,49 @@
+@page "/EnumerationMembers/{enumerationMemberId:int}/Delete"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.EnumerationMembers.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete EnumerationMember";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Enumerations/Details" asp-route-enumerationId="@Model.Breadcrumb_Enumeration_EnumerationId">@Model.Breadcrumb_Enumeration_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-enumerationId="@Model.EnumerationId">EnumerationMembers</a> &gt;
+    @Model.EnumerationMember.ValueString
+</p>
+<h1>Delete</h1>
+
+<h2>Are you sure you want to delete this?</h2>
+<div>
+    <h3>@Model.EnumerationMember.ValueString</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <h4>Core Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.EnumerationMember.EnumerationValueString)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.EnumerationMember.EnumerationValueString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EnumerationMember.EnumeratedValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EnumerationMember.EnumeratedValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EnumerationMember.EnumeratedValueDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EnumerationMember.EnumeratedValueDescription)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="EnumerationMember.EnumerationMemberId" />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-page="./Index" asp-route-enumerationId="@Model.EnumerationId">Back to List</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,52 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Enumerations.IndexModel
+
+@{
+    ViewData["Title"] = "Enumerations";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    Enumerations
+</p>
+<h1>Enumerations</h1>
+<p>
+    <a asp-page="Create" asp-route-conceptModelId="@Model.ConceptModelId">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Enumerations[0].ConceptModelValueString)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Enumerations[0].EnumerationName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Enumerations[0].EnumerationDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Enumerations)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConceptModelValueString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnumerationName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnumerationDescription)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-enumerationId="@item.EnumerationId">Details</a> |
+                <a asp-page="./Edit" asp-route-enumerationId="@item.EnumerationId">Edit</a> |
+                <a asp-page="./Delete" asp-route-enumerationId="@item.EnumerationId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

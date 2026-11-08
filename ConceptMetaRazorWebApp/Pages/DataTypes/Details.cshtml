@@ -1,0 +1,323 @@
+@page "/DataTypes/{dataTypeId:int}"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.DataTypes.DetailsModel
+
+@{
+    ViewData["Title"] = "DataType Details";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">DataTypes</a> &gt;
+    @Model.DataType.ValueString
+</p>
+<h1>Details</h1>
+<h3>@Model.DataType.ValueString</h3>
+<hr />
+<p>
+    <a asp-page="./Edit" asp-route-dataTypeId="@Model.DataType.DataTypeId">Edit</a>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DataType.DataTypeId" />
+            <h4>Core Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.DataTypeId" class="control-label"></label>
+                <input asp-for="DataType.DataTypeId" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.ConceptModelValueString" class="control-label"></label>
+                <input asp-for="DataType.ConceptModelValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.DataTypeName" class="control-label"></label>
+                <input asp-for="DataType.DataTypeName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.ExampleValueAsString" class="control-label"></label>
+                <input asp-for="DataType.ExampleValueAsString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.BasicDataType" class="control-label"></label>
+                <input asp-for="DataType.BasicDataType" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Database Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.SqlServerDataType" class="control-label"></label>
+                <input asp-for="DataType.SqlServerDataType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.OracleDataType" class="control-label"></label>
+                <input asp-for="DataType.OracleDataType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.MySqlDataType" class="control-label"></label>
+                <input asp-for="DataType.MySqlDataType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.MongoDbDataType" class="control-label"></label>
+                <input asp-for="DataType.MongoDbDataType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.ErsDataType" class="control-label"></label>
+                <input asp-for="DataType.ErsDataType" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Language Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.DotNetDataType" class="control-label"></label>
+                <input asp-for="DataType.DotNetDataType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.JavaDataType" class="control-label"></label>
+                <input asp-for="DataType.JavaDataType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.XmlDataType" class="control-label"></label>
+                <input asp-for="DataType.XmlDataType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.JsonDataType" class="control-label"></label>
+                <input asp-for="DataType.JsonDataType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.JsonFormat" class="control-label"></label>
+                <input asp-for="DataType.JsonFormat" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.OpenApiDataType" class="control-label"></label>
+                <input asp-for="DataType.OpenApiDataType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.OpenApiFormat" class="control-label"></label>
+                <input asp-for="DataType.OpenApiFormat" class="form-control" disabled="disabled" />
+            </div>
+            <h4>String Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.MinLength" class="control-label"></label>
+                <input asp-for="DataType.MinLength" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.MaxLength" class="control-label"></label>
+                <input asp-for="DataType.MaxLength" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.HasLength" class="control-label"></label>
+                <input asp-for="DataType.HasLength" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Number Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.MinValue" class="control-label"></label>
+                <input asp-for="DataType.MinValue" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.MaxValue" class="control-label"></label>
+                <input asp-for="DataType.MaxValue" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.HasIdentity" class="control-label"></label>
+                <input asp-for="DataType.HasIdentity" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Decimal Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.TotalDigits" class="control-label"></label>
+                <input asp-for="DataType.TotalDigits" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.DecimalPlaces" class="control-label"></label>
+                <input asp-for="DataType.DecimalPlaces" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.HasTotalDigits" class="control-label"></label>
+                <input asp-for="DataType.HasTotalDigits" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.HasDecimalPlaces" class="control-label"></label>
+                <input asp-for="DataType.HasDecimalPlaces" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Date Properties</h4>
+            <div class="form-group">
+                <label asp-for="DataType.DatePrecision" class="control-label"></label>
+                <input asp-for="DataType.DatePrecision" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DataType.HasDatePrecision" class="control-label"></label>
+                <input asp-for="DataType.HasDatePrecision" class="form-control" disabled="disabled" />
+            </div>
+        </form>
+    </div>
+    <!--dl class="row">
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.DataTypeName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.DataTypeName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.SqlServerDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.SqlServerDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.OracleDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.OracleDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.MySqlDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.MySqlDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.MongoDbDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.MongoDbDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.DotNetDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.DotNetDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.JavaDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.JavaDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.XmlDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.XmlDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.ExampleValueAsString)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.ExampleValueAsString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.JsonDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.JsonDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.JsonFormat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.JsonFormat)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.OpenApiDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.OpenApiDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.OpenApiFormat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.OpenApiFormat)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.ErsDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.ErsDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.BasicDataType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.BasicDataType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.MinLength)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.MinLength)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.MaxLength)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.MaxLength)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.MinValue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.MinValue)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.MaxValue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.MaxValue)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.TotalDigits)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.TotalDigits)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.DecimalPlaces)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.DecimalPlaces)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.DatePrecision)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.DatePrecision)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.HasLength)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.HasLength)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.HasTotalDigits)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.HasTotalDigits)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.HasDecimalPlaces)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.HasDecimalPlaces)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.HasIdentity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.HasIdentity)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.HasDatePrecision)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataType.HasDatePrecision)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.DataType.ConceptModelValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.DataType.ConceptModelValueString)
+        </dd>
+    </dl-->
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-dataTypeId="@Model.DataType.DataTypeId">Edit</a> |
+    <a asp-page="./Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+</div>

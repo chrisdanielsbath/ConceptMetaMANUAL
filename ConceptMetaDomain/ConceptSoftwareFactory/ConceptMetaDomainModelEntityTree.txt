@@ -1,0 +1,13 @@
+ConceptModel : ConceptModel
+    DataTypes : DataType[]
+    Enumerations : Enumeration[]
+        EnumeratedValues : EnumerationMember[]
+    Concepts : Concept[]
+        Includes : Include[]
+        Qualifiers : Qualifier[]
+        PropertyFamilies : ConceptPropertyFamily[]
+        UniqueKeys : ConceptUniqueKey[]
+            PropertyFamilyRefs : ConceptUniqueKeyPropertyFamilyRef[]
+        SubTypes : ConceptSubType[]
+            PropertyFamilyRefs : ConceptSubTypePropertyFamilyRef[]
+        Properties : ConceptRef[]

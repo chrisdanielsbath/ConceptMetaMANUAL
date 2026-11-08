@@ -1,0 +1,47 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Qualifiers.IndexModel
+
+@{
+    ViewData["Title"] = "Qualifiers";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    Qualifiers
+</p>
+<h1>Qualifiers</h1>
+<p>
+    <a asp-page="Create" asp-route-conceptId="@Model.ConceptId">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Qualifiers[0].ItemValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Qualifiers[0].SeqNo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Qualifiers)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeqNo)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-qualifierId="@item.QualifierId">Details</a> |
+                <a asp-page="./Edit" asp-route-qualifierId="@item.QualifierId">Edit</a> |
+                <a asp-page="./Delete" asp-route-qualifierId="@item.QualifierId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

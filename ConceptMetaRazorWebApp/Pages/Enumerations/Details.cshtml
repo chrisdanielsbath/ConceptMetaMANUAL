@@ -1,0 +1,78 @@
+@page "/Enumerations/{enumerationId:int}"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Enumerations.DetailsModel
+
+@{
+    ViewData["Title"] = "Enumeration Details";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Enumerations</a> &gt;
+    @Model.Enumeration.ValueString
+</p>
+<h1>Details</h1>
+<h3>@Model.Enumeration.ValueString</h3>
+<hr />
+<p>
+    <a asp-page="./Edit" asp-route-enumerationId="@Model.Enumeration.EnumerationId">Edit</a> |
+    <a asp-page="../EnumerationMembers/Index" asp-route-enumerationId="@Model.Enumeration.EnumerationId">EnumeratedValues</a>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Enumeration.EnumerationId" />
+            <h4>Core Properties</h4>
+            <div class="form-group">
+                <label asp-for="Enumeration.EnumerationId" class="control-label"></label>
+                <input asp-for="Enumeration.EnumerationId" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Enumeration.ConceptModelValueString" class="control-label"></label>
+                <input asp-for="Enumeration.ConceptModelValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Enumeration.EnumerationName" class="control-label"></label>
+                <input asp-for="Enumeration.EnumerationName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Enumeration.EnumerationDescription" class="control-label"></label>
+                <input asp-for="Enumeration.EnumerationDescription" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Enumeration.DataTypeValueString" class="control-label"></label>
+                <input asp-for="Enumeration.DataTypeValueString" class="form-control" disabled="disabled" />
+            </div>
+        </form>
+    </div>
+    <!--dl class="row">
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Enumeration.EnumerationName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Enumeration.EnumerationName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Enumeration.EnumerationDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Enumeration.EnumerationDescription)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Enumeration.ConceptModelValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Enumeration.ConceptModelValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Enumeration.DataTypeValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Enumeration.DataTypeValueString)
+        </dd>
+    </dl-->
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-enumerationId="@Model.Enumeration.EnumerationId">Edit</a> |
+    <a asp-page="./Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+</div>

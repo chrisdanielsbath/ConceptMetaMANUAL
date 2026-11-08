@@ -1,0 +1,1354 @@
+<html>
+<head>
+  <title>ConceptMeta - ConceptRef</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; <a href="../ConceptModel/ConceptModel.html">ConceptModel</a>
+  &gt; <a href="../Concept/Concept.html">Concept</a>
+  &gt; ConceptRef
+  <br/>
+  <button class="accordion active entity">ConceptRef</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Entity name</th>
+        <td class="entity">ConceptRef</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>A field or relationship</td>
+      </tr>
+      <tr>
+        <th>Database schema name</th>
+        <td>dbo</td>
+      </tr>
+      <tr>
+        <th>Database table name</th>
+        <td>ConceptRef</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active index">Indexes</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Index name</th>
+        <th>Fields</th>
+      </tr>
+      <tr>
+        <td>PrimaryKey</td>
+        <td class="index"><a href="./Indexes/PK_ConceptRef.html">PK_ConceptRef</td>
+        <td>ConceptRefId</td>
+      </tr>
+      <tr>
+        <td>AlternateKeyLogicalKey</td>
+        <td class="index"><a href="./Indexes/AK_ConceptRef_ConceptId_PropertyName.html">AK_ConceptRef_ConceptId_PropertyName</td>
+        <td>ConceptId, PropertyName</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion  active property" >Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ConceptRefId.html">ConceptRefId</a></td>
+        <td>int</td>
+        <td>The ID of the ConceptRef</td>
+        <td class="domain"><a href="../Domains/ConceptRefId.html">ConceptRefId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ConceptModelId.html">ConceptModelId</a></td>
+        <td>int</td>
+        <td>The ID of the ConceptModel</td>
+        <td class="domain"><a href="../Domains/ConceptModelId.html">ConceptModelId</a></td>
+        <td></td>
+        <td>ImpliedInPersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ModelName.html">ModelName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href="../Domains/ModelName.html">ModelName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../ConceptRef/Fields/ConceptId.html">ConceptId</a></td>
+        <td>int</td>
+        <td>The ID of the Concept</td>
+        <td class="domain"><a href="../Domains/ConceptId.html">ConceptId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ConceptName.html">ConceptName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The name of the Concept</td>
+        <td class="domain"><a href="../Domains/ConceptName.html">ConceptName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Concept</td>
+        <td>object</td>
+        <td>The associated Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+        <td>ConceptId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/PropertyName.html">PropertyName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/PropertyName.html">PropertyName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/PropertyDescription.html">PropertyDescription</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/PropertyDescription.html">PropertyDescription</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../ConceptRef/Fields/ReferencedConceptId.html">ReferencedConceptId</a></td>
+        <td>int</td>
+        <td>The ID of the Referenced Concept</td>
+        <td class="domain"><a href="../Domains/ReferencedConceptId.html">ReferencedConceptId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ReferencedConceptName.html">ReferencedConceptName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The ConceptName value for the Referenced Concept</td>
+        <td class="domain"><a href="../Domains/ReferencedConceptName.html">ReferencedConceptName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ReferencedConcept</td>
+        <td>object</td>
+        <td>The Referenced Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+        <td>ReferencedConceptId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ConceptRefType.html">ConceptRefType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ConceptRefType.html">ConceptRefType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../ConceptRef/Fields/ConceptPropertyFamilyId.html">ConceptPropertyFamilyId</a></td>
+        <td>int</td>
+        <td>The ID of the ConceptPropertyFamily</td>
+        <td class="domain"><a href="../Domains/ConceptPropertyFamilyId.html">ConceptPropertyFamilyId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/PropertyFamilyName.html">PropertyFamilyName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The PropertyFamilyName value for the ConceptPropertyFamily</td>
+        <td class="domain"><a href="../Domains/PropertyFamilyName.html">PropertyFamilyName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">PropertyFamily</td>
+        <td>object</td>
+        <td>The associated ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+        <td>ConceptPropertyFamilyId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsPropagating.html">IsPropagating</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsPropagating.html">IsPropagating</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/DbColumnName.html">DbColumnName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/DbColumnName.html">DbColumnName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsIdentity.html">IsIdentity</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsIdentity.html">IsIdentity</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsCoreField.html">IsCoreField</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsCoreField.html">IsCoreField</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/FieldFamilyName.html">FieldFamilyName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/FieldFamilyName.html">FieldFamilyName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsUpdatable.html">IsUpdatable</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsUpdatable.html">IsUpdatable</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/FieldLabel.html">FieldLabel</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/FieldLabel.html">FieldLabel</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsScalarFieldToSerialiseInPersistenceModel.html">IsScalarFieldToSerialiseInPersistenceModel</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsScalarFieldToSerialiseInPersistenceModel.html">IsScalarFieldToSerialiseInPersistenceModel</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsScalarFieldToSerialiseInDomainModel.html">IsScalarFieldToSerialiseInDomainModel</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsScalarFieldToSerialiseInDomainModel.html">IsScalarFieldToSerialiseInDomainModel</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsSeqNoField.html">IsSeqNoField</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsSeqNoField.html">IsSeqNoField</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsDiscriminatorField.html">IsDiscriminatorField</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsDiscriminatorField.html">IsDiscriminatorField</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsXmlAttribute.html">IsXmlAttribute</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsXmlAttribute.html">IsXmlAttribute</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsReferenceToChildEntity.html">IsReferenceToChildEntity</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsReferenceToChildEntity.html">IsReferenceToChildEntity</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ParentQualifier.html">ParentQualifier</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ParentQualifier.html">ParentQualifier</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ChildQualifier.html">ChildQualifier</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ChildQualifier.html">ChildQualifier</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/MinChildOccurrences.html">MinChildOccurrences</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MinChildOccurrences.html">MinChildOccurrences</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/MaxChildOccurrences.html">MaxChildOccurrences</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MaxChildOccurrences.html">MaxChildOccurrences</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ChildVerbPhrase.html">ChildVerbPhrase</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ChildVerbPhrase.html">ChildVerbPhrase</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ParentVerbPhrase.html">ParentVerbPhrase</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ParentVerbPhrase.html">ParentVerbPhrase</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ChildPropertySeq.html">ChildPropertySeq</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ChildPropertySeq.html">ChildPropertySeq</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ChildCollectionName.html">ChildCollectionName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ChildCollectionName.html">ChildCollectionName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ChildItemName.html">ChildItemName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ChildItemName.html">ChildItemName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ChildPropertyDescription.html">ChildPropertyDescription</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ChildPropertyDescription.html">ChildPropertyDescription</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/SelectorType.html">SelectorType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/SelectorType.html">SelectorType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/RelationshipType.html">RelationshipType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/RelationshipType.html">RelationshipType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/OutputExplicitXmlCollection.html">OutputExplicitXmlCollection</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/OutputExplicitXmlCollection.html">OutputExplicitXmlCollection</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsSerialisedUsingScalarFieldInDomainModel.html">IsSerialisedUsingScalarFieldInDomainModel</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsSerialisedUsingScalarFieldInDomainModel.html">IsSerialisedUsingScalarFieldInDomainModel</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ScalarFieldNameInDomainModel.html">ScalarFieldNameInDomainModel</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ScalarFieldNameInDomainModel.html">ScalarFieldNameInDomainModel</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ExampleValueAsString.html">ExampleValueAsString</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ExampleValueAsString.html">ExampleValueAsString</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/RelationshipName.html">RelationshipName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/RelationshipName.html">RelationshipName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/DbForeignKeyName.html">DbForeignKeyName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/DbForeignKeyName.html">DbForeignKeyName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ParentIndexName.html">ParentIndexName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ParentIndexName.html">ParentIndexName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ForeignKeySurrogateKeyFieldName.html">ForeignKeySurrogateKeyFieldName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ForeignKeySurrogateKeyFieldName.html">ForeignKeySurrogateKeyFieldName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/ChildPropertyName.html">ChildPropertyName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ChildPropertyName.html">ChildPropertyName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/IsNullable.html">IsNullable</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsNullable.html">IsNullable</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptRef/Fields/PropertySeq.html">PropertySeq</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/PropertySeq.html">PropertySeq</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active field">Fields</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Field name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Domain</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptRefId.html">ConceptRefId</td>
+        <td>int</td>
+        <td>The ID of the ConceptRef</td>
+        <td class="domain"><a href = "../Domains/ConceptRefId.html" > ConceptRefId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptModelId.html">ConceptModelId</td>
+        <td>int</td>
+        <td>The ID of the ConceptModel</td>
+        <td class="domain"><a href = "../Domains/ConceptModelId.html" > ConceptModelId</a></a></td>
+        <td>ImpliedInPersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ModelName.html">ModelName</td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href = "../Domains/ModelName.html" > ModelName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ConceptId.html">ConceptId</td>
+        <td>int</td>
+        <td>The ID of the Concept</td>
+        <td class="domain"><a href = "../Domains/ConceptId.html" > ConceptId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptName.html">ConceptName</td>
+        <td>nvarchar(200)</td>
+        <td>The name of the Concept</td>
+        <td class="domain"><a href = "../Domains/ConceptName.html" > ConceptName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/PropertyName.html">PropertyName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/PropertyName.html" > PropertyName</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/PropertyDescription.html">PropertyDescription</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/PropertyDescription.html" > PropertyDescription</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ReferencedConceptId.html">ReferencedConceptId</td>
+        <td>int</td>
+        <td>The ID of the Referenced Concept</td>
+        <td class="domain"><a href = "../Domains/ReferencedConceptId.html" > ReferencedConceptId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ReferencedConceptName.html">ReferencedConceptName</td>
+        <td>nvarchar(200)</td>
+        <td>The ConceptName value for the Referenced Concept</td>
+        <td class="domain"><a href = "../Domains/ReferencedConceptName.html" > ReferencedConceptName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptRefType.html">ConceptRefType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ConceptRefType.html" > ConceptRefType</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ConceptPropertyFamilyId.html">ConceptPropertyFamilyId</td>
+        <td>int</td>
+        <td>The ID of the ConceptPropertyFamily</td>
+        <td class="domain"><a href = "../Domains/ConceptPropertyFamilyId.html" > ConceptPropertyFamilyId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/PropertyFamilyName.html">PropertyFamilyName</td>
+        <td>nvarchar(200)</td>
+        <td>The PropertyFamilyName value for the ConceptPropertyFamily</td>
+        <td class="domain"><a href = "../Domains/PropertyFamilyName.html" > PropertyFamilyName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsPropagating.html">IsPropagating</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsPropagating.html" > IsPropagating</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DbColumnName.html">DbColumnName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/DbColumnName.html" > DbColumnName</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsIdentity.html">IsIdentity</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsIdentity.html" > IsIdentity</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsCoreField.html">IsCoreField</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsCoreField.html" > IsCoreField</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/FieldFamilyName.html">FieldFamilyName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/FieldFamilyName.html" > FieldFamilyName</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsUpdatable.html">IsUpdatable</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsUpdatable.html" > IsUpdatable</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/FieldLabel.html">FieldLabel</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/FieldLabel.html" > FieldLabel</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsScalarFieldToSerialiseInPersistenceModel.html">IsScalarFieldToSerialiseInPersistenceModel</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsScalarFieldToSerialiseInPersistenceModel.html" > IsScalarFieldToSerialiseInPersistenceModel</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsScalarFieldToSerialiseInDomainModel.html">IsScalarFieldToSerialiseInDomainModel</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsScalarFieldToSerialiseInDomainModel.html" > IsScalarFieldToSerialiseInDomainModel</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsSeqNoField.html">IsSeqNoField</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsSeqNoField.html" > IsSeqNoField</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsDiscriminatorField.html">IsDiscriminatorField</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsDiscriminatorField.html" > IsDiscriminatorField</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsXmlAttribute.html">IsXmlAttribute</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsXmlAttribute.html" > IsXmlAttribute</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsReferenceToChildEntity.html">IsReferenceToChildEntity</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsReferenceToChildEntity.html" > IsReferenceToChildEntity</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ParentQualifier.html">ParentQualifier</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ParentQualifier.html" > ParentQualifier</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ChildQualifier.html">ChildQualifier</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ChildQualifier.html" > ChildQualifier</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MinChildOccurrences.html">MinChildOccurrences</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MinChildOccurrences.html" > MinChildOccurrences</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MaxChildOccurrences.html">MaxChildOccurrences</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MaxChildOccurrences.html" > MaxChildOccurrences</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ChildVerbPhrase.html">ChildVerbPhrase</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ChildVerbPhrase.html" > ChildVerbPhrase</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ParentVerbPhrase.html">ParentVerbPhrase</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ParentVerbPhrase.html" > ParentVerbPhrase</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ChildPropertySeq.html">ChildPropertySeq</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ChildPropertySeq.html" > ChildPropertySeq</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ChildCollectionName.html">ChildCollectionName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ChildCollectionName.html" > ChildCollectionName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ChildItemName.html">ChildItemName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ChildItemName.html" > ChildItemName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ChildPropertyDescription.html">ChildPropertyDescription</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ChildPropertyDescription.html" > ChildPropertyDescription</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/SelectorType.html">SelectorType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/SelectorType.html" > SelectorType</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/RelationshipType.html">RelationshipType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/RelationshipType.html" > RelationshipType</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/OutputExplicitXmlCollection.html">OutputExplicitXmlCollection</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/OutputExplicitXmlCollection.html" > OutputExplicitXmlCollection</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsSerialisedUsingScalarFieldInDomainModel.html">IsSerialisedUsingScalarFieldInDomainModel</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsSerialisedUsingScalarFieldInDomainModel.html" > IsSerialisedUsingScalarFieldInDomainModel</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ScalarFieldNameInDomainModel.html">ScalarFieldNameInDomainModel</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ScalarFieldNameInDomainModel.html" > ScalarFieldNameInDomainModel</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ExampleValueAsString.html">ExampleValueAsString</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ExampleValueAsString.html" > ExampleValueAsString</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/RelationshipName.html">RelationshipName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/RelationshipName.html" > RelationshipName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DbForeignKeyName.html">DbForeignKeyName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/DbForeignKeyName.html" > DbForeignKeyName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ParentIndexName.html">ParentIndexName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ParentIndexName.html" > ParentIndexName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ForeignKeySurrogateKeyFieldName.html">ForeignKeySurrogateKeyFieldName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ForeignKeySurrogateKeyFieldName.html" > ForeignKeySurrogateKeyFieldName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ChildPropertyName.html">ChildPropertyName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ChildPropertyName.html" > ChildPropertyName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsNullable.html">IsNullable</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsNullable.html" > IsNullable</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/PropertySeq.html">PropertySeq</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/PropertySeq.html" > PropertySeq</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active entityproperty" >Primary Navigation Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ReferencedConcept</td>
+        <td>object</td>
+        <td>The Referenced Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+        <td>ReferencedConceptId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">PropertyFamily</td>
+        <td>object</td>
+        <td>The associated ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+        <td>ConceptPropertyFamilyId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion entityproperty" >Secondary Navigation Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Concept</td>
+        <td>object</td>
+        <td>The associated Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+        <td>ConceptId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion rule">Primary Business Rules</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="rule">A ConceptRef references up to one ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A ConceptRef references exactly one Concept (as a Referenced Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion rule">Secondary Business Rules</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="rule">A ConceptRef is owned by exactly one Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion relationship">Relationships</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.Properties.html">Concept.Properties</a></td>
+        <td>A ConceptRef is owned by exactly one Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/ConceptRef.ReferencedConcept.html">ConceptRef.ReferencedConcept</a></td>
+        <td>A ConceptRef references exactly one Concept (as a Referenced Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/ConceptRef.PropertyFamily.html">ConceptRef.PropertyFamily</a></td>
+        <td>A ConceptRef references up to one ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

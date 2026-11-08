@@ -1,0 +1,57 @@
+@page "/Includes/{includeId:int}/Edit"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Includes.EditModel
+
+@{
+    ViewData["Title"] = "Edit Include";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Includes</a> &gt;
+    @Model.Include.ValueString
+</p>
+<h1>Edit</h1>
+<h3>@Model.Include.ValueString</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Include.IncludeId" />
+            <h4>Core Properties</h4>
+            <div class="form-group">
+                <label asp-for="Include.IncludeId" class="control-label"></label>
+                <input asp-for="Include.IncludeId" class="form-control" disabled="disabled" />
+                <span asp-validation-for="Include.IncludeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Include.ConceptKeyString" class="control-label"></label>
+                <select asp-for="Include.ConceptKeyString" class="form-control" asp-items="Model.ConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Include.ConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Include.ItemValue" class="control-label"></label>
+                <input asp-for="Include.ItemValue" class="form-control" />
+                <span asp-validation-for="Include.ItemValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Include.SeqNo" class="control-label"></label>
+                <input asp-for="Include.SeqNo" class="form-control" />
+                <span asp-validation-for="Include.SeqNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="Details" asp-route-includeId="@Model.Include.IncludeId">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

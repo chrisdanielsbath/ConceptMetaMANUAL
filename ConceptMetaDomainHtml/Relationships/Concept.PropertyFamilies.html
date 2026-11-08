@@ -1,0 +1,195 @@
+<html>
+<head>
+  <title>ConceptMeta - Concept.PropertyFamilies</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; Concept.PropertyFamilies
+  <button class="accordion active relationship">Concept.PropertyFamilies</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Relationship Name</th>
+        <td class="relationship">Concept.PropertyFamilies</td>
+      </tr>
+      <tr>
+        <th>Primary Entity</th>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Name</th>
+        <td class="entityproperty">Concept.PropertyFamilies</td>
+      </tr>
+      <tr>
+        <th>Relationship Type</th>
+        <td>ParentChild</td>
+      </tr>
+      <tr>
+        <th>Simple Relationship Type</th>
+        <td>NestingRelationship</td>
+      </tr>
+      <tr>
+        <th>Conceptual Relationship Type</th>
+        <td>UniqueContainer</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active relationship">Class Model Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Primary Entity</th>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Name</th>
+        <td class="entityproperty">Concept.PropertyFamilies</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Description</th>
+        <td>The set of ConceptPropertyFamilies where the ConceptPropertyFamily is owned by this Concept</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Business Rule</th>
+        <td class="rule">A Concept owns zero, one or many ConceptPropertyFamilies</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity</th>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+      </tr>
+      <tr>
+        <th>Primary Entity Property Name</th>
+        <td class="entityproperty">ConceptPropertyFamily.Concept</td>
+      </tr>
+      <tr>
+        <th>Primary Entity Property Description</th>
+        <td>The associated Concept</td>
+      </tr>
+      <tr>
+        <th>Primary Entity Business Rule</th>
+        <td class="rule">A ConceptPropertyFamily is owned by exactly one Concept</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active relationship">Relational Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Is Identifying Relationship?</th>
+        <td>True</td>
+      </tr>
+      <tr>
+        <th>Is Mandatory Relationship?</th>
+        <td>True</td>
+      </tr>
+      <tr>
+        <th>Conceptual Relationship Type</th>
+        <td>UniqueContainer</td>
+      </tr>
+      <tr>
+        <th>Is Propagating Relationship?</th>
+        <td>False</td>
+      </tr>
+      <tr>
+        <th>Relationship Fields</th>
+        <td>ConceptPropertyFamily(ModelName, ConceptName) references Concept(ModelName, ConceptName)</td>
+      </tr>
+      <tr>
+        <th>Logical Relationship Fields</th>
+        <td>ConceptPropertyFamily(ModelName, ConceptName) references Concept(ModelName, ConceptName)</td>
+      </tr>
+      <tr>
+        <th>Logical Business Relationship Fields</th>
+        <td>ConceptPropertyFamily(ModelName, ConceptName) references Concept(ModelName, ConceptName)</td>
+      </tr>
+      <tr>
+        <th>Business Relationship Fields</th>
+        <td>ConceptPropertyFamily(ModelName, ConceptName) references Concept(ModelName, ConceptName)</td>
+      </tr>
+      <tr class="entity">
+        <th>Child Entity</th>
+        <td><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+      </tr>
+      <tr>
+        <th>Parent Property Name</th>
+        <td class="entityproperty">ConceptPropertyFamily.Concept</td>
+      </tr>
+      <tr>
+        <th>Parent Property Description</th>
+        <td>The associated Concept</td>
+      </tr>
+      <tr>
+        <th>Parent Business Rule</th>
+        <td class="rule">A ConceptPropertyFamily is owned by exactly one Concept</td>
+      </tr>
+      <tr>
+        <th>Parent Index Name</th>
+        <td>PK4_ObjectConcept</td>
+      </tr>
+      <tr>
+        <th>Parent Verb Phrase</th>
+        <td>is owned by</td>
+      </tr>
+      <tr>
+        <th>Parent Property Sequence</th>
+        <td>3</td>
+      </tr>
+      <tr>
+        <th>Parent Property Selector Type</th>
+        <td>Dropdown</td>
+      </tr>
+      <tr>
+        <th>Child Fields</th>
+        <td>ModelName, ConceptName</td>
+      </tr>
+      <tr>
+        <th>Parent Property Name Override</th>
+        <td>Concept</td>
+      </tr>
+      <tr>
+        <th>Parent Entity</th>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <th>Child Property Name</th>
+        <td class="entityproperty">Concept.PropertyFamilies</td>
+      </tr>
+      <tr>
+        <th>Child Property Description</th>
+        <td>The set of ConceptPropertyFamilies where the ConceptPropertyFamily is owned by this Concept</td>
+      </tr>
+      <tr>
+        <th>Child Business Rule</th>
+        <td class="rule">A Concept owns zero, one or many ConceptPropertyFamilies</td>
+      </tr>
+      <tr>
+        <th>Child Verb Phrase</th>
+        <td>owns</td>
+      </tr>
+      <tr>
+        <th>Child Property Sequence</th>
+        <td>40</td>
+      </tr>
+      <tr>
+        <th>Parent Fields</th>
+        <td>ModelName, ConceptName</td>
+      </tr>
+      <tr>
+        <th>Child Collection Name Override</th>
+        <td>PropertyFamilies</td>
+      </tr>
+      <tr>
+        <th>Child Item Name Override</th>
+        <td>PropertyFamily</td>
+      </tr>
+      <tr>
+        <th>Child Property Is Collection</th>
+        <td>True</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

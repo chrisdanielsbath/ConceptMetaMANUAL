@@ -1,0 +1,68 @@
+@page "/ConceptPropertyFamilies/{conceptPropertyFamilyId:int}"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptPropertyFamilies.DetailsModel
+
+@{
+    ViewData["Title"] = "ConceptPropertyFamily Details";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">ConceptPropertyFamilies</a> &gt;
+    @Model.ConceptPropertyFamily.ValueString
+</p>
+<h1>Details</h1>
+<h3>@Model.ConceptPropertyFamily.ValueString</h3>
+<hr />
+<p>
+    <a asp-page="./Edit" asp-route-conceptPropertyFamilyId="@Model.ConceptPropertyFamily.ConceptPropertyFamilyId">Edit</a>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ConceptPropertyFamily.ConceptPropertyFamilyId" />
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptPropertyFamily.ConceptPropertyFamilyId" class="control-label"></label>
+                <input asp-for="ConceptPropertyFamily.ConceptPropertyFamilyId" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptPropertyFamily.ConceptValueString" class="control-label"></label>
+                <input asp-for="ConceptPropertyFamily.ConceptValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptPropertyFamily.PropertyFamilyName" class="control-label"></label>
+                <input asp-for="ConceptPropertyFamily.PropertyFamilyName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptPropertyFamily.SeqNo" class="control-label"></label>
+                <input asp-for="ConceptPropertyFamily.SeqNo" class="form-control" disabled="disabled" />
+            </div>
+        </form>
+    </div>
+    <!--dl class="row">
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptPropertyFamily.PropertyFamilyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptPropertyFamily.PropertyFamilyName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptPropertyFamily.SeqNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptPropertyFamily.SeqNo)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptPropertyFamily.ConceptValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.ConceptPropertyFamily.ConceptValueString)
+        </dd>
+    </dl-->
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-conceptPropertyFamilyId="@Model.ConceptPropertyFamily.ConceptPropertyFamilyId">Edit</a> |
+    <a asp-page="./Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>

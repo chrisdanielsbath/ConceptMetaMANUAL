@@ -1,0 +1,33 @@
+@page "/ConceptModels/{conceptModelId:int}/ViewJson"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptModels.ViewJsonModel
+
+@{
+    ViewData["Title"] = "View ConceptModel Json";
+}
+
+<p>
+    <a asp-page="Index">ConceptModels</a> &gt;
+    @Model.ConceptModel.ToString()
+</p>
+<h1>View</h1>
+<h3>@Model.ConceptModel.ToString()</h3>
+<hr />
+<p>
+    <a asp-page="./EditJson" asp-route-conceptModelId="@Model.ConceptModelId">Edit Json</a> |
+    <a asp-page="./Details" asp-route-conceptModelId="@Model.ConceptModelId">Details</a> |
+    <a asp-page="../DataTypes/Index" asp-route-conceptModelId="@Model.ConceptModelId">DataTypes</a> |
+    <a asp-page="../Enumerations/Index" asp-route-conceptModelId="@Model.ConceptModelId">Enumerations</a> |
+    <a asp-page="../Concepts/Index" asp-route-conceptModelId="@Model.ConceptModelId">Concepts</a>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <input type="hidden" asp-for="@Model.ConceptModelId" />
+            <p><pre>@Html.DisplayFor(model => model.ConceptModelJson)</pre></p>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="./EditJson" asp-route-conceptModelId="@Model.ConceptModelId">Edit Json</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

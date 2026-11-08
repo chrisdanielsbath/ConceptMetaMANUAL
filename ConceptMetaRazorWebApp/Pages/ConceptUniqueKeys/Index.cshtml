@@ -1,0 +1,41 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptUniqueKeys.IndexModel
+
+@{
+    ViewData["Title"] = "ConceptUniqueKeys";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    ConceptUniqueKeys
+</p>
+<h1>ConceptUniqueKeys</h1>
+<p>
+    <a asp-page="Create" asp-route-conceptId="@Model.ConceptId">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConceptUniqueKeys[0].UniqueKeyName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ConceptUniqueKeys)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UniqueKeyName)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-conceptUniqueKeyId="@item.ConceptUniqueKeyId">Details</a> |
+                <a asp-page="./Edit" asp-route-conceptUniqueKeyId="@item.ConceptUniqueKeyId">Edit</a> |
+                <a asp-page="./Delete" asp-route-conceptUniqueKeyId="@item.ConceptUniqueKeyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

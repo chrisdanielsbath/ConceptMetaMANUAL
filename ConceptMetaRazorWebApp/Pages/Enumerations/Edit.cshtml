@@ -1,0 +1,63 @@
+@page "/Enumerations/{enumerationId:int}/Edit"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Enumerations.EditModel
+
+@{
+    ViewData["Title"] = "Edit Enumeration";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Enumerations</a> &gt;
+    @Model.Enumeration.ValueString
+</p>
+<h1>Edit</h1>
+<h3>@Model.Enumeration.ValueString</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Enumeration.EnumerationId" />
+            <h4>Core Properties</h4>
+            <div class="form-group">
+                <label asp-for="Enumeration.EnumerationId" class="control-label"></label>
+                <input asp-for="Enumeration.EnumerationId" class="form-control" disabled="disabled" />
+                <span asp-validation-for="Enumeration.EnumerationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enumeration.ConceptModelKeyString" class="control-label"></label>
+                <select asp-for="Enumeration.ConceptModelKeyString" class="form-control" asp-items="Model.ConceptModelSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Enumeration.ConceptModelKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enumeration.EnumerationName" class="control-label"></label>
+                <input asp-for="Enumeration.EnumerationName" class="form-control" />
+                <span asp-validation-for="Enumeration.EnumerationName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enumeration.EnumerationDescription" class="control-label"></label>
+                <input asp-for="Enumeration.EnumerationDescription" class="form-control" />
+                <span asp-validation-for="Enumeration.EnumerationDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enumeration.DataTypeKeyString" class="control-label"></label>
+                <select asp-for="Enumeration.DataTypeKeyString" class="form-control" asp-items="Model.DataTypeSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Enumeration.DataTypeKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="Details" asp-route-enumerationId="@Model.Enumeration.EnumerationId">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

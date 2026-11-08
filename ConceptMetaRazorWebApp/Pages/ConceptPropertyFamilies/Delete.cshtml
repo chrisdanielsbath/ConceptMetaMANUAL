@@ -1,0 +1,49 @@
+@page "/ConceptPropertyFamilies/{conceptPropertyFamilyId:int}/Delete"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptPropertyFamilies.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete ConceptPropertyFamily";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">ConceptPropertyFamilies</a> &gt;
+    @Model.ConceptPropertyFamily.ValueString
+</p>
+<h1>Delete</h1>
+
+<h2>Are you sure you want to delete this?</h2>
+<div>
+    <h3>@Model.ConceptPropertyFamily.ValueString</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <h4>Common Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptPropertyFamily.ConceptValueString)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.ConceptPropertyFamily.ConceptValueString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptPropertyFamily.PropertyFamilyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptPropertyFamily.PropertyFamilyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptPropertyFamily.SeqNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptPropertyFamily.SeqNo)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="ConceptPropertyFamily.ConceptPropertyFamilyId" />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-page="./Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+        </div>
+    </form>
+</div>

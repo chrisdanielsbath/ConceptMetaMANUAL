@@ -1,0 +1,213 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Concepts.CreateModel
+
+@{
+    ViewData["Title"] = "Create Concept";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Concepts</a> &gt;
+    New Concept
+</p>
+<h1>Create</h1>
+
+<h3>New Concept</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptModelKeyString" class="control-label"></label>
+                <select asp-for="Concept.ConceptModelKeyString" class="form-control" asp-items="Model.ConceptModelSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.ConceptModelKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptName" class="control-label"></label>
+                <input asp-for="Concept.ConceptName" class="form-control" />
+                <span asp-validation-for="Concept.ConceptName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptDescription" class="control-label"></label>
+                <input asp-for="Concept.ConceptDescription" class="form-control" />
+                <span asp-validation-for="Concept.ConceptDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptType" class="control-label"></label>
+                <select asp-for="Concept.ConceptType" class="form-control" asp-items="Model.ConceptTypeSL" >
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.ConceptType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.IsUpdatable" class="control-label"></label>
+                <select asp-for="Concept.IsUpdatable" class="form-control" asp-items="Model.IsUpdatableSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.IsUpdatable" class="text-danger"></span>
+            </div>
+            <h4>Enumeration Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.EnumerationKeyString" class="control-label"></label>
+                <select asp-for="Concept.EnumerationKeyString" class="form-control" asp-items="Model.EnumerationSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.EnumerationKeyString" class="text-danger"></span>
+            </div>
+            <h4>Data Type Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.DataTypeKeyString" class="control-label"></label>
+                <select asp-for="Concept.DataTypeKeyString" class="form-control" asp-items="Model.DataTypeSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.DataTypeKeyString" class="text-danger"></span>
+            </div>
+            <h4>Scalar Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.BasedOnConceptKeyString" class="control-label"></label>
+                <select asp-for="Concept.BasedOnConceptKeyString" class="form-control" asp-items="Model.BasedOnConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.BasedOnConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ExampleValueAsString" class="control-label"></label>
+                <input asp-for="Concept.ExampleValueAsString" class="form-control" />
+                <span asp-validation-for="Concept.ExampleValueAsString" class="text-danger"></span>
+            </div>
+            <h4>String Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.MinLength" class="control-label"></label>
+                <input asp-for="Concept.MinLength" class="form-control" />
+                <span asp-validation-for="Concept.MinLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.MaxLength" class="control-label"></label>
+                <input asp-for="Concept.MaxLength" class="form-control" />
+                <span asp-validation-for="Concept.MaxLength" class="text-danger"></span>
+            </div>
+            <h4>Number Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.MinValue" class="control-label"></label>
+                <input asp-for="Concept.MinValue" class="form-control" />
+                <span asp-validation-for="Concept.MinValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.MaxValue" class="control-label"></label>
+                <input asp-for="Concept.MaxValue" class="form-control" />
+                <span asp-validation-for="Concept.MaxValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.TotalDigits" class="control-label"></label>
+                <input asp-for="Concept.TotalDigits" class="form-control" />
+                <span asp-validation-for="Concept.TotalDigits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.DecimalPlaces" class="control-label"></label>
+                <input asp-for="Concept.DecimalPlaces" class="form-control" />
+                <span asp-validation-for="Concept.DecimalPlaces" class="text-danger"></span>
+            </div>
+            <h4>Date Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.DatePrecision" class="control-label"></label>
+                <input asp-for="Concept.DatePrecision" class="form-control" />
+                <span asp-validation-for="Concept.DatePrecision" class="text-danger"></span>
+            </div>
+            <h4>Object Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.DbSchemaName" class="control-label"></label>
+                <input asp-for="Concept.DbSchemaName" class="form-control" />
+                <span asp-validation-for="Concept.DbSchemaName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.DbTableName" class="control-label"></label>
+                <input asp-for="Concept.DbTableName" class="form-control" />
+                <span asp-validation-for="Concept.DbTableName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.IsCollectionItem" class="control-label"></label>
+                <select asp-for="Concept.IsCollectionItem" class="form-control" asp-items="Model.IsCollectionItemSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.IsCollectionItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ToStringExpression" class="control-label"></label>
+                <input asp-for="Concept.ToStringExpression" class="form-control" />
+                <span asp-validation-for="Concept.ToStringExpression" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.IsCreatable" class="control-label"></label>
+                <select asp-for="Concept.IsCreatable" class="form-control" asp-items="Model.IsCreatableSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.IsCreatable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.IsDeletable" class="control-label"></label>
+                <select asp-for="Concept.IsDeletable" class="form-control" asp-items="Model.IsDeletableSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.IsDeletable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.SurrogateKeyFieldName" class="control-label"></label>
+                <input asp-for="Concept.SurrogateKeyFieldName" class="form-control" />
+                <span asp-validation-for="Concept.SurrogateKeyFieldName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.PrimaryKeyName" class="control-label"></label>
+                <input asp-for="Concept.PrimaryKeyName" class="form-control" />
+                <span asp-validation-for="Concept.PrimaryKeyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.AlternateKeyName" class="control-label"></label>
+                <input asp-for="Concept.AlternateKeyName" class="form-control" />
+                <span asp-validation-for="Concept.AlternateKeyName" class="text-danger"></span>
+            </div>
+            <h4>Unique Key Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.ReferencedConceptKeyString" class="control-label"></label>
+                <select asp-for="Concept.ReferencedConceptKeyString" class="form-control" asp-items="Model.ReferencedConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.ReferencedConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ReferencedUniqueKeyKeyString" class="control-label"></label>
+                <select asp-for="Concept.ReferencedUniqueKeyKeyString" class="form-control" asp-items="Model.ReferencedUniqueKeySL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.ReferencedUniqueKeyKeyString" class="text-danger"></span>
+            </div>
+            <h4>Sub Type Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.SpecialisedConceptKeyString" class="control-label"></label>
+                <select asp-for="Concept.SpecialisedConceptKeyString" class="form-control" asp-items="Model.SpecialisedConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.SpecialisedConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.SpecialisedSubTypeKeyString" class="control-label"></label>
+                <select asp-for="Concept.SpecialisedSubTypeKeyString" class="form-control" asp-items="Model.SpecialisedSubTypeSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.SpecialisedSubTypeKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

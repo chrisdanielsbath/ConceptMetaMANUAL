@@ -1,0 +1,86 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table {
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+}
+th, td {
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+th {
+  background-color: #eeeeee;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Change the background color of the button when you move the mouse over it (hover) */
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.model {
+  background-color: #dddddd;
+}
+.aggregate {
+  background-color: #dddddd;
+}
+.example {
+  background-color: #ffffcc;
+}
+.schema {
+	background-color: #eeeecc;
+}
+.openapi {
+  background-color: #ddddcc;
+}
+.entity {
+  background-color: #ccccff;
+}
+.index {
+  background-color: #ccddee;
+}
+.field {
+  background-color: #ccffff;
+}
+.domain {
+  background-color: #cceeee;
+}
+.enumeration {
+  background-color: #ccdddd;
+}
+.property {
+  background-color: #ccffff;
+}
+.entityproperty {
+  background-color: #ccccff;
+}
+.relationship {
+  background-color: #ccffcc;
+}
+.rule {
+  background-color: #cceecc;
+}

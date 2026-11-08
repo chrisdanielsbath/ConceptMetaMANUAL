@@ -1,0 +1,207 @@
+<html>
+<head>
+  <title>ConceptMeta - ConceptRef.ReferencedConcept</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; ConceptRef.ReferencedConcept
+  <button class="accordion active relationship">ConceptRef.ReferencedConcept</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Relationship Name</th>
+        <td class="relationship">ConceptRef.ReferencedConcept</td>
+      </tr>
+      <tr>
+        <th>Db Foreign Key Name</th>
+        <td>FK_ConceptRef_ReferencedConceptId</td>
+      </tr>
+      <tr>
+        <th>Primary Entity</th>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef</a></td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Name</th>
+        <td class="entityproperty">ConceptRef.ReferencedConcept</td>
+      </tr>
+      <tr>
+        <th>Relationship Type</th>
+        <td>Reference</td>
+      </tr>
+      <tr>
+        <th>Simple Relationship Type</th>
+        <td>ReferenceRelationship</td>
+      </tr>
+      <tr>
+        <th>Conceptual Relationship Type</th>
+        <td>Descriptive</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active relationship">Class Model Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Primary Entity</th>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef</a></td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Name</th>
+        <td class="entityproperty">ConceptRef.ReferencedConcept</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Description</th>
+        <td>The Referenced Concept</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Business Rule</th>
+        <td class="rule">A ConceptRef references exactly one Concept (as a Referenced Concept)</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity</th>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <th>Primary Entity Property Name</th>
+        <td class="entityproperty">Concept.ReferencedByProperties</td>
+      </tr>
+      <tr>
+        <th>Primary Entity Property Description</th>
+        <td>The set of ConceptRefs where the ConceptRef references this Concept (as a Referenced Concept)</td>
+      </tr>
+      <tr>
+        <th>Primary Entity Business Rule</th>
+        <td class="rule">A Concept is referenced by zero, one or many ConceptRefs (as a Referenced Concept)</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active relationship">Relational Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Db Foreign Key Name</th>
+        <td>FK_ConceptRef_ReferencedConceptId</td>
+      </tr>
+      <tr>
+        <th>Is Identifying Relationship?</th>
+        <td>False</td>
+      </tr>
+      <tr>
+        <th>Is Mandatory Relationship?</th>
+        <td>True</td>
+      </tr>
+      <tr>
+        <th>Conceptual Relationship Type</th>
+        <td>Descriptive</td>
+      </tr>
+      <tr>
+        <th>Is Propagating Relationship?</th>
+        <td>False</td>
+      </tr>
+      <tr>
+        <th>Relationship Fields</th>
+        <td>ConceptRef(ReferencedConceptId) references Concept(ConceptId)</td>
+      </tr>
+      <tr>
+        <th>Logical Relationship Fields</th>
+        <td>ConceptRef(ConceptModelId, ReferencedConceptId) references Concept(ConceptModelId, ConceptId)</td>
+      </tr>
+      <tr>
+        <th>Logical Business Relationship Fields</th>
+        <td>ConceptRef(ModelName, ReferencedConceptName) references Concept(ModelName, ConceptName)</td>
+      </tr>
+      <tr>
+        <th>Business Relationship Fields</th>
+        <td>ConceptRef(ModelName, ReferencedConceptName) references Concept(ModelName, ConceptName)</td>
+      </tr>
+      <tr class="entity">
+        <th>Child Entity</th>
+        <td><a href="../ConceptRef/ConceptRef.html">ConceptRef</a></td>
+      </tr>
+      <tr>
+        <th>Parent Property Name</th>
+        <td class="entityproperty">ConceptRef.ReferencedConcept</td>
+      </tr>
+      <tr>
+        <th>Parent Property Description</th>
+        <td>The Referenced Concept</td>
+      </tr>
+      <tr>
+        <th>Parent Business Rule</th>
+        <td class="rule">A ConceptRef references exactly one Concept (as a Referenced Concept)</td>
+      </tr>
+      <tr>
+        <th>Parent Index Name</th>
+        <td>PK2_CommonConcept</td>
+      </tr>
+      <tr>
+        <th>Parent Verb Phrase</th>
+        <td>references</td>
+      </tr>
+      <tr>
+        <th>Parent Qualifier</th>
+        <td>Referenced</td>
+      </tr>
+      <tr>
+        <th>Parent Property Sequence</th>
+        <td>11</td>
+      </tr>
+      <tr>
+        <th>Parent Property Selector Type</th>
+        <td>Searchable</td>
+      </tr>
+      <tr>
+        <th>Child Fields</th>
+        <td>ReferencedConceptId</td>
+      </tr>
+      <tr>
+        <th>Parent Property Name Override</th>
+        <td>ReferencedConcept</td>
+      </tr>
+      <tr>
+        <th>Parent Entity</th>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <th>Child Property Name</th>
+        <td class="entityproperty">Concept.ReferencedByProperties</td>
+      </tr>
+      <tr>
+        <th>Child Property Description</th>
+        <td>The set of ConceptRefs where the ConceptRef references this Concept (as a Referenced Concept)</td>
+      </tr>
+      <tr>
+        <th>Child Business Rule</th>
+        <td class="rule">A Concept is referenced by zero, one or many ConceptRefs (as a Referenced Concept)</td>
+      </tr>
+      <tr>
+        <th>Child Qualifier</th>
+        <td>ReferencedBy</td>
+      </tr>
+      <tr>
+        <th>Child Verb Phrase</th>
+        <td>is referenced by</td>
+      </tr>
+      <tr>
+        <th>Child Property Sequence</th>
+        <td>54</td>
+      </tr>
+      <tr>
+        <th>Parent Fields</th>
+        <td>ConceptId</td>
+      </tr>
+      <tr>
+        <th>Child Collection Name Override</th>
+        <td>ReferencedByProperties</td>
+      </tr>
+      <tr>
+        <th>Child Property Is Collection</th>
+        <td>True</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

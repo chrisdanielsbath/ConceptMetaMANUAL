@@ -1,0 +1,204 @@
+@page "/DataTypes/{dataTypeId:int}/Delete"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.DataTypes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete DataType";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">DataTypes</a> &gt;
+    @Model.DataType.ValueString
+</p>
+<h1>Delete</h1>
+
+<h2>Are you sure you want to delete this?</h2>
+<div>
+    <h3>@Model.DataType.ValueString</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <h4>Core Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.ConceptModelValueString)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.DataType.ConceptModelValueString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.DataTypeName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.DataTypeName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.ExampleValueAsString)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.ExampleValueAsString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.BasicDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.BasicDataType)
+        </dd>
+        <h4>Database Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.SqlServerDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.SqlServerDataType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.OracleDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.OracleDataType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.MySqlDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.MySqlDataType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.MongoDbDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.MongoDbDataType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.ErsDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.ErsDataType)
+        </dd>
+        <h4>Language Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.DotNetDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.DotNetDataType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.JavaDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.JavaDataType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.XmlDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.XmlDataType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.JsonDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.JsonDataType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.JsonFormat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.JsonFormat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.OpenApiDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.OpenApiDataType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.OpenApiFormat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.OpenApiFormat)
+        </dd>
+        <h4>String Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.MinLength)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.MinLength)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.MaxLength)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.MaxLength)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.HasLength)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.HasLength)
+        </dd>
+        <h4>Number Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.MinValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.MinValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.MaxValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.MaxValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.HasIdentity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.HasIdentity)
+        </dd>
+        <h4>Decimal Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.TotalDigits)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.TotalDigits)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.DecimalPlaces)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.DecimalPlaces)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.HasTotalDigits)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.HasTotalDigits)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.HasDecimalPlaces)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.HasDecimalPlaces)
+        </dd>
+        <h4>Date Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.DatePrecision)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.DatePrecision)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType.HasDatePrecision)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType.HasDatePrecision)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="DataType.DataTypeId" />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-page="./Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+        </div>
+    </form>
+</div>

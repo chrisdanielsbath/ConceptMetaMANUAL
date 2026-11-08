@@ -1,0 +1,53 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.EnumerationMembers.IndexModel
+
+@{
+    ViewData["Title"] = "EnumerationMembers";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Enumerations/Details" asp-route-enumerationId="@Model.Breadcrumb_Enumeration_EnumerationId">@Model.Breadcrumb_Enumeration_ValueString</a> &gt;
+    EnumerationMembers
+</p>
+<h1>EnumerationMembers</h1>
+<p>
+    <a asp-page="Create" asp-route-enumerationId="@Model.EnumerationId">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EnumerationMembers[0].EnumerationValueString)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnumerationMembers[0].EnumeratedValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnumerationMembers[0].EnumeratedValueDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.EnumerationMembers)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnumerationValueString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnumeratedValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnumeratedValueDescription)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-enumerationMemberId="@item.EnumerationMemberId">Details</a> |
+                <a asp-page="./Edit" asp-route-enumerationMemberId="@item.EnumerationMemberId">Edit</a> |
+                <a asp-page="./Delete" asp-route-enumerationMemberId="@item.EnumerationMemberId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,60 @@
+@page "/ConceptModels/{conceptModelId:int}"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptModels.DetailsModel
+
+@{
+    ViewData["Title"] = "ConceptModel Details";
+}
+
+<p>
+    <a asp-page="Index">ConceptModels</a> &gt;
+    @Model.ConceptModel.ValueString
+</p>
+<h1>Details</h1>
+<h3>@Model.ConceptModel.ValueString</h3>
+<hr />
+<p>
+    <a asp-page="./ViewJson" asp-route-conceptModelId="@Model.ConceptModel.ConceptModelId">View Json</a> |
+    <a asp-page="./Edit" asp-route-conceptModelId="@Model.ConceptModel.ConceptModelId">Edit</a> |
+    <a asp-page="../DataTypes/Index" asp-route-conceptModelId="@Model.ConceptModel.ConceptModelId">DataTypes</a> |
+    <a asp-page="../Enumerations/Index" asp-route-conceptModelId="@Model.ConceptModel.ConceptModelId">Enumerations</a> |
+    <a asp-page="../Concepts/Index" asp-route-conceptModelId="@Model.ConceptModel.ConceptModelId">Concepts</a>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ConceptModel.ConceptModelId" />
+            <h4>Core Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptModel.ConceptModelId" class="control-label"></label>
+                <input asp-for="ConceptModel.ConceptModelId" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptModel.ModelName" class="control-label"></label>
+                <input asp-for="ConceptModel.ModelName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptModel.DefaultStringLength" class="control-label"></label>
+                <input asp-for="ConceptModel.DefaultStringLength" class="form-control" disabled="disabled" />
+            </div>
+        </form>
+    </div>
+    <!--dl class="row">
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptModel.ModelName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptModel.ModelName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptModel.DefaultStringLength)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptModel.DefaultStringLength)
+        </dd>
+    </dl-->
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-conceptModelId="@Model.ConceptModel.ConceptModelId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

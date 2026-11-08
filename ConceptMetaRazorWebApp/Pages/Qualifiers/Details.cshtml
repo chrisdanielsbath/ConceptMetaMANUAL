@@ -1,0 +1,68 @@
+@page "/Qualifiers/{qualifierId:int}"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Qualifiers.DetailsModel
+
+@{
+    ViewData["Title"] = "Qualifier Details";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Qualifiers</a> &gt;
+    @Model.Qualifier.ValueString
+</p>
+<h1>Details</h1>
+<h3>@Model.Qualifier.ValueString</h3>
+<hr />
+<p>
+    <a asp-page="./Edit" asp-route-qualifierId="@Model.Qualifier.QualifierId">Edit</a>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Qualifier.QualifierId" />
+            <h4>Core Properties</h4>
+            <div class="form-group">
+                <label asp-for="Qualifier.QualifierId" class="control-label"></label>
+                <input asp-for="Qualifier.QualifierId" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Qualifier.ConceptValueString" class="control-label"></label>
+                <input asp-for="Qualifier.ConceptValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Qualifier.ItemValue" class="control-label"></label>
+                <input asp-for="Qualifier.ItemValue" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Qualifier.SeqNo" class="control-label"></label>
+                <input asp-for="Qualifier.SeqNo" class="form-control" disabled="disabled" />
+            </div>
+        </form>
+    </div>
+    <!--dl class="row">
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Qualifier.ItemValue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Qualifier.ItemValue)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Qualifier.SeqNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Qualifier.SeqNo)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Qualifier.ConceptValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.Qualifier.ConceptValueString)
+        </dd>
+    </dl-->
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-qualifierId="@Model.Qualifier.QualifierId">Edit</a> |
+    <a asp-page="./Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>

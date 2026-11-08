@@ -1,0 +1,54 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptSubTypePropertyFamilyRefs.CreateModel
+
+@{
+    ViewData["Title"] = "Create ConceptSubTypePropertyFamilyRef";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="../ConceptSubTypes/Details" asp-route-conceptSubTypeId="@Model.Breadcrumb_ConceptSubType_ConceptSubTypeId">@Model.Breadcrumb_ConceptSubType_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptSubTypeId="@Model.ConceptSubTypeId">ConceptSubTypePropertyFamilyRefs</a> &gt;
+    New ConceptSubTypePropertyFamilyRef
+</p>
+<h1>Create</h1>
+
+<h3>New ConceptSubTypePropertyFamilyRef</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptSubTypePropertyFamilyRef.ConceptSubTypeKeyString" class="control-label"></label>
+                <select asp-for="ConceptSubTypePropertyFamilyRef.ConceptSubTypeKeyString" class="form-control" asp-items="Model.ConceptSubTypeSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptSubTypePropertyFamilyRef.ConceptSubTypeKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptSubTypePropertyFamilyRef.ConceptPropertyFamilyKeyString" class="control-label"></label>
+                <select asp-for="ConceptSubTypePropertyFamilyRef.ConceptPropertyFamilyKeyString" class="form-control" asp-items="Model.ConceptPropertyFamilySL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptSubTypePropertyFamilyRef.ConceptPropertyFamilyKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptSubTypePropertyFamilyRef.SeqNo" class="control-label"></label>
+                <input asp-for="ConceptSubTypePropertyFamilyRef.SeqNo" class="form-control" />
+                <span asp-validation-for="ConceptSubTypePropertyFamilyRef.SeqNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptSubTypeId="@Model.ConceptSubTypeId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,281 @@
+<html>
+<head>
+  <title>ConceptMeta - EnumerationMember</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; <a href="../ConceptModel/ConceptModel.html">ConceptModel</a>
+  &gt; <a href="../Enumeration/Enumeration.html">Enumeration</a>
+  &gt; EnumerationMember
+  <br/>
+  <button class="accordion active entity">EnumerationMember</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Entity name</th>
+        <td class="entity">EnumerationMember</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>An item within a constrained vocabulary</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active index">Indexes</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Index name</th>
+        <th>Fields</th>
+      </tr>
+      <tr>
+        <td>PrimaryKey</td>
+        <td class="index"><a href="./Indexes/PK_EnumerationMember.html">PK_EnumerationMember</td>
+        <td>ModelName, EnumerationName, EnumeratedValue</td>
+      </tr>
+      <tr>
+        <td>AlternateKeyLogicalKey</td>
+        <td class="index"><a href="./Indexes/AK_EnumerationMember_EnumerationId_EnumeratedValue.html">AK_EnumerationMember_EnumerationId_EnumeratedValue</td>
+        <td>ModelName, EnumerationName, EnumeratedValue</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion  active property" >Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td>FK </td>
+        <td class="property"><a href="../EnumerationMember/Fields/ModelName.html">ModelName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href="../Domains/ModelName.html">ModelName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../EnumerationMember/Fields/DataTypeName.html">DataTypeName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The DataTypeName value for the DataType</td>
+        <td class="domain"><a href="../Domains/DataTypeName.html">DataTypeName</a></td>
+        <td></td>
+        <td>Implied</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>PK</td>
+        <td>FK </td>
+        <td class="property"><a href="../EnumerationMember/Fields/EnumerationName.html">EnumerationName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The EnumerationName value for the Enumeration</td>
+        <td class="domain"><a href="../Domains/EnumerationName.html">EnumerationName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Enumeration</td>
+        <td>object</td>
+        <td>The associated Enumeration</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+        <td>ModelName, EnumerationName</td>
+        <td></td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>PK</td>
+        <td></td>
+        <td class="property"><a href="../EnumerationMember/Fields/EnumeratedValue.html">EnumeratedValue</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/EnumeratedValue.html">EnumeratedValue</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../EnumerationMember/Fields/EnumeratedValueDescription.html">EnumeratedValueDescription</a></td>
+        <td>nvarchar(500)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/EnumeratedValueDescription.html">EnumeratedValueDescription</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Core</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active field">Fields</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Field name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Domain</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ModelName.html">ModelName</td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href = "../Domains/ModelName.html" > ModelName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>PK</td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/EnumerationName.html">EnumerationName</td>
+        <td>nvarchar(200)</td>
+        <td>The EnumerationName value for the Enumeration</td>
+        <td class="domain"><a href = "../Domains/EnumerationName.html" > EnumerationName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>PK</td>
+        <td></td>
+        <td class="field"><a href="./Fields/EnumeratedValue.html">EnumeratedValue</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/EnumeratedValue.html" > EnumeratedValue</a></a></td>
+        <td>Common</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/EnumeratedValueDescription.html">EnumeratedValueDescription</td>
+        <td>nvarchar(500)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/EnumeratedValueDescription.html" > EnumeratedValueDescription</a></a></td>
+        <td>Common</td>
+        <td>Core</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active field">Implied fields</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Field name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Domain</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DataTypeName.html">DataTypeName</td>
+        <td>nvarchar(200)</td>
+        <td>The DataTypeName value for the DataType</td>
+        <td class="domain"><a href = "../Domains/DataTypeName.html" > DataTypeName</a></a></td>
+        <td>Implied</td>
+        <td>Core</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion entityproperty" >Secondary Navigation Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Enumeration</td>
+        <td>object</td>
+        <td>The associated Enumeration</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+        <td>ModelName, EnumerationName</td>
+        <td></td>
+        <td>Core</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion rule">Secondary Business Rules</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="rule">An EnumerationMember is owned by exactly one Enumeration</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion relationship">Relationships</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Enumeration.EnumeratedValues.html">Enumeration.EnumeratedValues</a></td>
+        <td>An EnumerationMember is owned by exactly one Enumeration</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

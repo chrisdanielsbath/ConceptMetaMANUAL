@@ -1,0 +1,285 @@
+@page "/ConceptRefs/{conceptRefId:int}/Delete"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptRefs.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete ConceptRef";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">ConceptRefs</a> &gt;
+    @Model.ConceptRef.ValueString
+</p>
+<h1>Delete</h1>
+
+<h2>Are you sure you want to delete this?</h2>
+<div>
+    <h3>@Model.ConceptRef.ValueString</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <h4>Common Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ConceptValueString)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.ConceptRef.ConceptValueString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.PropertyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.PropertyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.PropertyDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.PropertyDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ReferencedConceptValueString)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.ConceptRef.ReferencedConceptValueString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ConceptRefType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ConceptRefType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.PropertyFamilyValueString)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.ConceptRef.PropertyFamilyValueString)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsPropagating)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsPropagating)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsUpdatable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsUpdatable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsNullable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsNullable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.PropertySeq)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.PropertySeq)
+        </dd>
+        <h4>Scalar Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.DbColumnName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.DbColumnName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsIdentity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsIdentity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsCoreField)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsCoreField)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.FieldFamilyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.FieldFamilyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.FieldLabel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.FieldLabel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsScalarFieldToSerialiseInPersistenceModel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsScalarFieldToSerialiseInPersistenceModel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsScalarFieldToSerialiseInDomainModel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsScalarFieldToSerialiseInDomainModel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsSeqNoField)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsSeqNoField)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsDiscriminatorField)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsDiscriminatorField)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsXmlAttribute)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsXmlAttribute)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsReferenceToChildEntity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsReferenceToChildEntity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ExampleValueAsString)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ExampleValueAsString)
+        </dd>
+        <h4>Object Properties</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ParentQualifier)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ParentQualifier)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildQualifier)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ChildQualifier)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.MinChildOccurrences)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.MinChildOccurrences)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.MaxChildOccurrences)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.MaxChildOccurrences)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildVerbPhrase)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ChildVerbPhrase)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ParentVerbPhrase)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ParentVerbPhrase)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildPropertySeq)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ChildPropertySeq)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildCollectionName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ChildCollectionName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildItemName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ChildItemName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildPropertyDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ChildPropertyDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.SelectorType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.SelectorType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.RelationshipType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.RelationshipType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.OutputExplicitXmlCollection)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.OutputExplicitXmlCollection)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.IsSerialisedUsingScalarFieldInDomainModel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.IsSerialisedUsingScalarFieldInDomainModel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ScalarFieldNameInDomainModel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ScalarFieldNameInDomainModel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.RelationshipName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.RelationshipName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.DbForeignKeyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.DbForeignKeyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ParentIndexName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ParentIndexName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ForeignKeySurrogateKeyFieldName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ForeignKeySurrogateKeyFieldName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildPropertyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConceptRef.ChildPropertyName)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="ConceptRef.ConceptRefId" />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-page="./Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+        </div>
+    </form>
+</div>

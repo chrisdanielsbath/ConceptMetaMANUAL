@@ -1,0 +1,677 @@
+openapi: '3.0.1'
+info: 
+  title: ConceptMeta (Domain)
+  description: RESTful API for the ConceptMeta (Domain) data model.
+  version: '1.0'
+paths: 
+  /ConceptModels/{modelName}: 
+    get: 
+      summary: Get ConceptModel by ModelName
+      description: Returns a single ConceptModel
+      operationId: GetConceptModelByModelName
+      parameters: 
+        - name: modelName
+          in: path
+          required: true
+          schema: 
+            type: string
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptModel'
+    put: 
+      summary: Update ConceptModel
+      description: Updates the specified ConceptModel
+      operationId: UpdateConceptModelByModelName
+      parameters: 
+        - name: modelName
+          in: path
+          required: true
+          schema: 
+            type: string
+      requestBody: 
+        description: ConceptModel object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptModel'
+    delete: 
+      summary: Delete ConceptModel
+      description: Deletes the ConceptModel that has the specified ModelName
+      operationId: DeleteConceptModelByModelName
+      parameters: 
+        - name: modelName
+          in: path
+          required: true
+          schema: 
+            type: string
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /ConceptModels: 
+    post: 
+      summary: Add a new ConceptModel
+      description: Adds a new ConceptModel
+      requestBody: 
+        description: ConceptModel object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptModel'
+components: 
+  schemas: 
+    Concept: 
+      required: 
+        - ConceptName
+        - ConceptType
+      type: object
+      description: An entity, a domain, a unique key or a sub type
+      properties: 
+        ConceptName: 
+          type: string
+          maxLength: 200
+          'nullable': false
+        ConceptDescription: 
+          type: string
+          maxLength: 500
+          'nullable': true
+        ConceptType: 
+          type: string
+          enum: 
+            - DataType
+            - Enumeration
+            - Object
+            - Scalar
+            - UniqueKey
+            - SubType
+          'nullable': false
+        DataTypeName: 
+          type: string
+          description: The DataTypeName value for the DataType
+          maxLength: 200
+          'nullable': true
+        EnumerationName: 
+          type: string
+          description: The EnumerationName value for the Enumeration
+          maxLength: 200
+          'nullable': true
+        BasedOnConceptName: 
+          type: string
+          description: The ConceptName value for the BasedOn Concept
+          maxLength: 200
+          'nullable': true
+        ExampleValueAsString: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        MinLength: 
+          type: integer
+          format: int32
+          'nullable': true
+        MaxLength: 
+          type: integer
+          format: int32
+          'nullable': true
+        MinValue: 
+          type: number
+          format: double
+          multipleOf: 0.001
+          'nullable': true
+        MaxValue: 
+          type: number
+          format: double
+          multipleOf: 0.001
+          'nullable': true
+        TotalDigits: 
+          type: integer
+          format: int32
+          'nullable': true
+        DecimalPlaces: 
+          type: integer
+          format: int32
+          'nullable': true
+        DatePrecision: 
+          type: integer
+          format: int32
+          'nullable': true
+        DbSchemaName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        DbTableName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsCollectionItem: 
+          type: boolean
+          'nullable': true
+        ToStringExpression: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsCreatable: 
+          type: boolean
+          'nullable': true
+        IsUpdatable: 
+          type: boolean
+          'nullable': true
+        IsDeletable: 
+          type: boolean
+          'nullable': true
+        SurrogateKeyFieldName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        PrimaryKeyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        AlternateKeyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ReferencedConceptName: 
+          type: string
+          description: The business-facing identifier for the Referenced Concept
+          maxLength: 200
+          'nullable': true
+        ReferencedUniqueKeyName: 
+          type: string
+          description: The business-facing identifier for the Referenced ConceptUniqueKey
+          maxLength: 200
+          'nullable': true
+        SpecialisedConceptName: 
+          type: string
+          description: The business-facing identifier for the Specialised Concept
+          maxLength: 200
+          'nullable': true
+        SpecialisedSubTypeName: 
+          type: string
+          description: The business-facing identifier for the Specialised ConceptSubType
+          maxLength: 200
+          'nullable': true
+        Includes: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/Include'
+        Qualifiers: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/Qualifier'
+        PropertyFamilies: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptPropertyFamily'
+        UniqueKeys: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptUniqueKey'
+        SubTypes: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptSubType'
+        Properties: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptRef'
+    ConceptModel: 
+      type: object
+      description: A model, made primarily of scalar concepts and object concepts
+      properties: 
+        ModelName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        DefaultStringLength: 
+          type: integer
+          format: int32
+          'nullable': true
+        DataTypes: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/DataType'
+        Enumerations: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/Enumeration'
+        Concepts: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/Concept'
+    ConceptPropertyFamily: 
+      type: string
+      description: A family of properties
+      maxLength: 200
+      'nullable': false
+    ConceptRef: 
+      required: 
+        - ReferencedConceptName
+        - ConceptRefType
+      type: object
+      description: A field or relationship
+      properties: 
+        PropertyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        PropertyDescription: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ReferencedConceptName: 
+          type: string
+          description: The ConceptName value for the Referenced Concept
+          maxLength: 200
+          'nullable': false
+        ConceptRefType: 
+          type: string
+          maxLength: 200
+          enum: 
+            - UniqueContainer
+            - Identifying
+            - Descriptive
+          'nullable': false
+        PropertyFamilyName: 
+          type: string
+          description: The PropertyFamilyName value for the ConceptPropertyFamily
+          maxLength: 200
+          'nullable': true
+        IsPropagating: 
+          type: boolean
+          'nullable': true
+        DbColumnName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsIdentity: 
+          type: boolean
+          'nullable': true
+        IsCoreField: 
+          type: boolean
+          'nullable': true
+        FieldFamilyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsUpdatable: 
+          type: boolean
+          'nullable': true
+        FieldLabel: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsScalarFieldToSerialiseInPersistenceModel: 
+          type: boolean
+          'nullable': true
+        IsScalarFieldToSerialiseInDomainModel: 
+          type: boolean
+          'nullable': true
+        IsSeqNoField: 
+          type: boolean
+          'nullable': true
+        IsDiscriminatorField: 
+          type: boolean
+          'nullable': true
+        IsXmlAttribute: 
+          type: boolean
+          'nullable': true
+        IsReferenceToChildEntity: 
+          type: boolean
+          'nullable': true
+        ParentQualifier: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ChildQualifier: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        MinChildOccurrences: 
+          type: integer
+          format: int32
+          'nullable': true
+        MaxChildOccurrences: 
+          type: integer
+          format: int32
+          'nullable': true
+        ChildVerbPhrase: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ParentVerbPhrase: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ChildPropertySeq: 
+          type: integer
+          format: int32
+          'nullable': true
+        ChildCollectionName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ChildItemName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ChildPropertyDescription: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        SelectorType: 
+          type: string
+          maxLength: 200
+          enum: 
+            - Dropdown
+            - Searchable
+          'nullable': true
+        RelationshipType: 
+          type: string
+          maxLength: 200
+          enum: 
+            - Reference
+            - ParentChild
+            - NestedObject
+            - DescriptiveReference
+            - Subtype
+            - UniqueChild
+            - PassThrough
+          'nullable': true
+        OutputExplicitXmlCollection: 
+          type: boolean
+          'nullable': true
+        IsSerialisedUsingScalarFieldInDomainModel: 
+          type: boolean
+          'nullable': true
+        ScalarFieldNameInDomainModel: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ExampleValueAsString: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        RelationshipName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        DbForeignKeyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ParentIndexName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ForeignKeySurrogateKeyFieldName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ChildPropertyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsNullable: 
+          type: boolean
+          'nullable': true
+        PropertySeq: 
+          type: integer
+          format: int32
+          'nullable': true
+    ConceptSubType: 
+      required: 
+        - SubTypeName
+      type: object
+      description: A specialised variety of an entity
+      properties: 
+        SubTypeName: 
+          type: string
+          maxLength: 200
+          'nullable': false
+        PropertyFamilyRefs: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+    ConceptSubTypePropertyFamilyRef: 
+      type: string
+      description: A record which associates a given sub type with a particular family of properties, signifying that the family is relevant to that sub type
+      maxLength: 200
+      'nullable': false
+    ConceptUniqueKey: 
+      required: 
+        - UniqueKeyName
+      type: object
+      description: A unique key index that can be used to uniquely identify objects of a particular type
+      properties: 
+        UniqueKeyName: 
+          type: string
+          maxLength: 200
+          'nullable': false
+        PropertyFamilyRefs: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+    ConceptUniqueKeyPropertyFamilyRef: 
+      type: string
+      description: A record that associates a given unique key with a particular family of properties, signifying that the family of properties is relevant to that unique key
+      maxLength: 200
+      'nullable': false
+    DataType: 
+      required: 
+        - DataTypeName
+      type: object
+      description: A data type
+      properties: 
+        DataTypeName: 
+          type: string
+          maxLength: 200
+          'nullable': false
+        SqlServerDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        OracleDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        MySqlDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        MongoDbDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        DotNetDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        JavaDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        XmlDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ExampleValueAsString: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        JsonDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        JsonFormat: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        OpenApiDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        OpenApiFormat: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ErsDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        BasicDataType: 
+          type: string
+          maxLength: 200
+          enum: 
+            - Binary
+            - Boolean
+            - Integer
+            - Date
+            - Decimal
+            - String
+            - Xml
+          'nullable': true
+        MinLength: 
+          type: integer
+          format: int32
+          'nullable': true
+        MaxLength: 
+          type: integer
+          format: int32
+          'nullable': true
+        MinValue: 
+          type: number
+          format: double
+          multipleOf: 0.001
+          'nullable': true
+        MaxValue: 
+          type: number
+          format: double
+          multipleOf: 0.001
+          'nullable': true
+        TotalDigits: 
+          type: integer
+          format: int32
+          'nullable': true
+        DecimalPlaces: 
+          type: integer
+          format: int32
+          'nullable': true
+        DatePrecision: 
+          type: integer
+          format: int32
+          'nullable': true
+        HasLength: 
+          type: boolean
+          'nullable': true
+        HasTotalDigits: 
+          type: boolean
+          'nullable': true
+        HasDecimalPlaces: 
+          type: boolean
+          'nullable': true
+        HasIdentity: 
+          type: boolean
+          'nullable': true
+        HasDatePrecision: 
+          type: boolean
+          'nullable': true
+    Enumeration: 
+      required: 
+        - DataTypeName
+      type: object
+      description: A constrained vocabulary
+      properties: 
+        EnumerationName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        EnumerationDescription: 
+          type: string
+          maxLength: 500
+          'nullable': true
+        DataTypeName: 
+          type: string
+          description: The DataTypeName value for the DataType
+          maxLength: 200
+          'nullable': false
+        EnumeratedValues: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/EnumerationMember'
+    EnumerationMember: 
+      required: 
+        - EnumeratedValue
+      type: object
+      description: An item within a constrained vocabulary
+      properties: 
+        EnumeratedValue: 
+          type: string
+          maxLength: 200
+          'nullable': false
+        EnumeratedValueDescription: 
+          type: string
+          maxLength: 500
+          'nullable': true
+    Include: 
+      type: string
+      description: A Linq expression, starting from the current entity, that defines an item to be hydrated when hydrating the current entity
+      maxLength: 200
+      'nullable': false
+    Qualifier: 
+      type: string
+      description: A prefix that can be placed before the name of the current entity to specify the role it plays
+      maxLength: 200
+      'nullable': false

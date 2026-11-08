@@ -1,0 +1,195 @@
+<html>
+<head>
+  <title>ConceptMeta - Enumeration.EnumeratedValues</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; Enumeration.EnumeratedValues
+  <button class="accordion active relationship">Enumeration.EnumeratedValues</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Relationship Name</th>
+        <td class="relationship">Enumeration.EnumeratedValues</td>
+      </tr>
+      <tr>
+        <th>Primary Entity</th>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Name</th>
+        <td class="entityproperty">Enumeration.EnumeratedValues</td>
+      </tr>
+      <tr>
+        <th>Relationship Type</th>
+        <td>ParentChild</td>
+      </tr>
+      <tr>
+        <th>Simple Relationship Type</th>
+        <td>NestingRelationship</td>
+      </tr>
+      <tr>
+        <th>Conceptual Relationship Type</th>
+        <td>UniqueContainer</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active relationship">Class Model Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Primary Entity</th>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Name</th>
+        <td class="entityproperty">Enumeration.EnumeratedValues</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Property Description</th>
+        <td>The set of EnumerationMembers where the EnumerationMember is owned by this Enumeration</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity Business Rule</th>
+        <td class="rule">An Enumeration owns zero, one or many EnumerationMembers</td>
+      </tr>
+      <tr>
+        <th>Secondary Entity</th>
+        <td class="entity"><a href="../EnumerationMember/EnumerationMember.html">EnumerationMember</a></td>
+      </tr>
+      <tr>
+        <th>Primary Entity Property Name</th>
+        <td class="entityproperty">EnumerationMember.Enumeration</td>
+      </tr>
+      <tr>
+        <th>Primary Entity Property Description</th>
+        <td>The associated Enumeration</td>
+      </tr>
+      <tr>
+        <th>Primary Entity Business Rule</th>
+        <td class="rule">An EnumerationMember is owned by exactly one Enumeration</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active relationship">Relational Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Is Identifying Relationship?</th>
+        <td>True</td>
+      </tr>
+      <tr>
+        <th>Is Mandatory Relationship?</th>
+        <td>True</td>
+      </tr>
+      <tr>
+        <th>Conceptual Relationship Type</th>
+        <td>UniqueContainer</td>
+      </tr>
+      <tr>
+        <th>Is Propagating Relationship?</th>
+        <td>False</td>
+      </tr>
+      <tr>
+        <th>Relationship Fields</th>
+        <td>EnumerationMember(ModelName, EnumerationName) references Enumeration(ModelName, EnumerationName)</td>
+      </tr>
+      <tr>
+        <th>Logical Relationship Fields</th>
+        <td>EnumerationMember(ModelName, DataTypeName, EnumerationName) references Enumeration(ModelName, DataTypeName, EnumerationName)</td>
+      </tr>
+      <tr>
+        <th>Logical Business Relationship Fields</th>
+        <td>EnumerationMember(ModelName, DataTypeName, EnumerationName) references Enumeration(ModelName, DataTypeName, EnumerationName)</td>
+      </tr>
+      <tr>
+        <th>Business Relationship Fields</th>
+        <td>EnumerationMember(ModelName, EnumerationName) references Enumeration(ModelName, EnumerationName)</td>
+      </tr>
+      <tr class="entity">
+        <th>Child Entity</th>
+        <td><a href="../EnumerationMember/EnumerationMember.html">EnumerationMember</a></td>
+      </tr>
+      <tr>
+        <th>Parent Property Name</th>
+        <td class="entityproperty">EnumerationMember.Enumeration</td>
+      </tr>
+      <tr>
+        <th>Parent Property Description</th>
+        <td>The associated Enumeration</td>
+      </tr>
+      <tr>
+        <th>Parent Business Rule</th>
+        <td class="rule">An EnumerationMember is owned by exactly one Enumeration</td>
+      </tr>
+      <tr>
+        <th>Parent Index Name</th>
+        <td>PK_Enumeration</td>
+      </tr>
+      <tr>
+        <th>Parent Verb Phrase</th>
+        <td>is owned by</td>
+      </tr>
+      <tr>
+        <th>Parent Property Sequence</th>
+        <td>4</td>
+      </tr>
+      <tr>
+        <th>Parent Property Selector Type</th>
+        <td>Dropdown</td>
+      </tr>
+      <tr>
+        <th>Child Fields</th>
+        <td>ModelName, EnumerationName</td>
+      </tr>
+      <tr>
+        <th>Parent Property Name Override</th>
+        <td>Enumeration</td>
+      </tr>
+      <tr>
+        <th>Parent Entity</th>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+      </tr>
+      <tr>
+        <th>Child Property Name</th>
+        <td class="entityproperty">Enumeration.EnumeratedValues</td>
+      </tr>
+      <tr>
+        <th>Child Property Description</th>
+        <td>The set of EnumerationMembers where the EnumerationMember is owned by this Enumeration</td>
+      </tr>
+      <tr>
+        <th>Child Business Rule</th>
+        <td class="rule">An Enumeration owns zero, one or many EnumerationMembers</td>
+      </tr>
+      <tr>
+        <th>Child Verb Phrase</th>
+        <td>owns</td>
+      </tr>
+      <tr>
+        <th>Child Property Sequence</th>
+        <td>7</td>
+      </tr>
+      <tr>
+        <th>Parent Fields</th>
+        <td>ModelName, EnumerationName</td>
+      </tr>
+      <tr>
+        <th>Child Collection Name Override</th>
+        <td>EnumeratedValues</td>
+      </tr>
+      <tr>
+        <th>Child Item Name Override</th>
+        <td>EnumerationMember</td>
+      </tr>
+      <tr>
+        <th>Child Property Is Collection</th>
+        <td>True</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

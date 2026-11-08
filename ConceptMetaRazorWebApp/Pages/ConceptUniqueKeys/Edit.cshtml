@@ -1,0 +1,52 @@
+@page "/ConceptUniqueKeys/{conceptUniqueKeyId:int}/Edit"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptUniqueKeys.EditModel
+
+@{
+    ViewData["Title"] = "Edit ConceptUniqueKey";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">ConceptUniqueKeys</a> &gt;
+    @Model.ConceptUniqueKey.ValueString
+</p>
+<h1>Edit</h1>
+<h3>@Model.ConceptUniqueKey.ValueString</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ConceptUniqueKey.ConceptUniqueKeyId" />
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptUniqueKey.ConceptUniqueKeyId" class="control-label"></label>
+                <input asp-for="ConceptUniqueKey.ConceptUniqueKeyId" class="form-control" disabled="disabled" />
+                <span asp-validation-for="ConceptUniqueKey.ConceptUniqueKeyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptUniqueKey.ConceptKeyString" class="control-label"></label>
+                <select asp-for="ConceptUniqueKey.ConceptKeyString" class="form-control" asp-items="Model.ConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptUniqueKey.ConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptUniqueKey.UniqueKeyName" class="control-label"></label>
+                <input asp-for="ConceptUniqueKey.UniqueKeyName" class="form-control" />
+                <span asp-validation-for="ConceptUniqueKey.UniqueKeyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="Details" asp-route-conceptUniqueKeyId="@Model.ConceptUniqueKey.ConceptUniqueKeyId">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

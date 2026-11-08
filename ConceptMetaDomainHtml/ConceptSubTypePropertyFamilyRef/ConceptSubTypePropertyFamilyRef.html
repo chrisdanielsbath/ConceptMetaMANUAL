@@ -1,0 +1,302 @@
+<html>
+<head>
+  <title>ConceptMeta - ConceptSubTypePropertyFamilyRef</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; <a href="../ConceptModel/ConceptModel.html">ConceptModel</a>
+  &gt; <a href="../Concept/Concept.html">Concept</a>
+  &gt; <a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a>
+  &gt; ConceptSubTypePropertyFamilyRef
+  <br/>
+  <button class="accordion active entity">ConceptSubTypePropertyFamilyRef</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Entity name</th>
+        <td class="entity">ConceptSubTypePropertyFamilyRef</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>A record which associates a given sub type with a particular family of properties, signifying that the family is relevant to that sub type</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active index">Indexes</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Index name</th>
+        <th>Fields</th>
+      </tr>
+      <tr>
+        <td>PrimaryKey</td>
+        <td class="index"><a href="./Indexes/PK_ConceptSubTypePropertyFamilyRef.html">PK_ConceptSubTypePropertyFamilyRef</td>
+        <td>ModelName, ConceptName, SubTypeName, PropertyFamilyName</td>
+      </tr>
+      <tr>
+        <td>AlternateKeyLogicalKey</td>
+        <td class="index"><a href="./Indexes/AK_ConceptSubTypePropertyFamilyRef_ConceptSubTypeId_ConceptPropertyFamilyId.html">AK_ConceptSubTypePropertyFamilyRef_ConceptSubTypeId_ConceptPropertyFamilyId</td>
+        <td>ModelName, ConceptName, SubTypeName, PropertyFamilyName</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion  active property" >Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td>FK </td>
+        <td class="property"><a href="../ConceptSubTypePropertyFamilyRef/Fields/ModelName.html">ModelName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href="../Domains/ModelName.html">ModelName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>PK</td>
+        <td>FK </td>
+        <td class="property"><a href="../ConceptSubTypePropertyFamilyRef/Fields/ConceptName.html">ConceptName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The name of the Concept</td>
+        <td class="domain"><a href="../Domains/ConceptName.html">ConceptName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>PK</td>
+        <td>FK </td>
+        <td class="property"><a href="../ConceptSubTypePropertyFamilyRef/Fields/SubTypeName.html">SubTypeName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The SubTypeName value for the ConceptSubType</td>
+        <td class="domain"><a href="../Domains/SubTypeName.html">SubTypeName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptSubType</td>
+        <td>object</td>
+        <td>The associated ConceptSubType</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a></td>
+        <td>ModelName, ConceptName, SubTypeName</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>PK</td>
+        <td>FK </td>
+        <td class="property"><a href="../ConceptSubTypePropertyFamilyRef/Fields/PropertyFamilyName.html">PropertyFamilyName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the ConceptPropertyFamily</td>
+        <td class="domain"><a href="../Domains/PropertyFamilyName.html">PropertyFamilyName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptPropertyFamily</td>
+        <td>object</td>
+        <td>The associated ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+        <td>ModelName, ConceptName, PropertyFamilyName</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active field">Fields</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Field name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Domain</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ModelName.html">ModelName</td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href = "../Domains/ModelName.html" > ModelName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>PK</td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ConceptName.html">ConceptName</td>
+        <td>nvarchar(200)</td>
+        <td>The name of the Concept</td>
+        <td class="domain"><a href = "../Domains/ConceptName.html" > ConceptName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>PK</td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/SubTypeName.html">SubTypeName</td>
+        <td>nvarchar(200)</td>
+        <td>The SubTypeName value for the ConceptSubType</td>
+        <td class="domain"><a href = "../Domains/SubTypeName.html" > SubTypeName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>PK</td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/PropertyFamilyName.html">PropertyFamilyName</td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the ConceptPropertyFamily</td>
+        <td class="domain"><a href = "../Domains/PropertyFamilyName.html" > PropertyFamilyName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active entityproperty" >Primary Navigation Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptPropertyFamily</td>
+        <td>object</td>
+        <td>The associated ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+        <td>ModelName, ConceptName, PropertyFamilyName</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion entityproperty" >Secondary Navigation Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptSubType</td>
+        <td>object</td>
+        <td>The associated ConceptSubType</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a></td>
+        <td>ModelName, ConceptName, SubTypeName</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion rule">Primary Business Rules</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="rule">A ConceptSubTypePropertyFamilyRef references exactly one ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion rule">Secondary Business Rules</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="rule">A ConceptSubTypePropertyFamilyRef is owned by exactly one ConceptSubType</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion relationship">Relationships</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/ConceptSubType.PropertyFamilyRefs.html">ConceptSubType.PropertyFamilyRefs</a></td>
+        <td>A ConceptSubTypePropertyFamilyRef is owned by exactly one ConceptSubType</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/ConceptSubTypePropertyFamilyRef.ConceptPropertyFamily.html">ConceptSubTypePropertyFamilyRef.ConceptPropertyFamily</a></td>
+        <td>A ConceptSubTypePropertyFamilyRef references exactly one ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

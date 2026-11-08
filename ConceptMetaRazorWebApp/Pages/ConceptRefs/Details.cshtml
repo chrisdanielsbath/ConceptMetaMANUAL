@@ -1,0 +1,460 @@
+@page "/ConceptRefs/{conceptRefId:int}"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptRefs.DetailsModel
+
+@{
+    ViewData["Title"] = "ConceptRef Details";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">ConceptRefs</a> &gt;
+    @Model.ConceptRef.ValueString
+</p>
+<h1>Details</h1>
+<h3>@Model.ConceptRef.ValueString</h3>
+<hr />
+<p>
+    <a asp-page="./Edit" asp-route-conceptRefId="@Model.ConceptRef.ConceptRefId">Edit</a>
+</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ConceptRef.ConceptRefId" />
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ConceptRefId" class="control-label"></label>
+                <input asp-for="ConceptRef.ConceptRefId" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ConceptValueString" class="control-label"></label>
+                <input asp-for="ConceptRef.ConceptValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertyName" class="control-label"></label>
+                <input asp-for="ConceptRef.PropertyName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertyDescription" class="control-label"></label>
+                <input asp-for="ConceptRef.PropertyDescription" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ReferencedConceptValueString" class="control-label"></label>
+                <input asp-for="ConceptRef.ReferencedConceptValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ConceptRefType" class="control-label"></label>
+                <input asp-for="ConceptRef.ConceptRefType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertyFamilyValueString" class="control-label"></label>
+                <input asp-for="ConceptRef.PropertyFamilyValueString" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsPropagating" class="control-label"></label>
+                <input asp-for="ConceptRef.IsPropagating" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsUpdatable" class="control-label"></label>
+                <input asp-for="ConceptRef.IsUpdatable" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsNullable" class="control-label"></label>
+                <input asp-for="ConceptRef.IsNullable" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertySeq" class="control-label"></label>
+                <input asp-for="ConceptRef.PropertySeq" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Scalar Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptRef.DbColumnName" class="control-label"></label>
+                <input asp-for="ConceptRef.DbColumnName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsIdentity" class="control-label"></label>
+                <input asp-for="ConceptRef.IsIdentity" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsCoreField" class="control-label"></label>
+                <input asp-for="ConceptRef.IsCoreField" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.FieldFamilyName" class="control-label"></label>
+                <input asp-for="ConceptRef.FieldFamilyName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.FieldLabel" class="control-label"></label>
+                <input asp-for="ConceptRef.FieldLabel" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsScalarFieldToSerialiseInPersistenceModel" class="control-label"></label>
+                <input asp-for="ConceptRef.IsScalarFieldToSerialiseInPersistenceModel" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsScalarFieldToSerialiseInDomainModel" class="control-label"></label>
+                <input asp-for="ConceptRef.IsScalarFieldToSerialiseInDomainModel" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsSeqNoField" class="control-label"></label>
+                <input asp-for="ConceptRef.IsSeqNoField" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsDiscriminatorField" class="control-label"></label>
+                <input asp-for="ConceptRef.IsDiscriminatorField" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsXmlAttribute" class="control-label"></label>
+                <input asp-for="ConceptRef.IsXmlAttribute" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsReferenceToChildEntity" class="control-label"></label>
+                <input asp-for="ConceptRef.IsReferenceToChildEntity" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ExampleValueAsString" class="control-label"></label>
+                <input asp-for="ConceptRef.ExampleValueAsString" class="form-control" disabled="disabled" />
+            </div>
+            <h4>Object Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ParentQualifier" class="control-label"></label>
+                <input asp-for="ConceptRef.ParentQualifier" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildQualifier" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildQualifier" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.MinChildOccurrences" class="control-label"></label>
+                <input asp-for="ConceptRef.MinChildOccurrences" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.MaxChildOccurrences" class="control-label"></label>
+                <input asp-for="ConceptRef.MaxChildOccurrences" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildVerbPhrase" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildVerbPhrase" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ParentVerbPhrase" class="control-label"></label>
+                <input asp-for="ConceptRef.ParentVerbPhrase" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildPropertySeq" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildPropertySeq" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildCollectionName" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildCollectionName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildItemName" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildItemName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildPropertyDescription" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildPropertyDescription" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.SelectorType" class="control-label"></label>
+                <input asp-for="ConceptRef.SelectorType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.RelationshipType" class="control-label"></label>
+                <input asp-for="ConceptRef.RelationshipType" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.OutputExplicitXmlCollection" class="control-label"></label>
+                <input asp-for="ConceptRef.OutputExplicitXmlCollection" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsSerialisedUsingScalarFieldInDomainModel" class="control-label"></label>
+                <input asp-for="ConceptRef.IsSerialisedUsingScalarFieldInDomainModel" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ScalarFieldNameInDomainModel" class="control-label"></label>
+                <input asp-for="ConceptRef.ScalarFieldNameInDomainModel" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.RelationshipName" class="control-label"></label>
+                <input asp-for="ConceptRef.RelationshipName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.DbForeignKeyName" class="control-label"></label>
+                <input asp-for="ConceptRef.DbForeignKeyName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ParentIndexName" class="control-label"></label>
+                <input asp-for="ConceptRef.ParentIndexName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ForeignKeySurrogateKeyFieldName" class="control-label"></label>
+                <input asp-for="ConceptRef.ForeignKeySurrogateKeyFieldName" class="form-control" disabled="disabled" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ChildPropertyName" class="control-label"></label>
+                <input asp-for="ConceptRef.ChildPropertyName" class="form-control" disabled="disabled" />
+            </div>
+        </form>
+    </div>
+    <!--dl class="row">
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.PropertyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.PropertyName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.PropertyDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.PropertyDescription)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ConceptRefType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ConceptRefType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsPropagating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsPropagating)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.DbColumnName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.DbColumnName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsIdentity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsIdentity)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsCoreField)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsCoreField)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.FieldFamilyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.FieldFamilyName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsUpdatable)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsUpdatable)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.FieldLabel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.FieldLabel)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsScalarFieldToSerialiseInPersistenceModel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsScalarFieldToSerialiseInPersistenceModel)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsScalarFieldToSerialiseInDomainModel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsScalarFieldToSerialiseInDomainModel)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsSeqNoField)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsSeqNoField)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsDiscriminatorField)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsDiscriminatorField)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsXmlAttribute)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsXmlAttribute)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsReferenceToChildEntity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsReferenceToChildEntity)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ParentQualifier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ParentQualifier)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildQualifier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ChildQualifier)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.MinChildOccurrences)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.MinChildOccurrences)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.MaxChildOccurrences)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.MaxChildOccurrences)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildVerbPhrase)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ChildVerbPhrase)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ParentVerbPhrase)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ParentVerbPhrase)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildPropertySeq)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ChildPropertySeq)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildCollectionName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ChildCollectionName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildItemName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ChildItemName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildPropertyDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ChildPropertyDescription)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.SelectorType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.SelectorType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.RelationshipType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.RelationshipType)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.OutputExplicitXmlCollection)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.OutputExplicitXmlCollection)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsSerialisedUsingScalarFieldInDomainModel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsSerialisedUsingScalarFieldInDomainModel)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ScalarFieldNameInDomainModel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ScalarFieldNameInDomainModel)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ExampleValueAsString)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ExampleValueAsString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.RelationshipName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.RelationshipName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.DbForeignKeyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.DbForeignKeyName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ParentIndexName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ParentIndexName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ForeignKeySurrogateKeyFieldName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ForeignKeySurrogateKeyFieldName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ChildPropertyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.ChildPropertyName)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.IsNullable)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.IsNullable)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.PropertySeq)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConceptRef.PropertySeq)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ConceptValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.ConceptRef.ConceptValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.ReferencedConceptValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.ConceptRef.ReferencedConceptValueString)
+        </dd>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.ConceptRef.PropertyFamilyValueString)
+        </dt>
+        <dd class="col-sm-10">
+           @Html.DisplayFor(model => model.ConceptRef.PropertyFamilyValueString)
+        </dd>
+    </dl-->
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-conceptRefId="@Model.ConceptRef.ConceptRefId">Edit</a> |
+    <a asp-page="./Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>

@@ -1,0 +1,929 @@
+<html>
+<head>
+  <title>ConceptMeta - DataType</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; <a href="../ConceptModel/ConceptModel.html">ConceptModel</a>
+  &gt; DataType
+  <br/>
+  <button class="accordion active entity">DataType</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Entity name</th>
+        <td class="entity">DataType</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>A data type</td>
+      </tr>
+      <tr>
+        <th>Database schema name</th>
+        <td>dbo</td>
+      </tr>
+      <tr>
+        <th>Database table name</th>
+        <td>DataType</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active index">Indexes</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Index name</th>
+        <th>Fields</th>
+      </tr>
+      <tr>
+        <td>PrimaryKey</td>
+        <td class="index"><a href="./Indexes/PK_DataType.html">PK_DataType</td>
+        <td>DataTypeId</td>
+      </tr>
+      <tr>
+        <td>AlternateKeyLogicalKey</td>
+        <td class="index"><a href="./Indexes/AK_DataType_ConceptModelId_DataTypeName.html">AK_DataType_ConceptModelId_DataTypeName</td>
+        <td>ConceptModelId, DataTypeName</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion  active property" >Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/DataTypeId.html">DataTypeId</a></td>
+        <td>int</td>
+        <td>The ID of the DataType</td>
+        <td class="domain"><a href="../Domains/DataTypeId.html">DataTypeId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../DataType/Fields/ConceptModelId.html">ConceptModelId</a></td>
+        <td>int</td>
+        <td>The ID of the ConceptModel</td>
+        <td class="domain"><a href="../Domains/ConceptModelId.html">ConceptModelId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/ModelName.html">ModelName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href="../Domains/ModelName.html">ModelName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptModel</td>
+        <td>object</td>
+        <td>The associated ConceptModel</td>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">ConceptModel</a></td>
+        <td>ConceptModelId</td>
+        <td></td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/DataTypeName.html">DataTypeName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/DataTypeName.html">DataTypeName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/SqlServerDataType.html">SqlServerDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/SqlServerDataType.html">SqlServerDataType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Database</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/OracleDataType.html">OracleDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/OracleDataType.html">OracleDataType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Database</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/MySqlDataType.html">MySqlDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MySqlDbDataType.html">MySqlDbDataType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Database</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/MongoDbDataType.html">MongoDbDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MongoDbDataType.html">MongoDbDataType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Database</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/DotNetDataType.html">DotNetDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/DotNetDataType.html">DotNetDataType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/JavaDataType.html">JavaDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/JavaDataType.html">JavaDataType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/XmlDataType.html">XmlDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/XmlDateType.html">XmlDateType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/ExampleValueAsString.html">ExampleValueAsString</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ExampleValueAsString.html">ExampleValueAsString</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/JsonDataType.html">JsonDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/JsonDataType.html">JsonDataType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/JsonFormat.html">JsonFormat</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/JsonFormat.html">JsonFormat</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/OpenApiDataType.html">OpenApiDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/OpenApiDataType.html">OpenApiDataType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/OpenApiFormat.html">OpenApiFormat</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/OpenApiFormat.html">OpenApiFormat</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/ErsDataType.html">ErsDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ErsDataType.html">ErsDataType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Database</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/BasicDataType.html">BasicDataType</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/BasicDataType.html">BasicDataType</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/MinLength.html">MinLength</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MinLength.html">MinLength</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/MaxLength.html">MaxLength</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MaxLength.html">MaxLength</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/MinValue.html">MinValue</a></td>
+        <td>decimal(18, 3)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MinValue.html">MinValue</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/MaxValue.html">MaxValue</a></td>
+        <td>decimal(18, 3)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MaxValue.html">MaxValue</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/TotalDigits.html">TotalDigits</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/TotalDigits.html">TotalDigits</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Decimal</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/DecimalPlaces.html">DecimalPlaces</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/DecimalPlaces.html">DecimalPlaces</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Decimal</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/DatePrecision.html">DatePrecision</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/DatePrecision.html">DatePrecision</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Date</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/HasLength.html">HasLength</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/HasLength.html">HasLength</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/HasTotalDigits.html">HasTotalDigits</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/HasTotalDigits.html">HasTotalDigits</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Decimal</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/HasDecimalPlaces.html">HasDecimalPlaces</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/HasDecimalPlaces.html">HasDecimalPlaces</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Decimal</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/HasIdentity.html">HasIdentity</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/HasIdentity.html">HasIdentity</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../DataType/Fields/HasDatePrecision.html">HasDatePrecision</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/HasDatePrecision.html">HasDatePrecision</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Date</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Concepts</td>
+        <td>object</td>
+        <td>The set of Concepts where the Concept references this DataType</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Usage</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Enumerations</td>
+        <td>object</td>
+        <td>The set of Enumerations where the Enumeration references this DataType</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Usage</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active field">Fields</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Field name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Domain</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td></td>
+        <td class="field"><a href="./Fields/DataTypeId.html">DataTypeId</td>
+        <td>int</td>
+        <td>The ID of the DataType</td>
+        <td class="domain"><a href = "../Domains/DataTypeId.html" > DataTypeId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ConceptModelId.html">ConceptModelId</td>
+        <td>int</td>
+        <td>The ID of the ConceptModel</td>
+        <td class="domain"><a href = "../Domains/ConceptModelId.html" > ConceptModelId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DataTypeName.html">DataTypeName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/DataTypeName.html" > DataTypeName</a></a></td>
+        <td>Common</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/SqlServerDataType.html">SqlServerDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/SqlServerDataType.html" > SqlServerDataType</a></a></td>
+        <td>Common</td>
+        <td>Database</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/OracleDataType.html">OracleDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/OracleDataType.html" > OracleDataType</a></a></td>
+        <td>Common</td>
+        <td>Database</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MySqlDataType.html">MySqlDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MySqlDbDataType.html" > MySqlDbDataType</a></a></td>
+        <td>Common</td>
+        <td>Database</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MongoDbDataType.html">MongoDbDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MongoDbDataType.html" > MongoDbDataType</a></a></td>
+        <td>Common</td>
+        <td>Database</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DotNetDataType.html">DotNetDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/DotNetDataType.html" > DotNetDataType</a></a></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/JavaDataType.html">JavaDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/JavaDataType.html" > JavaDataType</a></a></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/XmlDataType.html">XmlDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/XmlDateType.html" > XmlDateType</a></a></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ExampleValueAsString.html">ExampleValueAsString</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ExampleValueAsString.html" > ExampleValueAsString</a></a></td>
+        <td>Common</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/JsonDataType.html">JsonDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/JsonDataType.html" > JsonDataType</a></a></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/JsonFormat.html">JsonFormat</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/JsonFormat.html" > JsonFormat</a></a></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/OpenApiDataType.html">OpenApiDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/OpenApiDataType.html" > OpenApiDataType</a></a></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/OpenApiFormat.html">OpenApiFormat</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/OpenApiFormat.html" > OpenApiFormat</a></a></td>
+        <td>Common</td>
+        <td>Language</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ErsDataType.html">ErsDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ErsDataType.html" > ErsDataType</a></a></td>
+        <td>Common</td>
+        <td>Database</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/BasicDataType.html">BasicDataType</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/BasicDataType.html" > BasicDataType</a></a></td>
+        <td>Common</td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MinLength.html">MinLength</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MinLength.html" > MinLength</a></a></td>
+        <td>Common</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MaxLength.html">MaxLength</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MaxLength.html" > MaxLength</a></a></td>
+        <td>Common</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MinValue.html">MinValue</td>
+        <td>decimal(18, 3)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MinValue.html" > MinValue</a></a></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MaxValue.html">MaxValue</td>
+        <td>decimal(18, 3)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MaxValue.html" > MaxValue</a></a></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/TotalDigits.html">TotalDigits</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/TotalDigits.html" > TotalDigits</a></a></td>
+        <td>Common</td>
+        <td>Decimal</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DecimalPlaces.html">DecimalPlaces</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/DecimalPlaces.html" > DecimalPlaces</a></a></td>
+        <td>Common</td>
+        <td>Decimal</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DatePrecision.html">DatePrecision</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/DatePrecision.html" > DatePrecision</a></a></td>
+        <td>Common</td>
+        <td>Date</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/HasLength.html">HasLength</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/HasLength.html" > HasLength</a></a></td>
+        <td>Common</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/HasTotalDigits.html">HasTotalDigits</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/HasTotalDigits.html" > HasTotalDigits</a></a></td>
+        <td>Common</td>
+        <td>Decimal</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/HasDecimalPlaces.html">HasDecimalPlaces</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/HasDecimalPlaces.html" > HasDecimalPlaces</a></a></td>
+        <td>Common</td>
+        <td>Decimal</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/HasIdentity.html">HasIdentity</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/HasIdentity.html" > HasIdentity</a></a></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/HasDatePrecision.html">HasDatePrecision</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/HasDatePrecision.html" > HasDatePrecision</a></a></td>
+        <td>Common</td>
+        <td>Date</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active field">Implied fields</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Field name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Domain</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ModelName.html">ModelName</td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href = "../Domains/ModelName.html" > ModelName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Core</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion entityproperty" >Secondary Navigation Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptModel</td>
+        <td>object</td>
+        <td>The associated ConceptModel</td>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">ConceptModel</a></td>
+        <td>ConceptModelId</td>
+        <td></td>
+        <td>Core</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Concepts</td>
+        <td>object</td>
+        <td>The set of Concepts where the Concept references this DataType</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Usage</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Enumerations</td>
+        <td>object</td>
+        <td>The set of Enumerations where the Enumeration references this DataType</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Usage</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion rule">Secondary Business Rules</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="rule">A DataType is referenced by zero, one or many Concepts</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept[]</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A DataType is owned by exactly one ConceptModel</td>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">ConceptModel</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A DataType is referenced by zero, one or many Enumerations</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration[]</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion relationship">Relationships</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/ConceptModel.DataTypes.html">ConceptModel.DataTypes</a></td>
+        <td>A DataType is owned by exactly one ConceptModel</td>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">ConceptModel</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.DataType.html">Concept.DataType</a></td>
+        <td>A DataType is referenced by zero, one or many Concepts</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept[]</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Enumeration.DataType.html">Enumeration.DataType</a></td>
+        <td>A DataType is referenced by zero, one or many Enumerations</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration[]</a></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

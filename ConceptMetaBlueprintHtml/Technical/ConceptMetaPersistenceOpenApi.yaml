@@ -1,0 +1,2124 @@
+openapi: '3.0.1'
+info: 
+  title: ConceptMeta (Persistence)
+  description: RESTful API for the ConceptMeta (Persistence) data model.
+  version: '1.0'
+paths: 
+  /Concepts/{conceptId}: 
+    get: 
+      summary: Get Concept by ConceptId
+      description: Returns a single Concept
+      operationId: GetConceptByConceptId
+      parameters: 
+        - name: conceptId
+          in: path
+          description: The ID of the Concept
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Concept'
+    put: 
+      summary: Update Concept
+      description: Updates the specified Concept
+      operationId: UpdateConceptByConceptId
+      parameters: 
+        - name: conceptId
+          in: path
+          description: The ID of the Concept
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: Concept object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/Concept'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/Concept'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/Concept'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Concept'
+    delete: 
+      summary: Delete Concept
+      description: Deletes the Concept that has the specified ConceptId
+      operationId: DeleteConceptByConceptId
+      parameters: 
+        - name: conceptId
+          in: path
+          description: The ID of the Concept
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /Concepts: 
+    post: 
+      summary: Add a new Concept
+      description: Adds a new Concept
+      requestBody: 
+        description: Concept object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/Concept'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/Concept'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/Concept'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Concept'
+  /ConceptModels/{conceptModelId}: 
+    get: 
+      summary: Get ConceptModel by ConceptModelId
+      description: Returns a single ConceptModel
+      operationId: GetConceptModelByConceptModelId
+      parameters: 
+        - name: conceptModelId
+          in: path
+          description: The ID of the ConceptModel
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptModel'
+    put: 
+      summary: Update ConceptModel
+      description: Updates the specified ConceptModel
+      operationId: UpdateConceptModelByConceptModelId
+      parameters: 
+        - name: conceptModelId
+          in: path
+          description: The ID of the ConceptModel
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: ConceptModel object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptModel'
+    delete: 
+      summary: Delete ConceptModel
+      description: Deletes the ConceptModel that has the specified ConceptModelId
+      operationId: DeleteConceptModelByConceptModelId
+      parameters: 
+        - name: conceptModelId
+          in: path
+          description: The ID of the ConceptModel
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /ConceptModels: 
+    post: 
+      summary: Add a new ConceptModel
+      description: Adds a new ConceptModel
+      requestBody: 
+        description: ConceptModel object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptModel'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptModel'
+  /ConceptPropertyFamilies/{conceptPropertyFamilyId}: 
+    get: 
+      summary: Get ConceptPropertyFamily by ConceptPropertyFamilyId
+      description: Returns a single ConceptPropertyFamily
+      operationId: GetConceptPropertyFamilyByConceptPropertyFamilyId
+      parameters: 
+        - name: conceptPropertyFamilyId
+          in: path
+          description: The ID of the ConceptPropertyFamily
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptPropertyFamily'
+    put: 
+      summary: Update ConceptPropertyFamily
+      description: Updates the specified ConceptPropertyFamily
+      operationId: UpdateConceptPropertyFamilyByConceptPropertyFamilyId
+      parameters: 
+        - name: conceptPropertyFamilyId
+          in: path
+          description: The ID of the ConceptPropertyFamily
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: ConceptPropertyFamily object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptPropertyFamily'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptPropertyFamily'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptPropertyFamily'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptPropertyFamily'
+    delete: 
+      summary: Delete ConceptPropertyFamily
+      description: Deletes the ConceptPropertyFamily that has the specified ConceptPropertyFamilyId
+      operationId: DeleteConceptPropertyFamilyByConceptPropertyFamilyId
+      parameters: 
+        - name: conceptPropertyFamilyId
+          in: path
+          description: The ID of the ConceptPropertyFamily
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /ConceptPropertyFamilies: 
+    post: 
+      summary: Add a new ConceptPropertyFamily
+      description: Adds a new ConceptPropertyFamily
+      requestBody: 
+        description: ConceptPropertyFamily object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptPropertyFamily'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptPropertyFamily'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptPropertyFamily'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptPropertyFamily'
+  /ConceptRefs/{conceptRefId}: 
+    get: 
+      summary: Get ConceptRef by ConceptRefId
+      description: Returns a single ConceptRef
+      operationId: GetConceptRefByConceptRefId
+      parameters: 
+        - name: conceptRefId
+          in: path
+          description: The ID of the ConceptRef
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptRef'
+    put: 
+      summary: Update ConceptRef
+      description: Updates the specified ConceptRef
+      operationId: UpdateConceptRefByConceptRefId
+      parameters: 
+        - name: conceptRefId
+          in: path
+          description: The ID of the ConceptRef
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: ConceptRef object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptRef'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptRef'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptRef'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptRef'
+    delete: 
+      summary: Delete ConceptRef
+      description: Deletes the ConceptRef that has the specified ConceptRefId
+      operationId: DeleteConceptRefByConceptRefId
+      parameters: 
+        - name: conceptRefId
+          in: path
+          description: The ID of the ConceptRef
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /ConceptRefs: 
+    post: 
+      summary: Add a new ConceptRef
+      description: Adds a new ConceptRef
+      requestBody: 
+        description: ConceptRef object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptRef'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptRef'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptRef'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptRef'
+  /ConceptSubTypes/{conceptSubTypeId}: 
+    get: 
+      summary: Get ConceptSubType by ConceptSubTypeId
+      description: Returns a single ConceptSubType
+      operationId: GetConceptSubTypeByConceptSubTypeId
+      parameters: 
+        - name: conceptSubTypeId
+          in: path
+          description: The ID of the ConceptSubType
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptSubType'
+    put: 
+      summary: Update ConceptSubType
+      description: Updates the specified ConceptSubType
+      operationId: UpdateConceptSubTypeByConceptSubTypeId
+      parameters: 
+        - name: conceptSubTypeId
+          in: path
+          description: The ID of the ConceptSubType
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: ConceptSubType object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubType'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubType'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubType'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptSubType'
+    delete: 
+      summary: Delete ConceptSubType
+      description: Deletes the ConceptSubType that has the specified ConceptSubTypeId
+      operationId: DeleteConceptSubTypeByConceptSubTypeId
+      parameters: 
+        - name: conceptSubTypeId
+          in: path
+          description: The ID of the ConceptSubType
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /ConceptSubTypes: 
+    post: 
+      summary: Add a new ConceptSubType
+      description: Adds a new ConceptSubType
+      requestBody: 
+        description: ConceptSubType object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubType'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubType'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubType'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptSubType'
+  /ConceptSubTypePropertyFamilyRefs/{conceptSubTypePropertyFamilyRefId}: 
+    get: 
+      summary: Get ConceptSubTypePropertyFamilyRef by ConceptSubTypePropertyFamilyRefId
+      description: Returns a single ConceptSubTypePropertyFamilyRef
+      operationId: GetConceptSubTypePropertyFamilyRefByConceptSubTypePropertyFamilyRefId
+      parameters: 
+        - name: conceptSubTypePropertyFamilyRefId
+          in: path
+          description: The ID of the ConceptSubTypePropertyFamilyRef
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+    put: 
+      summary: Update ConceptSubTypePropertyFamilyRef
+      description: Updates the specified ConceptSubTypePropertyFamilyRef
+      operationId: UpdateConceptSubTypePropertyFamilyRefByConceptSubTypePropertyFamilyRefId
+      parameters: 
+        - name: conceptSubTypePropertyFamilyRefId
+          in: path
+          description: The ID of the ConceptSubTypePropertyFamilyRef
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: ConceptSubTypePropertyFamilyRef object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+    delete: 
+      summary: Delete ConceptSubTypePropertyFamilyRef
+      description: Deletes the ConceptSubTypePropertyFamilyRef that has the specified ConceptSubTypePropertyFamilyRefId
+      operationId: DeleteConceptSubTypePropertyFamilyRefByConceptSubTypePropertyFamilyRefId
+      parameters: 
+        - name: conceptSubTypePropertyFamilyRefId
+          in: path
+          description: The ID of the ConceptSubTypePropertyFamilyRef
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /ConceptSubTypePropertyFamilyRefs: 
+    post: 
+      summary: Add a new ConceptSubTypePropertyFamilyRef
+      description: Adds a new ConceptSubTypePropertyFamilyRef
+      requestBody: 
+        description: ConceptSubTypePropertyFamilyRef object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+  /ConceptUniqueKeys/{conceptUniqueKeyId}: 
+    get: 
+      summary: Get ConceptUniqueKey by ConceptUniqueKeyId
+      description: Returns a single ConceptUniqueKey
+      operationId: GetConceptUniqueKeyByConceptUniqueKeyId
+      parameters: 
+        - name: conceptUniqueKeyId
+          in: path
+          description: The ID of the ConceptUniqueKey
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptUniqueKey'
+    put: 
+      summary: Update ConceptUniqueKey
+      description: Updates the specified ConceptUniqueKey
+      operationId: UpdateConceptUniqueKeyByConceptUniqueKeyId
+      parameters: 
+        - name: conceptUniqueKeyId
+          in: path
+          description: The ID of the ConceptUniqueKey
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: ConceptUniqueKey object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKey'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKey'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKey'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptUniqueKey'
+    delete: 
+      summary: Delete ConceptUniqueKey
+      description: Deletes the ConceptUniqueKey that has the specified ConceptUniqueKeyId
+      operationId: DeleteConceptUniqueKeyByConceptUniqueKeyId
+      parameters: 
+        - name: conceptUniqueKeyId
+          in: path
+          description: The ID of the ConceptUniqueKey
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /ConceptUniqueKeys: 
+    post: 
+      summary: Add a new ConceptUniqueKey
+      description: Adds a new ConceptUniqueKey
+      requestBody: 
+        description: ConceptUniqueKey object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKey'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKey'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKey'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptUniqueKey'
+  /ConceptUniqueKeyPropertyFamilyRefs/{conceptUniqueKeyPropertyFamilyRefId}: 
+    get: 
+      summary: Get ConceptUniqueKeyPropertyFamilyRef by ConceptUniqueKeyPropertyFamilyRefId
+      description: Returns a single ConceptUniqueKeyPropertyFamilyRef
+      operationId: GetConceptUniqueKeyPropertyFamilyRefByConceptUniqueKeyPropertyFamilyRefId
+      parameters: 
+        - name: conceptUniqueKeyPropertyFamilyRefId
+          in: path
+          description: The ID of the ConceptUniqueKeyPropertyFamilyRef
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+    put: 
+      summary: Update ConceptUniqueKeyPropertyFamilyRef
+      description: Updates the specified ConceptUniqueKeyPropertyFamilyRef
+      operationId: UpdateConceptUniqueKeyPropertyFamilyRefByConceptUniqueKeyPropertyFamilyRefId
+      parameters: 
+        - name: conceptUniqueKeyPropertyFamilyRefId
+          in: path
+          description: The ID of the ConceptUniqueKeyPropertyFamilyRef
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: ConceptUniqueKeyPropertyFamilyRef object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+    delete: 
+      summary: Delete ConceptUniqueKeyPropertyFamilyRef
+      description: Deletes the ConceptUniqueKeyPropertyFamilyRef that has the specified ConceptUniqueKeyPropertyFamilyRefId
+      operationId: DeleteConceptUniqueKeyPropertyFamilyRefByConceptUniqueKeyPropertyFamilyRefId
+      parameters: 
+        - name: conceptUniqueKeyPropertyFamilyRefId
+          in: path
+          description: The ID of the ConceptUniqueKeyPropertyFamilyRef
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /ConceptUniqueKeyPropertyFamilyRefs: 
+    post: 
+      summary: Add a new ConceptUniqueKeyPropertyFamilyRef
+      description: Adds a new ConceptUniqueKeyPropertyFamilyRef
+      requestBody: 
+        description: ConceptUniqueKeyPropertyFamilyRef object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+  /DataTypes/{dataTypeId}: 
+    get: 
+      summary: Get DataType by DataTypeId
+      description: Returns a single DataType
+      operationId: GetDataTypeByDataTypeId
+      parameters: 
+        - name: dataTypeId
+          in: path
+          description: The ID of the DataType
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/DataType'
+    put: 
+      summary: Update DataType
+      description: Updates the specified DataType
+      operationId: UpdateDataTypeByDataTypeId
+      parameters: 
+        - name: dataTypeId
+          in: path
+          description: The ID of the DataType
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: DataType object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/DataType'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/DataType'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/DataType'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/DataType'
+    delete: 
+      summary: Delete DataType
+      description: Deletes the DataType that has the specified DataTypeId
+      operationId: DeleteDataTypeByDataTypeId
+      parameters: 
+        - name: dataTypeId
+          in: path
+          description: The ID of the DataType
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /DataTypes: 
+    post: 
+      summary: Add a new DataType
+      description: Adds a new DataType
+      requestBody: 
+        description: DataType object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/DataType'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/DataType'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/DataType'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/DataType'
+  /Enumerations/{enumerationId}: 
+    get: 
+      summary: Get Enumeration by EnumerationId
+      description: Returns a single Enumeration
+      operationId: GetEnumerationByEnumerationId
+      parameters: 
+        - name: enumerationId
+          in: path
+          description: The ID of the Enumeration
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Enumeration'
+    put: 
+      summary: Update Enumeration
+      description: Updates the specified Enumeration
+      operationId: UpdateEnumerationByEnumerationId
+      parameters: 
+        - name: enumerationId
+          in: path
+          description: The ID of the Enumeration
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: Enumeration object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/Enumeration'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/Enumeration'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/Enumeration'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Enumeration'
+    delete: 
+      summary: Delete Enumeration
+      description: Deletes the Enumeration that has the specified EnumerationId
+      operationId: DeleteEnumerationByEnumerationId
+      parameters: 
+        - name: enumerationId
+          in: path
+          description: The ID of the Enumeration
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /Enumerations: 
+    post: 
+      summary: Add a new Enumeration
+      description: Adds a new Enumeration
+      requestBody: 
+        description: Enumeration object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/Enumeration'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/Enumeration'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/Enumeration'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Enumeration'
+  /EnumerationMembers/{enumerationMemberId}: 
+    get: 
+      summary: Get EnumerationMember by EnumerationMemberId
+      description: Returns a single EnumerationMember
+      operationId: GetEnumerationMemberByEnumerationMemberId
+      parameters: 
+        - name: enumerationMemberId
+          in: path
+          description: The ID of the EnumerationMember
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/EnumerationMember'
+    put: 
+      summary: Update EnumerationMember
+      description: Updates the specified EnumerationMember
+      operationId: UpdateEnumerationMemberByEnumerationMemberId
+      parameters: 
+        - name: enumerationMemberId
+          in: path
+          description: The ID of the EnumerationMember
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: EnumerationMember object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/EnumerationMember'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/EnumerationMember'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/EnumerationMember'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/EnumerationMember'
+    delete: 
+      summary: Delete EnumerationMember
+      description: Deletes the EnumerationMember that has the specified EnumerationMemberId
+      operationId: DeleteEnumerationMemberByEnumerationMemberId
+      parameters: 
+        - name: enumerationMemberId
+          in: path
+          description: The ID of the EnumerationMember
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /EnumerationMembers: 
+    post: 
+      summary: Add a new EnumerationMember
+      description: Adds a new EnumerationMember
+      requestBody: 
+        description: EnumerationMember object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/EnumerationMember'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/EnumerationMember'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/EnumerationMember'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/EnumerationMember'
+  /Includes/{includeId}: 
+    get: 
+      summary: Get Include by IncludeId
+      description: Returns a single Include
+      operationId: GetIncludeByIncludeId
+      parameters: 
+        - name: includeId
+          in: path
+          description: The ID of the Include
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Include'
+    put: 
+      summary: Update Include
+      description: Updates the specified Include
+      operationId: UpdateIncludeByIncludeId
+      parameters: 
+        - name: includeId
+          in: path
+          description: The ID of the Include
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: Include object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/Include'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/Include'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/Include'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Include'
+    delete: 
+      summary: Delete Include
+      description: Deletes the Include that has the specified IncludeId
+      operationId: DeleteIncludeByIncludeId
+      parameters: 
+        - name: includeId
+          in: path
+          description: The ID of the Include
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /Includes: 
+    post: 
+      summary: Add a new Include
+      description: Adds a new Include
+      requestBody: 
+        description: Include object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/Include'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/Include'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/Include'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Include'
+  /Qualifiers/{qualifierId}: 
+    get: 
+      summary: Get Qualifier by QualifierId
+      description: Returns a single Qualifier
+      operationId: GetQualifierByQualifierId
+      parameters: 
+        - name: qualifierId
+          in: path
+          description: The ID of the Qualifier
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Qualifier'
+    put: 
+      summary: Update Qualifier
+      description: Updates the specified Qualifier
+      operationId: UpdateQualifierByQualifierId
+      parameters: 
+        - name: qualifierId
+          in: path
+          description: The ID of the Qualifier
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      requestBody: 
+        description: Qualifier object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/Qualifier'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/Qualifier'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/Qualifier'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '404': 
+          description: Not found
+        '200': 
+          description: Ok
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Qualifier'
+    delete: 
+      summary: Delete Qualifier
+      description: Deletes the Qualifier that has the specified QualifierId
+      operationId: DeleteQualifierByQualifierId
+      parameters: 
+        - name: qualifierId
+          in: path
+          description: The ID of the Qualifier
+          required: true
+          schema: 
+            type: integer
+            format: int32
+      responses: 
+        '404': 
+          description: Not found
+        '204': 
+          description: No Content (i.e. Delete was successful)
+  /Qualifiers: 
+    post: 
+      summary: Add a new Qualifier
+      description: Adds a new Qualifier
+      requestBody: 
+        description: Qualifier object to be added
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/Qualifier'
+          text/json: 
+            schema: 
+              $ref: '#/components/schemas/Qualifier'
+          application/*+json: 
+            schema: 
+              $ref: '#/components/schemas/Qualifier'
+        required: true
+      responses: 
+        '400': 
+          description: Bad request
+        '201': 
+          description: Created
+          headers: 
+            Location: 
+              schema: 
+                type: string
+          content: 
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/Qualifier'
+components: 
+  schemas: 
+    Concept: 
+      required: 
+        - ConceptId
+        - ConceptName
+        - ConceptType
+      type: object
+      description: An entity, a domain, a unique key or a sub type
+      properties: 
+        ConceptId: 
+          type: integer
+          description: The ID of the Concept
+          format: int32
+          'nullable': false
+        ConceptName: 
+          type: string
+          maxLength: 200
+          'nullable': false
+        ConceptDescription: 
+          type: string
+          maxLength: 500
+          'nullable': true
+        ConceptType: 
+          type: string
+          enum: 
+            - DataType
+            - Enumeration
+            - Object
+            - Scalar
+            - UniqueKey
+            - SubType
+          'nullable': false
+        DataTypeId: 
+          type: integer
+          description: The ID of the DataType
+          format: int32
+          'nullable': true
+        EnumerationId: 
+          type: integer
+          description: The ID of the Enumeration
+          format: int32
+          'nullable': true
+        BasedOnConceptId: 
+          type: integer
+          description: The ID of the BasedOn Concept
+          format: int32
+          'nullable': true
+        ExampleValueAsString: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        MinLength: 
+          type: integer
+          format: int32
+          'nullable': true
+        MaxLength: 
+          type: integer
+          format: int32
+          'nullable': true
+        MinValue: 
+          type: number
+          format: double
+          multipleOf: 0.001
+          'nullable': true
+        MaxValue: 
+          type: number
+          format: double
+          multipleOf: 0.001
+          'nullable': true
+        TotalDigits: 
+          type: integer
+          format: int32
+          'nullable': true
+        DecimalPlaces: 
+          type: integer
+          format: int32
+          'nullable': true
+        DatePrecision: 
+          type: integer
+          format: int32
+          'nullable': true
+        DbSchemaName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        DbTableName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsCollectionItem: 
+          type: boolean
+          'nullable': true
+        ToStringExpression: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsCreatable: 
+          type: boolean
+          'nullable': true
+        IsUpdatable: 
+          type: boolean
+          'nullable': true
+        IsDeletable: 
+          type: boolean
+          'nullable': true
+        SurrogateKeyFieldName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        PrimaryKeyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        AlternateKeyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ReferencedConceptId: 
+          type: integer
+          description: The ID of the Referenced Concept
+          format: int32
+          'nullable': true
+        ReferencedConceptUniqueKeyId: 
+          type: integer
+          description: The ID of the Referenced ConceptUniqueKey
+          format: int32
+          'nullable': true
+        SpecialisedConceptId: 
+          type: integer
+          description: The ID of the Specialised Concept
+          format: int32
+          'nullable': true
+        SpecialisedConceptSubTypeId: 
+          type: integer
+          description: The ID of the Specialised ConceptSubType
+          format: int32
+          'nullable': true
+        Includes: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/Include'
+        Qualifiers: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/Qualifier'
+        PropertyFamilies: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptPropertyFamily'
+        UniqueKeys: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptUniqueKey'
+        SubTypes: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptSubType'
+        Properties: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptRef'
+    ConceptModel: 
+      required: 
+        - ConceptModelId
+      type: object
+      description: A model, made primarily of scalar concepts and object concepts
+      properties: 
+        ConceptModelId: 
+          type: integer
+          description: The ID of the ConceptModel
+          format: int32
+          'nullable': false
+        ModelName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        DefaultStringLength: 
+          type: integer
+          format: int32
+          'nullable': true
+        DataTypes: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/DataType'
+        Enumerations: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/Enumeration'
+        Concepts: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/Concept'
+    ConceptPropertyFamily: 
+      type: string
+      description: A family of properties
+      maxLength: 200
+      'nullable': false
+    ConceptRef: 
+      required: 
+        - ConceptRefId
+        - ReferencedConceptId
+        - ConceptRefType
+      type: object
+      description: A field or relationship
+      properties: 
+        ConceptRefId: 
+          type: integer
+          description: The ID of the ConceptRef
+          format: int32
+          'nullable': false
+        PropertyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        PropertyDescription: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ReferencedConceptId: 
+          type: integer
+          description: The ID of the Referenced Concept
+          format: int32
+          'nullable': false
+        ConceptRefType: 
+          type: string
+          maxLength: 200
+          enum: 
+            - UniqueContainer
+            - Identifying
+            - Descriptive
+          'nullable': false
+        ConceptPropertyFamilyId: 
+          type: integer
+          description: The ID of the ConceptPropertyFamily
+          format: int32
+          'nullable': true
+        IsPropagating: 
+          type: boolean
+          'nullable': true
+        DbColumnName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsIdentity: 
+          type: boolean
+          'nullable': true
+        IsCoreField: 
+          type: boolean
+          'nullable': true
+        FieldFamilyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsUpdatable: 
+          type: boolean
+          'nullable': true
+        FieldLabel: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsScalarFieldToSerialiseInPersistenceModel: 
+          type: boolean
+          'nullable': true
+        IsScalarFieldToSerialiseInDomainModel: 
+          type: boolean
+          'nullable': true
+        IsSeqNoField: 
+          type: boolean
+          'nullable': true
+        IsDiscriminatorField: 
+          type: boolean
+          'nullable': true
+        IsXmlAttribute: 
+          type: boolean
+          'nullable': true
+        IsReferenceToChildEntity: 
+          type: boolean
+          'nullable': true
+        ParentQualifier: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ChildQualifier: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        MinChildOccurrences: 
+          type: integer
+          format: int32
+          'nullable': true
+        MaxChildOccurrences: 
+          type: integer
+          format: int32
+          'nullable': true
+        ChildVerbPhrase: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ParentVerbPhrase: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ChildPropertySeq: 
+          type: integer
+          format: int32
+          'nullable': true
+        ChildCollectionName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ChildItemName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ChildPropertyDescription: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        SelectorType: 
+          type: string
+          maxLength: 200
+          enum: 
+            - Dropdown
+            - Searchable
+          'nullable': true
+        RelationshipType: 
+          type: string
+          maxLength: 200
+          enum: 
+            - Reference
+            - ParentChild
+            - NestedObject
+            - DescriptiveReference
+            - Subtype
+            - UniqueChild
+            - PassThrough
+          'nullable': true
+        OutputExplicitXmlCollection: 
+          type: boolean
+          'nullable': true
+        IsSerialisedUsingScalarFieldInDomainModel: 
+          type: boolean
+          'nullable': true
+        ScalarFieldNameInDomainModel: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ExampleValueAsString: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        RelationshipName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        DbForeignKeyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ParentIndexName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ForeignKeySurrogateKeyFieldName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ChildPropertyName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        IsNullable: 
+          type: boolean
+          'nullable': true
+        PropertySeq: 
+          type: integer
+          format: int32
+          'nullable': true
+    ConceptSubType: 
+      required: 
+        - ConceptSubTypeId
+        - SubTypeName
+      type: object
+      description: A specialised variety of an entity
+      properties: 
+        ConceptSubTypeId: 
+          type: integer
+          description: The ID of the ConceptSubType
+          format: int32
+          'nullable': false
+        SubTypeName: 
+          type: string
+          maxLength: 200
+          'nullable': false
+        PropertyFamilyRefs: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptSubTypePropertyFamilyRef'
+    ConceptSubTypePropertyFamilyRef: 
+      required: 
+        - ConceptSubTypePropertyFamilyRefId
+        - ConceptPropertyFamilyId
+        - SeqNo
+      type: object
+      description: A record which associates a given sub type with a particular family of properties, signifying that the family is relevant to that sub type
+      properties: 
+        ConceptSubTypePropertyFamilyRefId: 
+          type: integer
+          description: The ID of the ConceptSubTypePropertyFamilyRef
+          format: int32
+          'nullable': false
+        ConceptPropertyFamilyId: 
+          type: integer
+          description: The ID of the ConceptPropertyFamily
+          format: int32
+          'nullable': false
+        SeqNo: 
+          type: integer
+          description: Sequence number
+          format: int32
+          'nullable': false
+    ConceptUniqueKey: 
+      required: 
+        - ConceptUniqueKeyId
+        - UniqueKeyName
+      type: object
+      description: A unique key index that can be used to uniquely identify objects of a particular type
+      properties: 
+        ConceptUniqueKeyId: 
+          type: integer
+          description: The ID of the ConceptUniqueKey
+          format: int32
+          'nullable': false
+        UniqueKeyName: 
+          type: string
+          maxLength: 200
+          'nullable': false
+        PropertyFamilyRefs: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/ConceptUniqueKeyPropertyFamilyRef'
+    ConceptUniqueKeyPropertyFamilyRef: 
+      required: 
+        - ConceptUniqueKeyPropertyFamilyRefId
+        - ConceptPropertyFamilyId
+        - SeqNo
+      type: object
+      description: A record that associates a given unique key with a particular family of properties, signifying that the family of properties is relevant to that unique key
+      properties: 
+        ConceptUniqueKeyPropertyFamilyRefId: 
+          type: integer
+          description: The ID of the ConceptUniqueKeyPropertyFamilyRef
+          format: int32
+          'nullable': false
+        ConceptPropertyFamilyId: 
+          type: integer
+          description: The ID of the ConceptPropertyFamily
+          format: int32
+          'nullable': false
+        SeqNo: 
+          type: integer
+          description: Sequence number
+          format: int32
+          'nullable': false
+    DataType: 
+      required: 
+        - DataTypeId
+        - DataTypeName
+      type: object
+      description: A data type
+      properties: 
+        DataTypeId: 
+          type: integer
+          description: The ID of the DataType
+          format: int32
+          'nullable': false
+        DataTypeName: 
+          type: string
+          maxLength: 200
+          'nullable': false
+        SqlServerDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        OracleDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        MySqlDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        MongoDbDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        DotNetDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        JavaDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        XmlDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ExampleValueAsString: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        JsonDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        JsonFormat: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        OpenApiDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        OpenApiFormat: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        ErsDataType: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        BasicDataType: 
+          type: string
+          maxLength: 200
+          enum: 
+            - Binary
+            - Boolean
+            - Integer
+            - Date
+            - Decimal
+            - String
+            - Xml
+          'nullable': true
+        MinLength: 
+          type: integer
+          format: int32
+          'nullable': true
+        MaxLength: 
+          type: integer
+          format: int32
+          'nullable': true
+        MinValue: 
+          type: number
+          format: double
+          multipleOf: 0.001
+          'nullable': true
+        MaxValue: 
+          type: number
+          format: double
+          multipleOf: 0.001
+          'nullable': true
+        TotalDigits: 
+          type: integer
+          format: int32
+          'nullable': true
+        DecimalPlaces: 
+          type: integer
+          format: int32
+          'nullable': true
+        DatePrecision: 
+          type: integer
+          format: int32
+          'nullable': true
+        HasLength: 
+          type: boolean
+          'nullable': true
+        HasTotalDigits: 
+          type: boolean
+          'nullable': true
+        HasDecimalPlaces: 
+          type: boolean
+          'nullable': true
+        HasIdentity: 
+          type: boolean
+          'nullable': true
+        HasDatePrecision: 
+          type: boolean
+          'nullable': true
+    Enumeration: 
+      required: 
+        - EnumerationId
+        - DataTypeId
+      type: object
+      description: A constrained vocabulary
+      properties: 
+        EnumerationId: 
+          type: integer
+          description: The ID of the Enumeration
+          format: int32
+          'nullable': false
+        EnumerationName: 
+          type: string
+          maxLength: 200
+          'nullable': true
+        EnumerationDescription: 
+          type: string
+          maxLength: 500
+          'nullable': true
+        DataTypeId: 
+          type: integer
+          description: The ID of the DataType
+          format: int32
+          'nullable': false
+        EnumeratedValues: 
+          type: array
+          items: 
+            $ref: '#/components/schemas/EnumerationMember'
+    EnumerationMember: 
+      required: 
+        - EnumerationMemberId
+        - EnumeratedValue
+      type: object
+      description: An item within a constrained vocabulary
+      properties: 
+        EnumerationMemberId: 
+          type: integer
+          description: The ID of the EnumerationMember
+          format: int32
+          'nullable': false
+        EnumeratedValue: 
+          type: string
+          maxLength: 200
+          'nullable': false
+        EnumeratedValueDescription: 
+          type: string
+          maxLength: 500
+          'nullable': true
+    Include: 
+      type: string
+      description: A Linq expression, starting from the current entity, that defines an item to be hydrated when hydrating the current entity
+      maxLength: 200
+      'nullable': false
+    Qualifier: 
+      type: string
+      description: A prefix that can be placed before the name of the current entity to specify the role it plays
+      maxLength: 200
+      'nullable': false

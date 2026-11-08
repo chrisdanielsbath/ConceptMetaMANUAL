@@ -1,0 +1,464 @@
+<html>
+<head>
+  <title>ConceptMeta - ConceptUniqueKeyPropertyFamilyRef</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; <a href="../ConceptModel/ConceptModel.html">ConceptModel</a>
+  &gt; <a href="../Concept/Concept.html">Concept</a>
+  &gt; <a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a>
+  &gt; ConceptUniqueKeyPropertyFamilyRef
+  <br/>
+  <button class="accordion active entity">ConceptUniqueKeyPropertyFamilyRef</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Entity name</th>
+        <td class="entity">ConceptUniqueKeyPropertyFamilyRef</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>A record that associates a given unique key with a particular family of properties, signifying that the family of properties is relevant to that unique key</td>
+      </tr>
+      <tr>
+        <th>Database schema name</th>
+        <td>dbo</td>
+      </tr>
+      <tr>
+        <th>Database table name</th>
+        <td>ConceptUniqueKeyPropertyFamilyRef</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active index">Indexes</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Index name</th>
+        <th>Fields</th>
+      </tr>
+      <tr>
+        <td>PrimaryKey</td>
+        <td class="index"><a href="./Indexes/PK_ConceptUniqueKeyPropertyFamilyRef.html">PK_ConceptUniqueKeyPropertyFamilyRef</td>
+        <td>ConceptUniqueKeyPropertyFamilyRefId</td>
+      </tr>
+      <tr>
+        <td>AlternateKeyLogicalKey</td>
+        <td class="index"><a href="./Indexes/AK_ConceptUniqueKeyPropertyFamilyRef_ConceptUniqueKeyId_ConceptPropertyFamilyId.html">AK_ConceptUniqueKeyPropertyFamilyRef_ConceptUniqueKeyId_ConceptPropertyFamilyId</td>
+        <td>ConceptUniqueKeyId, ConceptPropertyFamilyId</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion  active property" >Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td></td>
+        <td class="property"><a href="../ConceptUniqueKeyPropertyFamilyRef/Fields/ConceptUniqueKeyPropertyFamilyRefId.html">ConceptUniqueKeyPropertyFamilyRefId</a></td>
+        <td>int</td>
+        <td>The ID of the ConceptUniqueKeyPropertyFamilyRef</td>
+        <td class="domain"><a href="../Domains/ConceptUniqueKeyPropertyFamilyRefId.html">ConceptUniqueKeyPropertyFamilyRefId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptUniqueKeyPropertyFamilyRef/Fields/ConceptModelId.html">ConceptModelId</a></td>
+        <td>int</td>
+        <td>The ID of the ConceptModel</td>
+        <td class="domain"><a href="../Domains/ConceptModelId.html">ConceptModelId</a></td>
+        <td></td>
+        <td>ImpliedInPersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptUniqueKeyPropertyFamilyRef/Fields/ModelName.html">ModelName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href="../Domains/ModelName.html">ModelName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptUniqueKeyPropertyFamilyRef/Fields/ConceptId.html">ConceptId</a></td>
+        <td>int</td>
+        <td>The ID of the Concept</td>
+        <td class="domain"><a href="../Domains/ConceptId.html">ConceptId</a></td>
+        <td></td>
+        <td>ImpliedInPersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptUniqueKeyPropertyFamilyRef/Fields/ConceptName.html">ConceptName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The name of the Concept</td>
+        <td class="domain"><a href="../Domains/ConceptName.html">ConceptName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../ConceptUniqueKeyPropertyFamilyRef/Fields/ConceptUniqueKeyId.html">ConceptUniqueKeyId</a></td>
+        <td>int</td>
+        <td>The ID of the ConceptUniqueKey</td>
+        <td class="domain"><a href="../Domains/ConceptUniqueKeyId.html">ConceptUniqueKeyId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptUniqueKeyPropertyFamilyRef/Fields/UniqueKeyName.html">UniqueKeyName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The UniqueKeyName value for the ConceptUniqueKey</td>
+        <td class="domain"><a href="../Domains/UniqueKeyName.html">UniqueKeyName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptUniqueKey</td>
+        <td>object</td>
+        <td>The associated ConceptUniqueKey</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a></td>
+        <td>ConceptUniqueKeyId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../ConceptUniqueKeyPropertyFamilyRef/Fields/ConceptPropertyFamilyId.html">ConceptPropertyFamilyId</a></td>
+        <td>int</td>
+        <td>The ID of the ConceptPropertyFamily</td>
+        <td class="domain"><a href="../Domains/ConceptPropertyFamilyId.html">ConceptPropertyFamilyId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptUniqueKeyPropertyFamilyRef/Fields/PropertyFamilyName.html">PropertyFamilyName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the ConceptPropertyFamily</td>
+        <td class="domain"><a href="../Domains/PropertyFamilyName.html">PropertyFamilyName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptPropertyFamily</td>
+        <td>object</td>
+        <td>The associated ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+        <td>ConceptPropertyFamilyId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../ConceptUniqueKeyPropertyFamilyRef/Fields/SeqNo.html">SeqNo</a></td>
+        <td>int</td>
+        <td>Sequence number</td>
+        <td class="domain">csf-seqno</td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active field">Fields</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Field name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Domain</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptUniqueKeyPropertyFamilyRefId.html">ConceptUniqueKeyPropertyFamilyRefId</td>
+        <td>int</td>
+        <td>The ID of the ConceptUniqueKeyPropertyFamilyRef</td>
+        <td class="domain"><a href = "../Domains/ConceptUniqueKeyPropertyFamilyRefId.html" > ConceptUniqueKeyPropertyFamilyRefId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ConceptUniqueKeyId.html">ConceptUniqueKeyId</td>
+        <td>int</td>
+        <td>The ID of the ConceptUniqueKey</td>
+        <td class="domain"><a href = "../Domains/ConceptUniqueKeyId.html" > ConceptUniqueKeyId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ConceptPropertyFamilyId.html">ConceptPropertyFamilyId</td>
+        <td>int</td>
+        <td>The ID of the ConceptPropertyFamily</td>
+        <td class="domain"><a href = "../Domains/ConceptPropertyFamilyId.html" > ConceptPropertyFamilyId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/SeqNo.html">SeqNo</td>
+        <td>int</td>
+        <td>Sequence number</td>
+        <td class="domain">csf-seqno</a></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active field">Implied fields</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Field name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Domain</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptModelId.html">ConceptModelId</td>
+        <td>int</td>
+        <td>The ID of the ConceptModel</td>
+        <td class="domain"><a href = "../Domains/ConceptModelId.html" > ConceptModelId</a></a></td>
+        <td>ImpliedInPersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ModelName.html">ModelName</td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href = "../Domains/ModelName.html" > ModelName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptId.html">ConceptId</td>
+        <td>int</td>
+        <td>The ID of the Concept</td>
+        <td class="domain"><a href = "../Domains/ConceptId.html" > ConceptId</a></a></td>
+        <td>ImpliedInPersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptName.html">ConceptName</td>
+        <td>nvarchar(200)</td>
+        <td>The name of the Concept</td>
+        <td class="domain"><a href = "../Domains/ConceptName.html" > ConceptName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/UniqueKeyName.html">UniqueKeyName</td>
+        <td>nvarchar(200)</td>
+        <td>The UniqueKeyName value for the ConceptUniqueKey</td>
+        <td class="domain"><a href = "../Domains/UniqueKeyName.html" > UniqueKeyName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/PropertyFamilyName.html">PropertyFamilyName</td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the ConceptPropertyFamily</td>
+        <td class="domain"><a href = "../Domains/PropertyFamilyName.html" > PropertyFamilyName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active entityproperty" >Primary Navigation Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptPropertyFamily</td>
+        <td>object</td>
+        <td>The associated ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+        <td>ConceptPropertyFamilyId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion entityproperty" >Secondary Navigation Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptUniqueKey</td>
+        <td>object</td>
+        <td>The associated ConceptUniqueKey</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a></td>
+        <td>ConceptUniqueKeyId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion rule">Primary Business Rules</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="rule">A ConceptUniqueKeyPropertyFamilyRef references exactly one ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion rule">Secondary Business Rules</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="rule">A ConceptUniqueKeyPropertyFamilyRef is owned by exactly one ConceptUniqueKey</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion relationship">Relationships</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/ConceptUniqueKey.PropertyFamilyRefs.html">ConceptUniqueKey.PropertyFamilyRefs</a></td>
+        <td>A ConceptUniqueKeyPropertyFamilyRef is owned by exactly one ConceptUniqueKey</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/ConceptUniqueKeyPropertyFamilyRef.ConceptPropertyFamily.html">ConceptUniqueKeyPropertyFamilyRef.ConceptPropertyFamily</a></td>
+        <td>A ConceptUniqueKeyPropertyFamilyRef references exactly one ConceptPropertyFamily</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

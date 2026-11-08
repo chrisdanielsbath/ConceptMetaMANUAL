@@ -1,0 +1,1643 @@
+<html>
+<head>
+  <title>ConceptMeta - Concept</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; <a href="../ConceptModel/ConceptModel.html">ConceptModel</a>
+  &gt; Concept
+  <br/>
+  <button class="accordion active entity">Concept</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Entity name</th>
+        <td class="entity">Concept</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>An entity, a domain, a unique key or a sub type</td>
+      </tr>
+      <tr>
+        <th>Database schema name</th>
+        <td>dbo</td>
+      </tr>
+      <tr>
+        <th>Database table name</th>
+        <td>Concept</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active index">Indexes</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Index name</th>
+        <th>Fields</th>
+      </tr>
+      <tr>
+        <td>PrimaryKey</td>
+        <td class="index"><a href="./Indexes/PK_Concept.html">PK_Concept</td>
+        <td>ConceptId</td>
+      </tr>
+      <tr>
+        <td>AlternateKeyLogicalKey</td>
+        <td class="index"><a href="./Indexes/AK_Concept_ConceptModelId_ConceptName.html">AK_Concept_ConceptModelId_ConceptName</td>
+        <td>ConceptModelId, ConceptName</td>
+      </tr>
+      <tr>
+        <td>AlternateKey</td>
+        <td class="index"><a href="./Indexes/PK2_CommonConcept.html">PK2_CommonConcept</td>
+        <td>ConceptId</td>
+      </tr>
+      <tr>
+        <td>AlternateKey</td>
+        <td class="index"><a href="./Indexes/PK3_ScalarConcept.html">PK3_ScalarConcept</td>
+        <td>ConceptId</td>
+      </tr>
+      <tr>
+        <td>AlternateKey</td>
+        <td class="index"><a href="./Indexes/PK4_ObjectConcept.html">PK4_ObjectConcept</td>
+        <td>ConceptId</td>
+      </tr>
+      <tr>
+        <td>AlternateKey</td>
+        <td class="index"><a href="./Indexes/PK5_UniqueKeyConcept.html">PK5_UniqueKeyConcept</td>
+        <td>ConceptId</td>
+      </tr>
+      <tr>
+        <td>AlternateKey</td>
+        <td class="index"><a href="./Indexes/PK6_SubTypeConcept.html">PK6_SubTypeConcept</td>
+        <td>ConceptId</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion  active property" >Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/ConceptId.html">ConceptId</a></td>
+        <td>int</td>
+        <td>The ID of the Concept</td>
+        <td class="domain"><a href="../Domains/ConceptId.html">ConceptId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../Concept/Fields/ConceptModelId.html">ConceptModelId</a></td>
+        <td>int</td>
+        <td>The ID of the ConceptModel</td>
+        <td class="domain"><a href="../Domains/ConceptModelId.html">ConceptModelId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/ModelName.html">ModelName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href="../Domains/ModelName.html">ModelName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptModel</td>
+        <td>object</td>
+        <td>The associated ConceptModel</td>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">ConceptModel</a></td>
+        <td>ConceptModelId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/ConceptName.html">ConceptName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ConceptName.html">ConceptName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/ConceptDescription.html">ConceptDescription</a></td>
+        <td>nvarchar(500)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ConceptDescription.html">ConceptDescription</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/ConceptType.html">ConceptType</a></td>
+        <td>nvarchar(max)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ConceptTypeEnum.html">ConceptTypeEnum</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../Concept/Fields/DataTypeId.html">DataTypeId</a></td>
+        <td>int</td>
+        <td>The ID of the DataType</td>
+        <td class="domain"><a href="../Domains/DataTypeId.html">DataTypeId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>DataType</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/DataTypeName.html">DataTypeName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The DataTypeName value for the DataType</td>
+        <td class="domain"><a href="../Domains/DataTypeName.html">DataTypeName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>DataType</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">DataType</td>
+        <td>object</td>
+        <td>The associated DataType</td>
+        <td class="entity"><a href="../DataType/DataType.html">DataType</a></td>
+        <td>DataTypeId</td>
+        <td></td>
+        <td>DataType</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../Concept/Fields/EnumerationId.html">EnumerationId</a></td>
+        <td>int</td>
+        <td>The ID of the Enumeration</td>
+        <td class="domain"><a href="../Domains/EnumerationId.html">EnumerationId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Enumeration</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/EnumerationName.html">EnumerationName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The EnumerationName value for the Enumeration</td>
+        <td class="domain"><a href="../Domains/EnumerationName.html">EnumerationName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Enumeration</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Enumeration</td>
+        <td>object</td>
+        <td>The associated Enumeration</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+        <td>EnumerationId</td>
+        <td></td>
+        <td>Enumeration</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../Concept/Fields/BasedOnConceptId.html">BasedOnConceptId</a></td>
+        <td>int</td>
+        <td>The ID of the BasedOn Concept</td>
+        <td class="domain"><a href="../Domains/BasedOnConceptId.html">BasedOnConceptId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/BasedOnConceptName.html">BasedOnConceptName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The ConceptName value for the BasedOn Concept</td>
+        <td class="domain"><a href="../Domains/BasedOnConceptName.html">BasedOnConceptName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">BasedOnConcept</td>
+        <td>object</td>
+        <td>The BasedOn Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+        <td>BasedOnConceptId</td>
+        <td></td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/ExampleValueAsString.html">ExampleValueAsString</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ExampleValueAsString.html">ExampleValueAsString</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/MinLength.html">MinLength</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MinLength.html">MinLength</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/MaxLength.html">MaxLength</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MaxLength.html">MaxLength</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/MinValue.html">MinValue</a></td>
+        <td>decimal(18, 3)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MinValue.html">MinValue</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/MaxValue.html">MaxValue</a></td>
+        <td>decimal(18, 3)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/MaxValue.html">MaxValue</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/TotalDigits.html">TotalDigits</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/TotalDigits.html">TotalDigits</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/DecimalPlaces.html">DecimalPlaces</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/DecimalPlaces.html">DecimalPlaces</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/DatePrecision.html">DatePrecision</a></td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/DatePrecision.html">DatePrecision</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Date</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/DbSchemaName.html">DbSchemaName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/DbSchemaName.html">DbSchemaName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/DbTableName.html">DbTableName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/DbTableName.html">DbTableName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/IsCollectionItem.html">IsCollectionItem</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsCollectionItem.html">IsCollectionItem</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/ToStringExpression.html">ToStringExpression</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/ToStringExpression.html">ToStringExpression</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/IsCreatable.html">IsCreatable</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsCreatable.html">IsCreatable</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/IsUpdatable.html">IsUpdatable</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsUpdatable.html">IsUpdatable</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/IsDeletable.html">IsDeletable</a></td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/IsDeletable.html">IsDeletable</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/SurrogateKeyFieldName.html">SurrogateKeyFieldName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/SurrogateKeyFieldName.html">SurrogateKeyFieldName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/PrimaryKeyName.html">PrimaryKeyName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/PrimaryKeyName.html">PrimaryKeyName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/AlternateKeyName.html">AlternateKeyName</a></td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href="../Domains/AlternateKeyName.html">AlternateKeyName</a></td>
+        <td></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../Concept/Fields/ReferencedConceptId.html">ReferencedConceptId</a></td>
+        <td>int</td>
+        <td>The ID of the Referenced Concept</td>
+        <td class="domain"><a href="../Domains/ReferencedConceptId.html">ReferencedConceptId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/ReferencedConceptName.html">ReferencedConceptName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the Referenced Concept</td>
+        <td class="domain"><a href="../Domains/ReferencedConceptName.html">ReferencedConceptName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ReferencedConcept</td>
+        <td>object</td>
+        <td>The Referenced Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+        <td>ReferencedConceptId</td>
+        <td></td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../Concept/Fields/ReferencedConceptUniqueKeyId.html">ReferencedConceptUniqueKeyId</a></td>
+        <td>int</td>
+        <td>The ID of the Referenced ConceptUniqueKey</td>
+        <td class="domain"><a href="../Domains/ReferencedConceptUniqueKeyId.html">ReferencedConceptUniqueKeyId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/ReferencedUniqueKeyName.html">ReferencedUniqueKeyName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the Referenced ConceptUniqueKey</td>
+        <td class="domain"><a href="../Domains/ReferencedUniqueKeyName.html">ReferencedUniqueKeyName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ReferencedUniqueKey</td>
+        <td>object</td>
+        <td>The Referenced ConceptUniqueKey</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a></td>
+        <td>ReferencedConceptUniqueKeyId</td>
+        <td></td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../Concept/Fields/SpecialisedConceptId.html">SpecialisedConceptId</a></td>
+        <td>int</td>
+        <td>The ID of the Specialised Concept</td>
+        <td class="domain"><a href="../Domains/SpecialisedConceptId.html">SpecialisedConceptId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/SpecialisedConceptName.html">SpecialisedConceptName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the Specialised Concept</td>
+        <td class="domain"><a href="../Domains/SpecialisedConceptName.html">SpecialisedConceptName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">SpecialisedConcept</td>
+        <td>object</td>
+        <td>The Specialised Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+        <td>SpecialisedConceptId</td>
+        <td></td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td></td>
+        <td>FK </td>
+        <td class="property"><a href="../Concept/Fields/SpecialisedConceptSubTypeId.html">SpecialisedConceptSubTypeId</a></td>
+        <td>int</td>
+        <td>The ID of the Specialised ConceptSubType</td>
+        <td class="domain"><a href="../Domains/SpecialisedConceptSubTypeId.html">SpecialisedConceptSubTypeId</a></td>
+        <td></td>
+        <td>PersistenceOnly</td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td></td>
+        <td></td>
+        <td class="property"><a href="../Concept/Fields/SpecialisedSubTypeName.html">SpecialisedSubTypeName</a></td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the Specialised ConceptSubType</td>
+        <td class="domain"><a href="../Domains/SpecialisedSubTypeName.html">SpecialisedSubTypeName</a></td>
+        <td></td>
+        <td>ImpliedInPersistence</td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">SpecialisedSubType</td>
+        <td>object</td>
+        <td>The Specialised ConceptSubType</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a></td>
+        <td>SpecialisedConceptSubTypeId</td>
+        <td></td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Includes</td>
+        <td>object</td>
+        <td>The set of Includes where the Include is owned by this Concept</td>
+        <td class="entity"><a href="../Include/Include.html">Include</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Qualifiers</td>
+        <td>object</td>
+        <td>The set of Qualifiers where the Qualifier is owned by this Concept</td>
+        <td class="entity"><a href="../Qualifier/Qualifier.html">Qualifier</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">PropertyFamilies</td>
+        <td>object</td>
+        <td>The set of ConceptPropertyFamilies where the ConceptPropertyFamily is owned by this Concept</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">UniqueKeys</td>
+        <td>object</td>
+        <td>The set of ConceptUniqueKeys where the ConceptUniqueKey is owned by this Concept</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">SubTypes</td>
+        <td>object</td>
+        <td>The set of ConceptSubTypes where the ConceptSubType is owned by this Concept</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Properties</td>
+        <td>object</td>
+        <td>The set of ConceptRefs where the ConceptRef is owned by this Concept</td>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>53</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">DerivedConcepts</td>
+        <td>object</td>
+        <td>The set of Concepts where the Concept references this Concept (as a BasedOn Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>54</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ReferencedByProperties</td>
+        <td>object</td>
+        <td>The set of ConceptRefs where the ConceptRef references this Concept (as a Referenced Concept)</td>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Usage</td>
+      </tr>
+      <tr>
+        <td>55</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ReferencedByConcepts</td>
+        <td>object</td>
+        <td>The set of Concepts where the Concept references this Concept (as a Referenced Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>56</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">SpecialisedByConcepts</td>
+        <td>object</td>
+        <td>The set of Concepts where the Concept references this Concept (as a Specialised Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active field">Fields</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Field name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Domain</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PK</td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptId.html">ConceptId</td>
+        <td>int</td>
+        <td>The ID of the Concept</td>
+        <td class="domain"><a href = "../Domains/ConceptId.html" > ConceptId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ConceptModelId.html">ConceptModelId</td>
+        <td>int</td>
+        <td>The ID of the ConceptModel</td>
+        <td class="domain"><a href = "../Domains/ConceptModelId.html" > ConceptModelId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ModelName.html">ModelName</td>
+        <td>nvarchar(200)</td>
+        <td>The ModelName value for the ConceptModel</td>
+        <td class="domain"><a href = "../Domains/ModelName.html" > ModelName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptName.html">ConceptName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ConceptName.html" > ConceptName</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptDescription.html">ConceptDescription</td>
+        <td>nvarchar(500)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ConceptDescription.html" > ConceptDescription</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ConceptType.html">ConceptType</td>
+        <td>nvarchar(max)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ConceptTypeEnum.html" > ConceptTypeEnum</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/DataTypeId.html">DataTypeId</td>
+        <td>int</td>
+        <td>The ID of the DataType</td>
+        <td class="domain"><a href = "../Domains/DataTypeId.html" > DataTypeId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>DataType</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DataTypeName.html">DataTypeName</td>
+        <td>nvarchar(200)</td>
+        <td>The DataTypeName value for the DataType</td>
+        <td class="domain"><a href = "../Domains/DataTypeName.html" > DataTypeName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>DataType</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/EnumerationId.html">EnumerationId</td>
+        <td>int</td>
+        <td>The ID of the Enumeration</td>
+        <td class="domain"><a href = "../Domains/EnumerationId.html" > EnumerationId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Enumeration</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/EnumerationName.html">EnumerationName</td>
+        <td>nvarchar(200)</td>
+        <td>The EnumerationName value for the Enumeration</td>
+        <td class="domain"><a href = "../Domains/EnumerationName.html" > EnumerationName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Enumeration</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/BasedOnConceptId.html">BasedOnConceptId</td>
+        <td>int</td>
+        <td>The ID of the BasedOn Concept</td>
+        <td class="domain"><a href = "../Domains/BasedOnConceptId.html" > BasedOnConceptId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/BasedOnConceptName.html">BasedOnConceptName</td>
+        <td>nvarchar(200)</td>
+        <td>The ConceptName value for the BasedOn Concept</td>
+        <td class="domain"><a href = "../Domains/BasedOnConceptName.html" > BasedOnConceptName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ExampleValueAsString.html">ExampleValueAsString</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ExampleValueAsString.html" > ExampleValueAsString</a></a></td>
+        <td>Common</td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MinLength.html">MinLength</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MinLength.html" > MinLength</a></a></td>
+        <td>Common</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MaxLength.html">MaxLength</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MaxLength.html" > MaxLength</a></a></td>
+        <td>Common</td>
+        <td>String</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MinValue.html">MinValue</td>
+        <td>decimal(18, 3)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MinValue.html" > MinValue</a></a></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/MaxValue.html">MaxValue</td>
+        <td>decimal(18, 3)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/MaxValue.html" > MaxValue</a></a></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/TotalDigits.html">TotalDigits</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/TotalDigits.html" > TotalDigits</a></a></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DecimalPlaces.html">DecimalPlaces</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/DecimalPlaces.html" > DecimalPlaces</a></a></td>
+        <td>Common</td>
+        <td>Number</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DatePrecision.html">DatePrecision</td>
+        <td>int</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/DatePrecision.html" > DatePrecision</a></a></td>
+        <td>Common</td>
+        <td>Date</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DbSchemaName.html">DbSchemaName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/DbSchemaName.html" > DbSchemaName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/DbTableName.html">DbTableName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/DbTableName.html" > DbTableName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsCollectionItem.html">IsCollectionItem</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsCollectionItem.html" > IsCollectionItem</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ToStringExpression.html">ToStringExpression</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/ToStringExpression.html" > ToStringExpression</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsCreatable.html">IsCreatable</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsCreatable.html" > IsCreatable</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsUpdatable.html">IsUpdatable</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsUpdatable.html" > IsUpdatable</a></a></td>
+        <td>Common</td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/IsDeletable.html">IsDeletable</td>
+        <td>bit</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/IsDeletable.html" > IsDeletable</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/SurrogateKeyFieldName.html">SurrogateKeyFieldName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/SurrogateKeyFieldName.html" > SurrogateKeyFieldName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/PrimaryKeyName.html">PrimaryKeyName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/PrimaryKeyName.html" > PrimaryKeyName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/AlternateKeyName.html">AlternateKeyName</td>
+        <td>nvarchar(200)</td>
+        <td></td>
+        <td class="domain"><a href = "../Domains/AlternateKeyName.html" > AlternateKeyName</a></a></td>
+        <td>Common</td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ReferencedConceptId.html">ReferencedConceptId</td>
+        <td>int</td>
+        <td>The ID of the Referenced Concept</td>
+        <td class="domain"><a href = "../Domains/ReferencedConceptId.html" > ReferencedConceptId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ReferencedConceptName.html">ReferencedConceptName</td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the Referenced Concept</td>
+        <td class="domain"><a href = "../Domains/ReferencedConceptName.html" > ReferencedConceptName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/ReferencedConceptUniqueKeyId.html">ReferencedConceptUniqueKeyId</td>
+        <td>int</td>
+        <td>The ID of the Referenced ConceptUniqueKey</td>
+        <td class="domain"><a href = "../Domains/ReferencedConceptUniqueKeyId.html" > ReferencedConceptUniqueKeyId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/ReferencedUniqueKeyName.html">ReferencedUniqueKeyName</td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the Referenced ConceptUniqueKey</td>
+        <td class="domain"><a href = "../Domains/ReferencedUniqueKeyName.html" > ReferencedUniqueKeyName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/SpecialisedConceptId.html">SpecialisedConceptId</td>
+        <td>int</td>
+        <td>The ID of the Specialised Concept</td>
+        <td class="domain"><a href = "../Domains/SpecialisedConceptId.html" > SpecialisedConceptId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/SpecialisedConceptName.html">SpecialisedConceptName</td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the Specialised Concept</td>
+        <td class="domain"><a href = "../Domains/SpecialisedConceptName.html" > SpecialisedConceptName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td></td>
+        <td>FK</td>
+        <td class="field"><a href="./Fields/SpecialisedConceptSubTypeId.html">SpecialisedConceptSubTypeId</td>
+        <td>int</td>
+        <td>The ID of the Specialised ConceptSubType</td>
+        <td class="domain"><a href = "../Domains/SpecialisedConceptSubTypeId.html" > SpecialisedConceptSubTypeId</a></a></td>
+        <td>PersistenceOnly</td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td></td>
+        <td></td>
+        <td class="field"><a href="./Fields/SpecialisedSubTypeName.html">SpecialisedSubTypeName</td>
+        <td>nvarchar(200)</td>
+        <td>The business-facing identifier for the Specialised ConceptSubType</td>
+        <td class="domain"><a href = "../Domains/SpecialisedSubTypeName.html" > SpecialisedSubTypeName</a></a></td>
+        <td>ImpliedInPersistence</td>
+        <td>SubType</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active entityproperty" >Primary Navigation Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">DataType</td>
+        <td>object</td>
+        <td>The associated DataType</td>
+        <td class="entity"><a href="../DataType/DataType.html">DataType</a></td>
+        <td>DataTypeId</td>
+        <td></td>
+        <td>DataType</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Enumeration</td>
+        <td>object</td>
+        <td>The associated Enumeration</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+        <td>EnumerationId</td>
+        <td></td>
+        <td>Enumeration</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">BasedOnConcept</td>
+        <td>object</td>
+        <td>The BasedOn Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+        <td>BasedOnConceptId</td>
+        <td></td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ReferencedConcept</td>
+        <td>object</td>
+        <td>The Referenced Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+        <td>ReferencedConceptId</td>
+        <td></td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ReferencedUniqueKey</td>
+        <td>object</td>
+        <td>The Referenced ConceptUniqueKey</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a></td>
+        <td>ReferencedConceptUniqueKeyId</td>
+        <td></td>
+        <td>UniqueKey</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">SpecialisedConcept</td>
+        <td>object</td>
+        <td>The Specialised Concept</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+        <td>SpecialisedConceptId</td>
+        <td></td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">SpecialisedSubType</td>
+        <td>object</td>
+        <td>The Specialised ConceptSubType</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a></td>
+        <td>SpecialisedConceptSubTypeId</td>
+        <td></td>
+        <td>SubType</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Includes</td>
+        <td>object</td>
+        <td>The set of Includes where the Include is owned by this Concept</td>
+        <td class="entity"><a href="../Include/Include.html">Include</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Qualifiers</td>
+        <td>object</td>
+        <td>The set of Qualifiers where the Qualifier is owned by this Concept</td>
+        <td class="entity"><a href="../Qualifier/Qualifier.html">Qualifier</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">PropertyFamilies</td>
+        <td>object</td>
+        <td>The set of ConceptPropertyFamilies where the ConceptPropertyFamily is owned by this Concept</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">UniqueKeys</td>
+        <td>object</td>
+        <td>The set of ConceptUniqueKeys where the ConceptUniqueKey is owned by this Concept</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">SubTypes</td>
+        <td>object</td>
+        <td>The set of ConceptSubTypes where the ConceptSubType is owned by this Concept</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">Properties</td>
+        <td>object</td>
+        <td>The set of ConceptRefs where the ConceptRef is owned by this Concept</td>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion entityproperty" >Secondary Navigation Properties</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Seq</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Property name</th>
+        <th>Data type</th>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Associated Fields</th>
+        <th>Field Usage</th>
+        <th>Field Family</th>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ConceptModel</td>
+        <td>object</td>
+        <td>The associated ConceptModel</td>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">ConceptModel</a></td>
+        <td>ConceptModelId</td>
+        <td></td>
+        <td>Common</td>
+      </tr>
+      <tr>
+        <td>53</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">DerivedConcepts</td>
+        <td>object</td>
+        <td>The set of Concepts where the Concept references this Concept (as a BasedOn Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Scalar</td>
+      </tr>
+      <tr>
+        <td>54</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ReferencedByProperties</td>
+        <td>object</td>
+        <td>The set of ConceptRefs where the ConceptRef references this Concept (as a Referenced Concept)</td>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Usage</td>
+      </tr>
+      <tr>
+        <td>55</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">ReferencedByConcepts</td>
+        <td>object</td>
+        <td>The set of Concepts where the Concept references this Concept (as a Referenced Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+      <tr>
+        <td>56</td>
+        <td></td>
+        <td></td>
+        <td class="entityproperty">SpecialisedByConcepts</td>
+        <td>object</td>
+        <td>The set of Concepts where the Concept references this Concept (as a Specialised Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a>[]</td>
+        <td></td>
+        <td></td>
+        <td>Object</td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion rule">Primary Business Rules</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="rule">A Concept references up to one Concept (as a BasedOn Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept references up to one DataType</td>
+        <td class="entity"><a href="../DataType/DataType.html">DataType</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept references up to one Enumeration</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept owns zero, one or many Includes</td>
+        <td class="entity"><a href="../Include/Include.html">Include[]</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept owns zero, one or many ConceptRefs</td>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef[]</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept owns zero, one or many ConceptPropertyFamilies</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily[]</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept owns zero, one or many Qualifiers</td>
+        <td class="entity"><a href="../Qualifier/Qualifier.html">Qualifier[]</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept references up to one Concept (as a Referenced Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept references up to one ConceptUniqueKey (as a Referenced ConceptUniqueKey)</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept references up to one Concept (as a Specialised Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept references up to one ConceptSubType (as a Specialised ConceptSubType)</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept owns zero, one or many ConceptSubTypes</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType[]</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept owns zero, one or many ConceptUniqueKeys</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey[]</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion rule">Secondary Business Rules</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="rule">A Concept is referenced by zero, one or many Concepts (as a BasedOn Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept[]</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept is referenced by zero, one or many Concepts (as a Referenced Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept[]</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept is referenced by zero, one or many Concepts (as a Specialised Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept[]</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept is owned by exactly one ConceptModel</td>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">ConceptModel</a></td>
+      </tr>
+      <tr>
+        <td class="rule">A Concept is referenced by zero, one or many ConceptRefs (as a Referenced Concept)</td>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef[]</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion relationship">Relationships</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/ConceptModel.Concepts.html">ConceptModel.Concepts</a></td>
+        <td>A Concept is owned by exactly one ConceptModel</td>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">ConceptModel</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.DataType.html">Concept.DataType</a></td>
+        <td>A Concept references up to one DataType</td>
+        <td class="entity"><a href="../DataType/DataType.html">DataType</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.Enumeration.html">Concept.Enumeration</a></td>
+        <td>A Concept references up to one Enumeration</td>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.BasedOnConcept.html">Concept.BasedOnConcept</a></td>
+        <td>A Concept references up to one Concept (as a BasedOn Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.ReferencedConcept.html">Concept.ReferencedConcept</a></td>
+        <td>A Concept references up to one Concept (as a Referenced Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.ReferencedUniqueKey.html">Concept.ReferencedUniqueKey</a></td>
+        <td>A Concept references up to one ConceptUniqueKey (as a Referenced ConceptUniqueKey)</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.SpecialisedConcept.html">Concept.SpecialisedConcept</a></td>
+        <td>A Concept references up to one Concept (as a Specialised Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.SpecialisedSubType.html">Concept.SpecialisedSubType</a></td>
+        <td>A Concept references up to one ConceptSubType (as a Specialised ConceptSubType)</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.Includes.html">Concept.Includes</a></td>
+        <td>A Concept owns zero, one or many Includes</td>
+        <td class="entity"><a href="../Include/Include.html">Include[]</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.Qualifiers.html">Concept.Qualifiers</a></td>
+        <td>A Concept owns zero, one or many Qualifiers</td>
+        <td class="entity"><a href="../Qualifier/Qualifier.html">Qualifier[]</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.PropertyFamilies.html">Concept.PropertyFamilies</a></td>
+        <td>A Concept owns zero, one or many ConceptPropertyFamilies</td>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily[]</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.UniqueKeys.html">Concept.UniqueKeys</a></td>
+        <td>A Concept owns zero, one or many ConceptUniqueKeys</td>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey[]</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.SubTypes.html">Concept.SubTypes</a></td>
+        <td>A Concept owns zero, one or many ConceptSubTypes</td>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType[]</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.Properties.html">Concept.Properties</a></td>
+        <td>A Concept owns zero, one or many ConceptRefs</td>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef[]</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.BasedOnConcept.html">Concept.BasedOnConcept</a></td>
+        <td>A Concept is referenced by zero, one or many Concepts (as a BasedOn Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept[]</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/ConceptRef.ReferencedConcept.html">ConceptRef.ReferencedConcept</a></td>
+        <td>A Concept is referenced by zero, one or many ConceptRefs (as a Referenced Concept)</td>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef[]</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.ReferencedConcept.html">Concept.ReferencedConcept</a></td>
+        <td>A Concept is referenced by zero, one or many Concepts (as a Referenced Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept[]</a></td>
+      </tr>
+      <tr>
+        <td class="relationship"><a href="../Relationships/Concept.SpecialisedConcept.html">Concept.SpecialisedConcept</a></td>
+        <td>A Concept is referenced by zero, one or many Concepts (as a Specialised Concept)</td>
+        <td class="entity"><a href="../Concept/Concept.html">Concept[]</a></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

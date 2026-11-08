@@ -1,0 +1,206 @@
+<html>
+<head>
+  <title>ConceptMeta - ConceptMeta JSON Example (Persistence)</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; ConceptMeta JSON Example (Persistence)
+  <script src="../Javascript/prism.js"></script>
+  <button class="accordion active example">ConceptMeta JSON Example (Persistence)</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>File name</th>
+        <td class="example">ConceptMetaPersistenceExample.json<td>
+      </tr>
+      <tr>
+        <th>Link</th>
+        <td><a href="ConceptMetaPersistenceExample.json" download="ConceptMetaPersistenceExample.json">Download</a></td>
+      </tr>
+      <tr>
+        <th>Schema</th>
+        <td class="schema"><a href="ConceptMetaPersistenceJsonSchema.html">ConceptMetaPersistenceSchema.json</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active example">Preview (ConceptMetaPersistenceExample.json)</button>
+  <div class="panel">
+    <pre>
+      <code class="lang-json">
+{
+  &quot;ConceptModels&quot;: [
+    {
+      &quot;ConceptModelId&quot;: 1,
+      &quot;ModelName&quot;: &quot;CsfMetaModel&quot;,
+      &quot;DefaultStringLength&quot;: 200,
+      &quot;DataTypes&quot;: [
+        {
+          &quot;DataTypeId&quot;: 1,
+          &quot;DataTypeName&quot;: &quot;binary&quot;,
+          &quot;SqlServerDataType&quot;: &quot;binary&quot;,
+          &quot;OracleDataType&quot;: &quot;raw&quot;,
+          &quot;MySqlDataType&quot;: &quot;binary&quot;,
+          &quot;MongoDbDataType&quot;: &quot;binData&quot;,
+          &quot;DotNetDataType&quot;: &quot;byte[]&quot;,
+          &quot;JavaDataType&quot;: &quot;byte[]&quot;,
+          &quot;XmlDataType&quot;: &quot;xs:base64Binary&quot;,
+          &quot;ExampleValueAsString&quot;: &quot;a1b2c3d4&quot;,
+          &quot;JsonDataType&quot;: &quot;String&quot;,
+          &quot;JsonFormat&quot;: &quot;date-time&quot;,
+          &quot;OpenApiDataType&quot;: &quot;String&quot;,
+          &quot;OpenApiFormat&quot;: &quot;byte&quot;,
+          &quot;ErsDataType&quot;: &quot;BINARY&quot;,
+          &quot;BasicDataType&quot;: &quot;Binary&quot;,
+          &quot;MinLength&quot;: 1,
+          &quot;MaxLength&quot;: 4000,
+          &quot;MinValue&quot;: 1,
+          &quot;MaxValue&quot;: 4000,
+          &quot;TotalDigits&quot;: 3,
+          &quot;DecimalPlaces&quot;: 1,
+          &quot;DatePrecision&quot;: 7,
+          &quot;HasLength&quot;: true,
+          &quot;HasTotalDigits&quot;: true,
+          &quot;HasDecimalPlaces&quot;: true,
+          &quot;HasIdentity&quot;: true,
+          &quot;HasDatePrecision&quot;: true
+        }
+      ],
+      &quot;Enumerations&quot;: [
+        {
+          &quot;EnumerationId&quot;: 1,
+          &quot;EnumerationName&quot;: &quot;BasicDataType&quot;,
+          &quot;EnumerationDescription&quot;: &quot;The logical data type&quot;,
+          &quot;DataTypeId&quot;: 1,
+          &quot;EnumeratedValues&quot;: [
+            {
+              &quot;EnumerationMemberId&quot;: 1,
+              &quot;EnumeratedValue&quot;: &quot;String&quot;,
+              &quot;EnumeratedValueDescription&quot;: &quot;Accepts textual values&quot;
+            }
+          ]
+        }
+      ],
+      &quot;Concepts&quot;: [
+        {
+          &quot;ConceptId&quot;: 1,
+          &quot;ConceptName&quot;: &quot;bool&quot;,
+          &quot;ConceptDescription&quot;: &quot;Boolean&quot;,
+          &quot;ConceptType&quot;: &quot;Scalar&quot;,
+          &quot;DataTypeId&quot;: 1,
+          &quot;EnumerationId&quot;: 1,
+          &quot;BasedOnConceptId&quot;: 1,
+          &quot;ExampleValueAsString&quot;: &quot;Binary&quot;,
+          &quot;MinLength&quot;: 200,
+          &quot;MaxLength&quot;: 200,
+          &quot;MinValue&quot;: 200,
+          &quot;MaxValue&quot;: 200,
+          &quot;TotalDigits&quot;: 3,
+          &quot;DecimalPlaces&quot;: 1,
+          &quot;DatePrecision&quot;: 7,
+          &quot;DbSchemaName&quot;: &quot;dbo&quot;,
+          &quot;DbTableName&quot;: &quot;BusinessIndexField&quot;,
+          &quot;IsCollectionItem&quot;: true,
+          &quot;ToStringExpression&quot;: &quot;{x.}FieldName&quot;,
+          &quot;IsCreatable&quot;: true,
+          &quot;IsUpdatable&quot;: true,
+          &quot;IsDeletable&quot;: true,
+          &quot;SurrogateKeyFieldName&quot;: &quot;True&quot;,
+          &quot;PrimaryKeyName&quot;: &quot;True&quot;,
+          &quot;AlternateKeyName&quot;: &quot;True&quot;,
+          &quot;ReferencedConceptId&quot;: 1,
+          &quot;ReferencedConceptUniqueKeyId&quot;: 1,
+          &quot;SpecialisedConceptId&quot;: 1,
+          &quot;SpecialisedConceptSubTypeId&quot;: 1,
+          &quot;Includes&quot;: [
+            &quot;{x.}ParentLogicalIndexField&quot;
+          ],
+          &quot;Qualifiers&quot;: [
+            &quot;Parent&quot;
+          ],
+          &quot;PropertyFamilies&quot;: [
+            &quot;Index&quot;
+          ],
+          &quot;UniqueKeys&quot;: [
+            {
+              &quot;ConceptUniqueKeyId&quot;: 1,
+              &quot;UniqueKeyName&quot;: &quot;string&quot;,
+              &quot;PropertyFamilyRefs&quot;: [
+                {
+                  &quot;ConceptUniqueKeyPropertyFamilyRefId&quot;: 1,
+                  &quot;ConceptPropertyFamilyId&quot;: 1,
+                  &quot;SeqNo&quot;: 1
+                }
+              ]
+            }
+          ],
+          &quot;SubTypes&quot;: [
+            {
+              &quot;ConceptSubTypeId&quot;: 1,
+              &quot;SubTypeName&quot;: &quot;string&quot;,
+              &quot;PropertyFamilyRefs&quot;: [
+                {
+                  &quot;ConceptSubTypePropertyFamilyRefId&quot;: 1,
+                  &quot;ConceptPropertyFamilyId&quot;: 1,
+                  &quot;SeqNo&quot;: 1
+                }
+              ]
+            }
+          ],
+          &quot;Properties&quot;: [
+            {
+              &quot;ConceptRefId&quot;: 1,
+              &quot;PropertyName&quot;: &quot;Index&quot;,
+              &quot;PropertyDescription&quot;: &quot;Index&quot;,
+              &quot;ReferencedConceptId&quot;: 1,
+              &quot;ConceptRefType&quot;: &quot;UniqueContainer&quot;,
+              &quot;ConceptPropertyFamilyId&quot;: 1,
+              &quot;IsPropagating&quot;: true,
+              &quot;DbColumnName&quot;: &quot;DbColumnName&quot;,
+              &quot;IsIdentity&quot;: true,
+              &quot;IsCoreField&quot;: true,
+              &quot;FieldFamilyName&quot;: &quot;CoreFields&quot;,
+              &quot;IsUpdatable&quot;: true,
+              &quot;FieldLabel&quot;: &quot;Field Label&quot;,
+              &quot;IsScalarFieldToSerialiseInPersistenceModel&quot;: true,
+              &quot;IsScalarFieldToSerialiseInDomainModel&quot;: true,
+              &quot;IsSeqNoField&quot;: true,
+              &quot;IsDiscriminatorField&quot;: true,
+              &quot;IsXmlAttribute&quot;: true,
+              &quot;IsReferenceToChildEntity&quot;: true,
+              &quot;ParentQualifier&quot;: &quot;string&quot;,
+              &quot;ChildQualifier&quot;: &quot;string&quot;,
+              &quot;MinChildOccurrences&quot;: 0,
+              &quot;MaxChildOccurrences&quot;: 10,
+              &quot;ChildVerbPhrase&quot;: &quot;owns&quot;,
+              &quot;ParentVerbPhrase&quot;: &quot;is owned by&quot;,
+              &quot;ChildPropertySeq&quot;: 7,
+              &quot;ChildCollectionName&quot;: &quot;BusinessFields&quot;,
+              &quot;ChildItemName&quot;: &quot;BusinessField&quot;,
+              &quot;ChildPropertyDescription&quot;: &quot;This field is useful&quot;,
+              &quot;SelectorType&quot;: &quot;Dropdown&quot;,
+              &quot;RelationshipType&quot;: &quot;ParentChild&quot;,
+              &quot;OutputExplicitXmlCollection&quot;: true,
+              &quot;IsSerialisedUsingScalarFieldInDomainModel&quot;: true,
+              &quot;ScalarFieldNameInDomainModel&quot;: &quot;FieldName&quot;,
+              &quot;ExampleValueAsString&quot;: &quot;This is an example&quot;,
+              &quot;RelationshipName&quot;: &quot;Class.Property&quot;,
+              &quot;DbForeignKeyName&quot;: &quot;FK_Child_ParentId&quot;,
+              &quot;ParentIndexName&quot;: &quot;PK_Parent&quot;,
+              &quot;ForeignKeySurrogateKeyFieldName&quot;: &quot;SurrogateId&quot;,
+              &quot;ChildPropertyName&quot;: &quot;PropertyName&quot;,
+              &quot;IsNullable&quot;: true,
+              &quot;PropertySeq&quot;: 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}      </code>
+    </pre>
+  </div>
+</body>
+</html>

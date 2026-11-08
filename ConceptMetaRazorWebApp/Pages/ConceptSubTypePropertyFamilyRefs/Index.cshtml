@@ -1,0 +1,54 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptSubTypePropertyFamilyRefs.IndexModel
+
+@{
+    ViewData["Title"] = "ConceptSubTypePropertyFamilyRefs";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="../ConceptSubTypes/Details" asp-route-conceptSubTypeId="@Model.Breadcrumb_ConceptSubType_ConceptSubTypeId">@Model.Breadcrumb_ConceptSubType_ValueString</a> &gt;
+    ConceptSubTypePropertyFamilyRefs
+</p>
+<h1>ConceptSubTypePropertyFamilyRefs</h1>
+<p>
+    <a asp-page="Create" asp-route-conceptSubTypeId="@Model.ConceptSubTypeId">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConceptSubTypePropertyFamilyRefs[0].ConceptSubTypeValueString)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConceptSubTypePropertyFamilyRefs[0].ConceptPropertyFamilyValueString)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConceptSubTypePropertyFamilyRefs[0].SeqNo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ConceptSubTypePropertyFamilyRefs)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConceptSubTypeValueString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConceptPropertyFamilyValueString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeqNo)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-conceptSubTypePropertyFamilyRefId="@item.ConceptSubTypePropertyFamilyRefId">Details</a> |
+                <a asp-page="./Edit" asp-route-conceptSubTypePropertyFamilyRefId="@item.ConceptSubTypePropertyFamilyRefId">Edit</a> |
+                <a asp-page="./Delete" asp-route-conceptSubTypePropertyFamilyRefId="@item.ConceptSubTypePropertyFamilyRefId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

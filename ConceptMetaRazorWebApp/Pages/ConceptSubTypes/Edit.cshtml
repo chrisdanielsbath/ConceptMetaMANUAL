@@ -1,0 +1,52 @@
+@page "/ConceptSubTypes/{conceptSubTypeId:int}/Edit"
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptSubTypes.EditModel
+
+@{
+    ViewData["Title"] = "Edit ConceptSubType";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">ConceptSubTypes</a> &gt;
+    @Model.ConceptSubType.ValueString
+</p>
+<h1>Edit</h1>
+<h3>@Model.ConceptSubType.ValueString</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ConceptSubType.ConceptSubTypeId" />
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptSubType.ConceptSubTypeId" class="control-label"></label>
+                <input asp-for="ConceptSubType.ConceptSubTypeId" class="form-control" disabled="disabled" />
+                <span asp-validation-for="ConceptSubType.ConceptSubTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptSubType.ConceptKeyString" class="control-label"></label>
+                <select asp-for="ConceptSubType.ConceptKeyString" class="form-control" asp-items="Model.ConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptSubType.ConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptSubType.SubTypeName" class="control-label"></label>
+                <input asp-for="ConceptSubType.SubTypeName" class="form-control" />
+                <span asp-validation-for="ConceptSubType.SubTypeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="Details" asp-route-conceptSubTypeId="@Model.ConceptSubType.ConceptSubTypeId">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,167 @@
+<html>
+<head>
+  <title>ConceptMeta - ConceptModel</title>
+  <link rel="stylesheet" href="../Css/styles.css"></link>
+  <link rel="stylesheet" href="../Css/prism.css"></link>
+  <script src="../Javascript/behaviour.js"></script>
+</head>
+<body onload="handleLoad()">
+  <a href="../ConceptMeta.html">ConceptMeta</a>
+  &gt; ConceptModel (Aggregate Root)
+  <button class="accordion active aggregate">ConceptModel</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Aggregate root name</th>
+        <td class="aggregate">ConceptModel</td>
+      </tr>
+      <tr class="example">
+        <th>XML Example (Domain)</th>
+        <td><a href="./Technical/ConceptModelDomainXmlExample.html">ConceptModelDomainExample.xml</a></td>
+      </tr>
+      <tr class="schema">
+        <th>XML Schema (Domain)</th>
+        <td><a href="./Technical/ConceptModelDomainXmlSchema.html">ConceptModelDomain.xsd</a></td>
+      </tr>
+      <tr class="example">
+        <th>JSON Example (Domain)</th>
+        <td><a href="./Technical/ConceptModelDomainJsonExample.html">ConceptModelDomainExample.json</a></td>
+      </tr>
+      <tr class="schema">
+        <th>JSON Schema (Domain)</th>
+        <td><a href="./Technical/ConceptModelDomainJsonSchema.html">ConceptModelDomainSchema.json</a></td>
+      </tr>
+      <tr class="openapi">
+        <th>OpenAPI Specification (Domain)</th>
+        <td><a href="./Technical/ConceptModelDomainOpenApi.html">ConceptModelDomainOpenApi.yaml</a></td>
+      </tr>
+      <tr>
+        <th>Root entity</th>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">View the associated root entity</a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active entity">Tree</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Path</th>
+        <th>Type</th>
+      </tr>
+      <tr>
+        <td>ConceptModel</td>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">ConceptModel</a>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;DataTypes</td>
+        <td class="entity">&nbsp;&nbsp;<a href="../DataType/DataType.html">DataType</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;Enumerations</td>
+        <td class="entity">&nbsp;&nbsp;<a href="../Enumeration/Enumeration.html">Enumeration</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;EnumeratedValues</td>
+        <td class="entity">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../EnumerationMember/EnumerationMember.html">EnumerationMember</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;Concepts</td>
+        <td class="entity">&nbsp;&nbsp;<a href="../Concept/Concept.html">Concept</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;Includes</td>
+        <td class="entity">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../Include/Include.html">Include</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;Qualifiers</td>
+        <td class="entity">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../Qualifier/Qualifier.html">Qualifier</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;PropertyFamilies</td>
+        <td class="entity">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;UniqueKeys</td>
+        <td class="entity">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PropertyFamilyRefs</td>
+        <td class="entity">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../ConceptUniqueKeyPropertyFamilyRef/ConceptUniqueKeyPropertyFamilyRef.html">ConceptUniqueKeyPropertyFamilyRef</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;SubTypes</td>
+        <td class="entity">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PropertyFamilyRefs</td>
+        <td class="entity">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../ConceptSubTypePropertyFamilyRef/ConceptSubTypePropertyFamilyRef.html">ConceptSubTypePropertyFamilyRef</a>[]
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;Properties</td>
+        <td class="entity">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../ConceptRef/ConceptRef.html">ConceptRef</a>[]
+      </tr>
+    </table>
+  </div>
+  <button class="accordion active entity">Entities</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Entity Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../Concept/Concept.html">Concept</td>
+        <td>An entity, a domain, a unique key or a sub type</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../ConceptModel/ConceptModel.html">ConceptModel</td>
+        <td>A model, made primarily of scalar concepts and object concepts</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../ConceptPropertyFamily/ConceptPropertyFamily.html">ConceptPropertyFamily</td>
+        <td>A family of properties</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../ConceptRef/ConceptRef.html">ConceptRef</td>
+        <td>A field or relationship</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../ConceptSubType/ConceptSubType.html">ConceptSubType</td>
+        <td>A specialised variety of an entity</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../ConceptSubTypePropertyFamilyRef/ConceptSubTypePropertyFamilyRef.html">ConceptSubTypePropertyFamilyRef</td>
+        <td>A record which associates a given sub type with a particular family of properties, signifying that the family is relevant to that sub type</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../ConceptUniqueKey/ConceptUniqueKey.html">ConceptUniqueKey</td>
+        <td>A unique key index that can be used to uniquely identify objects of a particular type</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../ConceptUniqueKeyPropertyFamilyRef/ConceptUniqueKeyPropertyFamilyRef.html">ConceptUniqueKeyPropertyFamilyRef</td>
+        <td>A record that associates a given unique key with a particular family of properties, signifying that the family of properties is relevant to that unique key</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../DataType/DataType.html">DataType</td>
+        <td>A data type</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../Enumeration/Enumeration.html">Enumeration</td>
+        <td>A constrained vocabulary</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../EnumerationMember/EnumerationMember.html">EnumerationMember</td>
+        <td>An item within a constrained vocabulary</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../Include/Include.html">Include</td>
+        <td>A Linq expression, starting from the current entity, that defines an item to be hydrated when hydrating the current entity</td>
+      </tr>
+      <tr>
+        <td class="entity"><a href="../Qualifier/Qualifier.html">Qualifier</td>
+        <td>A prefix that can be placed before the name of the current entity to specify the role it plays</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
