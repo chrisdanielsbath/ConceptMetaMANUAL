@@ -101,6 +101,22 @@ namespace ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.DataTypes
         #endregion
 
         #region Instance Methods
+        private async Task BuildBreadcrumbAsync()
+        {
+            if (DataType?.ConceptModel != null)
+            {
+                ConceptModel = DataType?.ConceptModel;
+            }
+            else
+            {
+                ConceptModel = await _context.ConceptModels
+                        .Where(conceptModel => conceptModel.ConceptModelId == ConceptModelId)
+                        .FirstOrDefaultAsync();
+            }
+
+            Breadcrumb_ConceptModel_ConceptModelId = ConceptModel?.ConceptModelId;
+            Breadcrumb_ConceptModel_ValueString = ConceptModel?.ValueString;
+        }
         public async Task<IActionResult> OnGetAsync()
         {
             await BuildBreadcrumbAsync();
@@ -121,22 +137,6 @@ namespace ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.DataTypes
             await BuildDropdownsAsync(true);
 
             return Page();
-        }
-        private async Task BuildBreadcrumbAsync()
-        {
-            if (DataType?.ConceptModel != null)
-            {
-                ConceptModel = DataType?.ConceptModel;
-            }
-            else
-            {
-                ConceptModel = await _context.ConceptModels
-                        .Where(conceptModel => conceptModel.ConceptModelId == ConceptModelId)
-                        .FirstOrDefaultAsync();
-            }
-
-            Breadcrumb_ConceptModel_ConceptModelId = ConceptModel?.ConceptModelId;
-            Breadcrumb_ConceptModel_ValueString = ConceptModel?.ValueString;
         }
         private async Task BuildDropdownsAsync(bool isPostback)
         {
@@ -175,8 +175,7 @@ namespace ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.DataTypes
                     _enumContext.BasicDataTypeSet.GetNewDropdownOptions(),
                     "PkString",
                     "ValueString",
-                    DataType.BasicDataType
-                    );
+                    DataType.BasicDataType);
             }
             else
             {
