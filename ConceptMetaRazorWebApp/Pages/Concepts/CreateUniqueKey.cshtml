@@ -1,0 +1,79 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Concepts.CreateUniqueKeyModel
+
+@{
+    ViewData["Title"] = "Create Concept (UniqueKey)";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Concepts</a> &gt;
+    New Concept
+</p>
+<h1>Create</h1>
+
+<h3>New Concept (UniqueKey)</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4>Unique Key Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.ReferencedConceptKeyString" class="control-label"></label>
+                <select asp-for="Concept.ReferencedConceptKeyString" class="form-control" asp-items="Model.ReferencedConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.ReferencedConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ReferencedUniqueKeyKeyString" class="control-label"></label>
+                <select asp-for="Concept.ReferencedUniqueKeyKeyString" class="form-control" asp-items="Model.ReferencedUniqueKeySL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.ReferencedUniqueKeyKeyString" class="text-danger"></span>
+            </div>
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptModelKeyString" class="control-label"></label>
+                <select asp-for="Concept.ConceptModelKeyString" class="form-control" asp-items="Model.ConceptModelSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.ConceptModelKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptName" class="control-label"></label>
+                <input asp-for="Concept.ConceptName" class="form-control" />
+                <span asp-validation-for="Concept.ConceptName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptDescription" class="control-label"></label>
+                <input asp-for="Concept.ConceptDescription" class="form-control" />
+                <span asp-validation-for="Concept.ConceptDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptType" class="control-label"></label>
+                <select asp-for="Concept.ConceptType" class="form-control" asp-items="Model.ConceptTypeSL" >
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.ConceptType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.IsUpdatable" class="control-label"></label>
+                <select asp-for="Concept.IsUpdatable" class="form-control" asp-items="Model.IsUpdatableSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.IsUpdatable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

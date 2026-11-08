@@ -43,7 +43,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="DataType.BasicDataType" class="control-label"></label>
-                <select asp-for="DataType.BasicDataType" class="form-control" asp-items="Model.BasicDataTypeSL" >
+                <select asp-for="DataType.BasicDataType" class="form-control" asp-items="Model.BasicDataTypeSL" disabled="disabled" >
                     <option value="">None</option>
                 </select>
                 <span asp-validation-for="DataType.BasicDataType" class="text-danger"></span>

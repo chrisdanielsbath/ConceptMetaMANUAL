@@ -1,0 +1,115 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Concepts.CreateScalarModel
+
+@{
+    ViewData["Title"] = "Create Concept (Scalar)";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Concepts</a> &gt;
+    New Concept
+</p>
+<h1>Create</h1>
+
+<h3>New Concept (Scalar)</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4>Scalar Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.BasedOnConceptKeyString" class="control-label"></label>
+                <select asp-for="Concept.BasedOnConceptKeyString" class="form-control" asp-items="Model.BasedOnConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.BasedOnConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ExampleValueAsString" class="control-label"></label>
+                <input asp-for="Concept.ExampleValueAsString" class="form-control" />
+                <span asp-validation-for="Concept.ExampleValueAsString" class="text-danger"></span>
+            </div>
+            <h4>String Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.MinLength" class="control-label"></label>
+                <input asp-for="Concept.MinLength" class="form-control" />
+                <span asp-validation-for="Concept.MinLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.MaxLength" class="control-label"></label>
+                <input asp-for="Concept.MaxLength" class="form-control" />
+                <span asp-validation-for="Concept.MaxLength" class="text-danger"></span>
+            </div>
+            <h4>Number Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.MinValue" class="control-label"></label>
+                <input asp-for="Concept.MinValue" class="form-control" />
+                <span asp-validation-for="Concept.MinValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.MaxValue" class="control-label"></label>
+                <input asp-for="Concept.MaxValue" class="form-control" />
+                <span asp-validation-for="Concept.MaxValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.TotalDigits" class="control-label"></label>
+                <input asp-for="Concept.TotalDigits" class="form-control" />
+                <span asp-validation-for="Concept.TotalDigits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.DecimalPlaces" class="control-label"></label>
+                <input asp-for="Concept.DecimalPlaces" class="form-control" />
+                <span asp-validation-for="Concept.DecimalPlaces" class="text-danger"></span>
+            </div>
+            <h4>Date Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.DatePrecision" class="control-label"></label>
+                <input asp-for="Concept.DatePrecision" class="form-control" />
+                <span asp-validation-for="Concept.DatePrecision" class="text-danger"></span>
+            </div>
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptModelKeyString" class="control-label"></label>
+                <select asp-for="Concept.ConceptModelKeyString" class="form-control" asp-items="Model.ConceptModelSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.ConceptModelKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptName" class="control-label"></label>
+                <input asp-for="Concept.ConceptName" class="form-control" />
+                <span asp-validation-for="Concept.ConceptName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptDescription" class="control-label"></label>
+                <input asp-for="Concept.ConceptDescription" class="form-control" />
+                <span asp-validation-for="Concept.ConceptDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.ConceptType" class="control-label"></label>
+                <select asp-for="Concept.ConceptType" class="form-control" asp-items="Model.ConceptTypeSL" >
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.ConceptType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concept.IsUpdatable" class="control-label"></label>
+                <select asp-for="Concept.IsUpdatable" class="form-control" asp-items="Model.IsUpdatableSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="Concept.IsUpdatable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,111 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptRefs.CreateCommonModel
+
+@{
+    ViewData["Title"] = "Create ConceptRef (Common)";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="../Concepts/Details" asp-route-conceptId="@Model.Breadcrumb_Concept_ConceptId">@Model.Breadcrumb_Concept_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">ConceptRefs</a> &gt;
+    New ConceptRef
+</p>
+<h1>Create</h1>
+
+<h3>New ConceptRef (Common)</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4>Common Properties</h4>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ConceptKeyString" class="control-label"></label>
+                <select asp-for="ConceptRef.ConceptKeyString" class="form-control" asp-items="Model.ConceptSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.ConceptKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertyName" class="control-label"></label>
+                <input asp-for="ConceptRef.PropertyName" class="form-control" />
+                <span asp-validation-for="ConceptRef.PropertyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertyDescription" class="control-label"></label>
+                <input asp-for="ConceptRef.PropertyDescription" class="form-control" />
+                <span asp-validation-for="ConceptRef.PropertyDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ReferencedConceptValueString" class="control-label"></label>
+                <input asp-for="ConceptRef.ReferencedConceptKeyString" id="hdnReferencedConceptVal" type="hidden" class="form-control" />
+                <input id="hdnReferencedConceptText" type="hidden" class="form-control" />
+                <input id="txtReferencedConceptSearch" asp-for="ConceptRef.ReferencedConceptValueString" type="text" class="form-control" />
+                <select id="selReferencedConcept" class="form-control" multiple="multiple">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.ReferencedConceptValueString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.ConceptRefType" class="control-label"></label>
+                <select asp-for="ConceptRef.ConceptRefType" class="form-control" asp-items="Model.ConceptRefTypeSL" >
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.ConceptRefType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertyFamilyKeyString" class="control-label"></label>
+                <select asp-for="ConceptRef.PropertyFamilyKeyString" class="form-control" asp-items="Model.PropertyFamilySL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.PropertyFamilyKeyString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsPropagating" class="control-label"></label>
+                <select asp-for="ConceptRef.IsPropagating" class="form-control" asp-items="Model.IsPropagatingSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsPropagating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsUpdatable" class="control-label"></label>
+                <select asp-for="ConceptRef.IsUpdatable" class="form-control" asp-items="Model.IsUpdatableSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsUpdatable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.IsNullable" class="control-label"></label>
+                <select asp-for="ConceptRef.IsNullable" class="form-control" asp-items="Model.IsNullableSL">
+                    <option value="">None</option>
+                </select>
+                <span asp-validation-for="ConceptRef.IsNullable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConceptRef.PropertySeq" class="control-label"></label>
+                <input asp-for="ConceptRef.PropertySeq" class="form-control" />
+                <span asp-validation-for="ConceptRef.PropertySeq" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptId="@Model.ConceptId">Back to List</a>
+</div>
+@section Scripts {
+    <script src="~/js/SearchableSelector.js"></script>
+    <script>
+        function getReferencedConceptQueryString() {
+            return "?conceptModelId=@Model.ConceptModelId";
+        }
+
+        $(document).ready(function () {
+            setupSearch("hdnReferencedConceptVal", "hdnReferencedConceptText", "txtReferencedConceptSearch", "selReferencedConcept", "Concept", getReferencedConceptQueryString);
+        });
+    </script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
