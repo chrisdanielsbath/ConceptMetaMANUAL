@@ -1,0 +1,43 @@
+@page
+@model ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.DataTypes.CreateStep1Model
+
+@{
+    ViewData["Title"] = "Create DataType - Step 1";
+}
+
+<p>
+    <a asp-page="../ConceptModels/Details" asp-route-conceptModelId="@Model.Breadcrumb_ConceptModel_ConceptModelId">@Model.Breadcrumb_ConceptModel_ValueString</a> &gt;
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">DataTypes</a> &gt;
+    New DataType (Step 1)
+</p>
+<h1>Create (Step 1)</h1>
+<h3>New DataType</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <a asp-page="CreateBinary" asp-route-conceptModelId="@Model.ConceptModelId">Binary</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateBoolean" asp-route-conceptModelId="@Model.ConceptModelId">Boolean</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateInteger" asp-route-conceptModelId="@Model.ConceptModelId">Integer</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateDate" asp-route-conceptModelId="@Model.ConceptModelId">Date</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateDecimal" asp-route-conceptModelId="@Model.ConceptModelId">Decimal</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateString" asp-route-conceptModelId="@Model.ConceptModelId">String</a>
+        </div>
+        <div class="form-group">
+            <a asp-page="CreateXml" asp-route-conceptModelId="@Model.ConceptModelId">Xml</a>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-page="Index" asp-route-conceptModelId="@Model.ConceptModelId">Back to List</a>
+</div>
