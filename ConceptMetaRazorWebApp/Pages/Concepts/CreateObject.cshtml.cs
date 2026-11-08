@@ -185,7 +185,8 @@ namespace ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Concepts
                 ConceptTypeSL = new SelectList(
                     _enumContext.ConceptTypeSet.GetNewDropdownOptions(),
                     "PkString",
-                    "ValueString");
+                    "ValueString",
+                    "Object"); // ensure the "Object" entry is selected
             }
 
             // setup IsCollectionItemSL

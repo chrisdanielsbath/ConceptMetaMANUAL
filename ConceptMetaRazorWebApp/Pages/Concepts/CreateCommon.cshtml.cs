@@ -182,7 +182,8 @@ namespace ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Concepts
                 ConceptTypeSL = new SelectList(
                     _enumContext.ConceptTypeSet.GetNewDropdownOptions(),
                     "PkString",
-                    "ValueString");
+                    "ValueString",
+                    "Common"); // ensure the "Common" entry is selected
             }
 
             // setup IsUpdatableSL

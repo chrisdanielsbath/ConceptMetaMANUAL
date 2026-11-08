@@ -266,7 +266,8 @@ namespace ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptRefs
                 ConceptRefTypeSL = new SelectList(
                     _enumContext.ConceptRefTypeSet.GetNewDropdownOptions(),
                     "PkString",
-                    "ValueString");
+                    "ValueString",
+                    "Scalar"); // ensure the "Scalar" entry is selected
             }
 
             // setup IsPropagatingSL

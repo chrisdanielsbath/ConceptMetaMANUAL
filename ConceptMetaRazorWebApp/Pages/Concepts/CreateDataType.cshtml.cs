@@ -204,7 +204,8 @@ namespace ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.Concepts
                 ConceptTypeSL = new SelectList(
                     _enumContext.ConceptTypeSet.GetNewDropdownOptions(),
                     "PkString",
-                    "ValueString");
+                    "ValueString",
+                    "DataType"); // ensure the "DataType" entry is selected
             }
 
             // setup IsUpdatableSL

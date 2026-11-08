@@ -258,7 +258,8 @@ namespace ConceptMeta.ConceptMetaDb.RazorWebApp.Pages.ConceptRefs
                 ConceptRefTypeSL = new SelectList(
                     _enumContext.ConceptRefTypeSet.GetNewDropdownOptions(),
                     "PkString",
-                    "ValueString");
+                    "ValueString",
+                    "Common"); // ensure the "Common" entry is selected
             }
 
             // setup IsPropagatingSL
